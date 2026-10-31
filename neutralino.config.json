@@ -1,0 +1,56 @@
+{
+  "applicationId": "dev.wordcraft.desktop",
+  "version": "0.1.1",
+  "defaultMode": "window",
+  "port": 0,
+  "documentRoot": "/dist/",
+  "url": "/",
+  "enableServer": true,
+  "enableNativeAPI": true,
+  "tokenSecurity": "one-time",
+  "dataLocation": "system",
+  "storageLocation": "system",
+  "nativeAllowList": [
+    "app.exit",
+    "events.*",
+    "window.setTitle",
+    "window.print",
+    "os.showOpenDialog",
+    "os.showSaveDialog",
+    "filesystem.getStats",
+    "filesystem.readBinaryFile",
+    "filesystem.writeBinaryFile",
+    "storage.getData",
+    "storage.getKeys",
+    "storage.setData"
+  ],
+  "serverHeaders": {
+    "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' ws://localhost:* ws://127.0.0.1:*; object-src 'none'; frame-src 'none'; base-uri 'self'",
+    "X-Content-Type-Options": "nosniff"
+  },
+  "modes": {
+    "window": {
+      "title": "Wordcraft Desktop",
+      "width": 1440,
+      "height": 960,
+      "minWidth": 760,
+      "minHeight": 600,
+      "center": true,
+      "resizable": true,
+      "icon": "/dist/app-icon.png",
+      "exitProcessOnClose": false,
+      "useSavedState": true,
+      "enableInspector": false,
+      "injectGlobals": true,
+      "injectClientLibrary": false
+    }
+  },
+  "cli": {
+    "binaryName": "wordcraft-desktop",
+    "resourcesPath": "/dist/",
+    "clientLibrary": "/neutralino.js",
+    "binaryVersion": "6.10.0",
+    "clientVersion": "6.10.0",
+    "distributionPath": "/release/"
+  }
+}

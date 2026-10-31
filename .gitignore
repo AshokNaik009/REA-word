@@ -1,0 +1,15 @@
+node_modules/
+dist/
+bin/
+.neu/
+.tmp/
+.storage/
+/neutralino.js
+/neutralino.d.ts
+/neutralinojs.log
+release/
+*.tsbuildinfo
+test-results/
+playwright-report/
+*.log
+.DS_Store
