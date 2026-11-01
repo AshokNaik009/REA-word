@@ -85,6 +85,21 @@ kbd { font-family: inherit; color: #8a9288; font-size: 10px; white-space: nowrap
 .large-tool > svg { height: 23px; width: 23px; color: var(--green); stroke-width: 1.5; }
 .large-tool small, .tool-note { font-size: 9px; color: #959d8f; }
 .tool-note { max-width: 250px; padding-top: 8px; }
+.paragraph-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.paragraph-fields label { display: flex; flex-direction: column; gap: 6px; font-size: 12px; }
+.paragraph-fields input, .paragraph-fields select { width: 100%; min-width: 0; padding: 9px; border: 1px solid var(--line); border-radius: 5px; background: #fffefa; }
+.paragraph-fields small { color: #7d8878; font-size: 10px; }
+.paragraph-checks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 22px 0; }
+.paragraph-checks label { display: flex; align-items: center; gap: 7px; font-size: 12px; }
+.document-page-break { display: block; height: 24px; position: relative; border-top: 1px dashed #a9b9a3; margin: 24px 0; break-after: page; }
+.document-page-break::after { content: "PAGE BREAK"; position: absolute; right: 0; top: 5px; color: #809079; font: 9px Verdana, sans-serif; letter-spacing: 1px; }
+@media print {
+  .document-page-break { height: 0; border: 0; margin: 0; }
+  .document-page-break::after { content: none; }
+}
+@media (max-width: 420px) {
+  .paragraph-fields, .paragraph-checks { grid-template-columns: 1fr; }
+}
 .ribbon-tip { display: flex; align-items: center; gap: 18px; padding: 0 28px; color: #7f8b79; }
 .tip-number { font: italic 38px Georgia, serif; color: #91a78c; }
 .ribbon-tip p { font-size: 12px; line-height: 1.9; }

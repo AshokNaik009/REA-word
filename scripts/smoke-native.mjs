@@ -63,13 +63,24 @@ try {
   catch { throw new Error(`Packaged first-launch failure: ${await page.locator('.loading-screen').textContent()}`) }
   await title.fill('Native storage smoke test')
   await editor.fill('These words live in native storage.')
+  const commandResults = await page.evaluate(() => [
+    window.wordcraft.execute('select.all'),
+    window.wordcraft.execute('para.spacing', { before: 12, after: 6 }),
+    window.wordcraft.execute('para.rtl'),
+    window.wordcraft.execute('select.text', { text: 'native storage' }),
+    window.wordcraft.execute('format.superscript'),
+  ])
+  assert.ok(commandResults.every(result => result.ok), 'Built UI must expose the same validated command session')
   await page.locator('.save-indicator.saved').waitFor()
   await page.reload()
   await editor.waitFor()
   assert.equal(await title.inputValue(), 'Native storage smoke test')
   assert.equal(await editor.textContent(), 'These words live in native storage.')
+  assert.equal(await editor.locator('p').getAttribute('data-wc-space-before'), '12')
+  assert.equal(await editor.locator('p').getAttribute('dir'), 'rtl')
+  assert.equal(await editor.locator('sup').textContent(), 'native storage')
   assert.deepEqual(errors, [])
-  console.log('PASS: built UI connects to the real Neutralino host and restores native saves after reload.')
+  console.log('PASS: built UI connects to the real Neutralino host and restores writing, paragraph properties and script marks from native storage after reload.')
   console.log('Native dialogs and system-WebView rendering still require manual platform testing.')
 } finally {
   await browser?.close()

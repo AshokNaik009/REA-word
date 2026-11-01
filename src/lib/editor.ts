@@ -1,4 +1,4 @@
-import { getSchema, type JSONContent } from '@tiptap/react'
+import { getSchema, type JSONContent } from '@tiptap/core'
 import StarterKit from '@tiptap/starter-kit'
 import { TextStyleKit } from '@tiptap/extension-text-style'
 import TextAlign from '@tiptap/extension-text-align'
@@ -9,7 +9,8 @@ import Placeholder from '@tiptap/extension-placeholder'
 import CharacterCount from '@tiptap/extension-character-count'
 import Typography from '@tiptap/extension-typography'
 import DOMPurify from 'dompurify'
-import { isLocalImage, isSafeLink } from './document'
+import { isEditorContent, isLocalImage, isSafeLink } from './document'
+import { PageBreak, ParagraphFormatting, Subscript, Superscript } from '../engine/extensions'
 
 export const extensions = [
   StarterKit.configure({
@@ -24,9 +25,14 @@ export const extensions = [
   Placeholder.configure({ placeholder: 'A new thought starts here...' }),
   CharacterCount,
   Typography,
+  ParagraphFormatting,
+  PageBreak,
+  Superscript,
+  Subscript,
 ]
 
 export function validateContent(content: JSONContent): void {
+  if (!isEditorContent(content)) throw new Error('Document content contains invalid or unsupported properties.')
   const schema = getSchema(extensions)
   schema.nodeFromJSON(content).check()
 }
@@ -50,10 +56,10 @@ export function sanitizeHTML(html: string): string {
 
 export interface SearchMatch { from: number; to: number }
 
-export function findMatches(doc: import('@tiptap/pm/model').Node, query: string): SearchMatch[] {
+export function findMatches(doc: import('@tiptap/pm/model').Node, query: string, caseSensitive = false): SearchMatch[] {
   if (!query) return []
   const matches: SearchMatch[] = []
-  const needle = query.toLowerCase()
+  const needle = caseSensitive ? query : query.toLowerCase()
   doc.descendants((node, pos) => {
     if (!node.isTextblock) return
     // Index the full text block so matches can cross bold/italic run boundaries.
@@ -69,7 +75,7 @@ export function findMatches(doc: import('@tiptap/pm/model').Node, query: string)
         positions.push(pos + 1 + offset)
       }
     })
-    const haystack = text.toLowerCase()
+    const haystack = caseSensitive ? text : text.toLowerCase()
     let index = 0
     while ((index = haystack.indexOf(needle, index)) !== -1 && matches.length < 10_000) {
       const from = positions[index]

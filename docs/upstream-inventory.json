@@ -1,0 +1,6948 @@
+{
+  "repository": "https://github.com/storytold/wordcraft",
+  "revision": "8afe6bef6d6d1195e06f50776a318d19058214da",
+  "method": "Catalog rows and literal CommandSpec::new IDs. Dynamic registrations and UI-only commands are not an exhaustive engine inventory.",
+  "catalog": [
+    {
+      "tab": "File",
+      "group": "Backstage",
+      "label": "New",
+      "id": "file.new",
+      "source": "crates/engine/src/catalog.rs:11"
+    },
+    {
+      "tab": "File",
+      "group": "Backstage",
+      "label": "Open",
+      "id": "file.open",
+      "source": "crates/engine/src/catalog.rs:12"
+    },
+    {
+      "tab": "File",
+      "group": "Backstage",
+      "label": "Save",
+      "id": "file.save",
+      "source": "crates/engine/src/catalog.rs:13"
+    },
+    {
+      "tab": "File",
+      "group": "Backstage",
+      "label": "Save As",
+      "id": "file.saveAs",
+      "source": "crates/engine/src/catalog.rs:14"
+    },
+    {
+      "tab": "File",
+      "group": "Backstage",
+      "label": "Print",
+      "id": "file.print",
+      "source": "crates/engine/src/catalog.rs:15"
+    },
+    {
+      "tab": "File",
+      "group": "Backstage",
+      "label": "Print Markup",
+      "id": "file.printMarkup",
+      "source": "crates/engine/src/catalog.rs:16"
+    },
+    {
+      "tab": "File",
+      "group": "Backstage",
+      "label": "Close",
+      "id": "file.close",
+      "source": "crates/engine/src/catalog.rs:17"
+    },
+    {
+      "tab": "File",
+      "group": "Backstage",
+      "label": "Info",
+      "id": "file.info",
+      "source": "crates/engine/src/catalog.rs:18"
+    },
+    {
+      "tab": "File",
+      "group": "Backstage",
+      "label": "Properties",
+      "id": "file.properties",
+      "source": "crates/engine/src/catalog.rs:19"
+    },
+    {
+      "tab": "File",
+      "group": "Backstage",
+      "label": "Export PDF",
+      "id": "file.exportPdf",
+      "source": "crates/engine/src/catalog.rs:20"
+    },
+    {
+      "tab": "File",
+      "group": "Backstage",
+      "label": "Export Image",
+      "id": "file.exportPng",
+      "source": "crates/engine/src/catalog.rs:21"
+    },
+    {
+      "tab": "File",
+      "group": "Backstage",
+      "label": "Options",
+      "id": "file.options",
+      "source": "crates/engine/src/catalog.rs:22"
+    },
+    {
+      "tab": "File",
+      "group": "Options",
+      "label": "Numerals",
+      "id": "view.numeral",
+      "source": "crates/engine/src/catalog.rs:23"
+    },
+    {
+      "tab": "File",
+      "group": "Backstage",
+      "label": "Share",
+      "id": "file.share",
+      "source": "crates/engine/src/catalog.rs:24"
+    },
+    {
+      "tab": "File",
+      "group": "Backstage",
+      "label": "Protect Document",
+      "id": "file.protect",
+      "source": "crates/engine/src/catalog.rs:25"
+    },
+    {
+      "tab": "File",
+      "group": "Backstage",
+      "label": "Inspect Document",
+      "id": "file.inspect",
+      "source": "crates/engine/src/catalog.rs:26"
+    },
+    {
+      "tab": "File",
+      "group": "Backstage",
+      "label": "Check Accessibility",
+      "id": "file.accessibility",
+      "source": "crates/engine/src/catalog.rs:27"
+    },
+    {
+      "tab": "File",
+      "group": "Backstage",
+      "label": "Check Compatibility",
+      "id": "file.compatibility",
+      "source": "crates/engine/src/catalog.rs:28"
+    },
+    {
+      "tab": "File",
+      "group": "Backstage",
+      "label": "Version History",
+      "id": "file.versions",
+      "source": "crates/engine/src/catalog.rs:29"
+    },
+    {
+      "tab": "File",
+      "group": "Backstage",
+      "label": "Recover Unsaved",
+      "id": "file.recover",
+      "source": "crates/engine/src/catalog.rs:30"
+    },
+    {
+      "tab": "File",
+      "group": "Backstage",
+      "label": "New from Template",
+      "id": "file.newFromTemplate",
+      "source": "crates/engine/src/catalog.rs:31"
+    },
+    {
+      "tab": "File",
+      "group": "Backstage",
+      "label": "Save as Template",
+      "id": "file.saveTemplate",
+      "source": "crates/engine/src/catalog.rs:32"
+    },
+    {
+      "tab": "File",
+      "group": "Backstage",
+      "label": "Personal Templates",
+      "id": "file.listTemplates",
+      "source": "crates/engine/src/catalog.rs:33"
+    },
+    {
+      "tab": "Quick Access",
+      "group": "Toolbar",
+      "label": "Undo",
+      "id": "edit.undo",
+      "source": "crates/engine/src/catalog.rs:34"
+    },
+    {
+      "tab": "Quick Access",
+      "group": "Toolbar",
+      "label": "Undo List",
+      "id": "edit.undoTo",
+      "source": "crates/engine/src/catalog.rs:35"
+    },
+    {
+      "tab": "Quick Access",
+      "group": "Toolbar",
+      "label": "Redo",
+      "id": "edit.redo",
+      "source": "crates/engine/src/catalog.rs:36"
+    },
+    {
+      "tab": "Quick Access",
+      "group": "Toolbar",
+      "label": "Repeat",
+      "id": "edit.repeat",
+      "source": "crates/engine/src/catalog.rs:37"
+    },
+    {
+      "tab": "Quick Access",
+      "group": "Toolbar",
+      "label": "AutoSave",
+      "id": "file.autosave",
+      "source": "crates/engine/src/catalog.rs:38"
+    },
+    {
+      "tab": "Title Bar",
+      "group": "Search",
+      "label": "Search (Tell Me)",
+      "id": "tools.search",
+      "source": "crates/engine/src/catalog.rs:39"
+    },
+    {
+      "tab": "Home",
+      "group": "Clipboard",
+      "label": "Paste",
+      "id": "edit.paste",
+      "source": "crates/engine/src/catalog.rs:40"
+    },
+    {
+      "tab": "Home",
+      "group": "Clipboard",
+      "label": "Paste Keep Text Only",
+      "id": "edit.pasteText",
+      "source": "crates/engine/src/catalog.rs:41"
+    },
+    {
+      "tab": "Home",
+      "group": "Clipboard",
+      "label": "Paste Merge Formatting",
+      "id": "edit.pasteMerge",
+      "source": "crates/engine/src/catalog.rs:42"
+    },
+    {
+      "tab": "Home",
+      "group": "Clipboard",
+      "label": "Paste Special",
+      "id": "edit.pasteSpecial",
+      "source": "crates/engine/src/catalog.rs:43"
+    },
+    {
+      "tab": "Home",
+      "group": "Clipboard",
+      "label": "Cut",
+      "id": "edit.cut",
+      "source": "crates/engine/src/catalog.rs:44"
+    },
+    {
+      "tab": "Home",
+      "group": "Clipboard",
+      "label": "Copy",
+      "id": "edit.copy",
+      "source": "crates/engine/src/catalog.rs:45"
+    },
+    {
+      "tab": "Home",
+      "group": "Clipboard",
+      "label": "Format Painter",
+      "id": "edit.formatPainter",
+      "source": "crates/engine/src/catalog.rs:46"
+    },
+    {
+      "tab": "Home",
+      "group": "Clipboard",
+      "label": "Copy Formatting",
+      "id": "edit.copyFormat",
+      "source": "crates/engine/src/catalog.rs:47"
+    },
+    {
+      "tab": "Home",
+      "group": "Clipboard",
+      "label": "Paste Formatting",
+      "id": "edit.pasteFormat",
+      "source": "crates/engine/src/catalog.rs:48"
+    },
+    {
+      "tab": "Home",
+      "group": "Clipboard",
+      "label": "Clipboard Pane",
+      "id": "edit.clipboardPane",
+      "source": "crates/engine/src/catalog.rs:49"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Font",
+      "id": "format.font",
+      "source": "crates/engine/src/catalog.rs:50"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Font Size",
+      "id": "format.size",
+      "source": "crates/engine/src/catalog.rs:51"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Increase Font Size",
+      "id": "format.growFont",
+      "source": "crates/engine/src/catalog.rs:52"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Decrease Font Size",
+      "id": "format.shrinkFont",
+      "source": "crates/engine/src/catalog.rs:53"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Change Case",
+      "id": "format.changeCase",
+      "source": "crates/engine/src/catalog.rs:54"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Clear All Formatting",
+      "id": "format.clear",
+      "source": "crates/engine/src/catalog.rs:55"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Bold",
+      "id": "format.bold",
+      "source": "crates/engine/src/catalog.rs:56"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Italic",
+      "id": "format.italic",
+      "source": "crates/engine/src/catalog.rs:57"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Underline",
+      "id": "format.underline",
+      "source": "crates/engine/src/catalog.rs:58"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Double Underline",
+      "id": "format.doubleUnderline",
+      "source": "crates/engine/src/catalog.rs:59"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Underline Color",
+      "id": "format.underlineColor",
+      "source": "crates/engine/src/catalog.rs:60"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Strikethrough",
+      "id": "format.strikethrough",
+      "source": "crates/engine/src/catalog.rs:61"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Subscript",
+      "id": "format.subscript",
+      "source": "crates/engine/src/catalog.rs:62"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Superscript",
+      "id": "format.superscript",
+      "source": "crates/engine/src/catalog.rs:63"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Text Effects Outline",
+      "id": "format.outline",
+      "source": "crates/engine/src/catalog.rs:64"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Text Effects Shadow",
+      "id": "format.shadow",
+      "source": "crates/engine/src/catalog.rs:65"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Text Effects and Typography",
+      "id": "format.textEffects",
+      "source": "crates/engine/src/catalog.rs:66"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Text Highlight Color",
+      "id": "format.highlight",
+      "source": "crates/engine/src/catalog.rs:67"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Font Color",
+      "id": "format.color",
+      "source": "crates/engine/src/catalog.rs:68"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Character Shading",
+      "id": "format.shading",
+      "source": "crates/engine/src/catalog.rs:69"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Font Dialog",
+      "id": "format.fontDialog",
+      "source": "crates/engine/src/catalog.rs:70"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Double Strikethrough",
+      "id": "format.doubleStrikethrough",
+      "source": "crates/engine/src/catalog.rs:71"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Small Caps",
+      "id": "format.smallCaps",
+      "source": "crates/engine/src/catalog.rs:72"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "All Caps",
+      "id": "format.allCaps",
+      "source": "crates/engine/src/catalog.rs:73"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Hidden",
+      "id": "format.hidden",
+      "source": "crates/engine/src/catalog.rs:74"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Emboss",
+      "id": "format.emboss",
+      "source": "crates/engine/src/catalog.rs:75"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Engrave",
+      "id": "format.engrave",
+      "source": "crates/engine/src/catalog.rs:76"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Character Spacing",
+      "id": "format.spacing",
+      "source": "crates/engine/src/catalog.rs:77"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Character Scale",
+      "id": "format.scale",
+      "source": "crates/engine/src/catalog.rs:78"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Character Position",
+      "id": "format.position",
+      "source": "crates/engine/src/catalog.rs:79"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Character Border",
+      "id": "format.border",
+      "source": "crates/engine/src/catalog.rs:80"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Phonetic Guide",
+      "id": "format.phonetic",
+      "source": "crates/engine/src/catalog.rs:81"
+    },
+    {
+      "tab": "Home",
+      "group": "Font",
+      "label": "Enclose Characters",
+      "id": "format.enclose",
+      "source": "crates/engine/src/catalog.rs:82"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Bullets",
+      "id": "para.bullets",
+      "source": "crates/engine/src/catalog.rs:83"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Numbering",
+      "id": "para.numbering",
+      "source": "crates/engine/src/catalog.rs:84"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Multilevel List",
+      "id": "para.multilevel",
+      "source": "crates/engine/src/catalog.rs:85"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Define New Multilevel List",
+      "id": "list.define",
+      "source": "crates/engine/src/catalog.rs:86"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Multilevel List Library",
+      "id": "list.multilevelPreset",
+      "source": "crates/engine/src/catalog.rs:87"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Change List Level",
+      "id": "para.listLevel",
+      "source": "crates/engine/src/catalog.rs:88"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Restart Numbering",
+      "id": "para.restartNumbering",
+      "source": "crates/engine/src/catalog.rs:89"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Define New Bullet",
+      "id": "para.defineBullet",
+      "source": "crates/engine/src/catalog.rs:90"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Define New Number Format",
+      "id": "para.defineNumber",
+      "source": "crates/engine/src/catalog.rs:91"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Set Numbering Value",
+      "id": "para.setNumberingValue",
+      "source": "crates/engine/src/catalog.rs:92"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Decrease Indent",
+      "id": "para.outdent",
+      "source": "crates/engine/src/catalog.rs:93"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Increase Indent",
+      "id": "para.indent",
+      "source": "crates/engine/src/catalog.rs:94"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Sort",
+      "id": "para.sort",
+      "source": "crates/engine/src/catalog.rs:95"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Show/Hide Marks",
+      "id": "view.marks",
+      "source": "crates/engine/src/catalog.rs:96"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Align Left",
+      "id": "para.alignLeft",
+      "source": "crates/engine/src/catalog.rs:97"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Center",
+      "id": "para.alignCenter",
+      "source": "crates/engine/src/catalog.rs:98"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Align Right",
+      "id": "para.alignRight",
+      "source": "crates/engine/src/catalog.rs:99"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Justify",
+      "id": "para.justify",
+      "source": "crates/engine/src/catalog.rs:100"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Distributed",
+      "id": "para.distribute",
+      "source": "crates/engine/src/catalog.rs:101"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Line Spacing",
+      "id": "para.lineSpacing",
+      "source": "crates/engine/src/catalog.rs:102"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Add Space Before",
+      "id": "para.addSpaceBefore",
+      "source": "crates/engine/src/catalog.rs:103"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Remove Space After",
+      "id": "para.removeSpaceAfter",
+      "source": "crates/engine/src/catalog.rs:104"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Shading",
+      "id": "para.shading",
+      "source": "crates/engine/src/catalog.rs:105"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Borders",
+      "id": "para.borders",
+      "source": "crates/engine/src/catalog.rs:106"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Horizontal Line",
+      "id": "insert.horizontalLine",
+      "source": "crates/engine/src/catalog.rs:107"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Paragraph Dialog",
+      "id": "para.dialog",
+      "source": "crates/engine/src/catalog.rs:108"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Tabs",
+      "id": "para.tabs",
+      "source": "crates/engine/src/catalog.rs:109"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Keep with Next",
+      "id": "para.keepNext",
+      "source": "crates/engine/src/catalog.rs:110"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Keep Lines Together",
+      "id": "para.keepLines",
+      "source": "crates/engine/src/catalog.rs:111"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Page Break Before",
+      "id": "para.pageBreakBefore",
+      "source": "crates/engine/src/catalog.rs:112"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Widow/Orphan Control",
+      "id": "para.widowControl",
+      "source": "crates/engine/src/catalog.rs:113"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Outline Level",
+      "id": "para.outlineLevel",
+      "source": "crates/engine/src/catalog.rs:114"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Hanging Indent",
+      "id": "para.hangingIndent",
+      "source": "crates/engine/src/catalog.rs:115"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Right-to-Left Text Direction",
+      "id": "para.rtl",
+      "source": "crates/engine/src/catalog.rs:116"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Left-to-Right Text Direction",
+      "id": "para.ltr",
+      "source": "crates/engine/src/catalog.rs:117"
+    },
+    {
+      "tab": "Home",
+      "group": "Paragraph",
+      "label": "Asian Typography",
+      "id": "para.asianTypography",
+      "source": "crates/engine/src/catalog.rs:118"
+    },
+    {
+      "tab": "Home",
+      "group": "Styles",
+      "label": "Styles Gallery",
+      "id": "para.style",
+      "source": "crates/engine/src/catalog.rs:119"
+    },
+    {
+      "tab": "Home",
+      "group": "Styles",
+      "label": "Normal",
+      "id": "para.normal",
+      "source": "crates/engine/src/catalog.rs:120"
+    },
+    {
+      "tab": "Home",
+      "group": "Styles",
+      "label": "Heading 1",
+      "id": "para.heading1",
+      "source": "crates/engine/src/catalog.rs:121"
+    },
+    {
+      "tab": "Home",
+      "group": "Styles",
+      "label": "Heading 2",
+      "id": "para.heading2",
+      "source": "crates/engine/src/catalog.rs:122"
+    },
+    {
+      "tab": "Home",
+      "group": "Styles",
+      "label": "Heading 3",
+      "id": "para.heading3",
+      "source": "crates/engine/src/catalog.rs:123"
+    },
+    {
+      "tab": "Home",
+      "group": "Styles",
+      "label": "Create a Style",
+      "id": "styles.create",
+      "source": "crates/engine/src/catalog.rs:124"
+    },
+    {
+      "tab": "Home",
+      "group": "Styles",
+      "label": "Modify Style",
+      "id": "styles.modify",
+      "source": "crates/engine/src/catalog.rs:125"
+    },
+    {
+      "tab": "Home",
+      "group": "Styles",
+      "label": "Update Style to Match",
+      "id": "styles.updateToMatch",
+      "source": "crates/engine/src/catalog.rs:126"
+    },
+    {
+      "tab": "Home",
+      "group": "Styles",
+      "label": "Delete Style",
+      "id": "styles.delete",
+      "source": "crates/engine/src/catalog.rs:127"
+    },
+    {
+      "tab": "Home",
+      "group": "Styles",
+      "label": "Styles Pane",
+      "id": "styles.pane",
+      "source": "crates/engine/src/catalog.rs:128"
+    },
+    {
+      "tab": "Home",
+      "group": "Styles",
+      "label": "Style Inspector",
+      "id": "styles.inspector",
+      "source": "crates/engine/src/catalog.rs:129"
+    },
+    {
+      "tab": "Home",
+      "group": "Styles",
+      "label": "Manage Styles",
+      "id": "styles.manage",
+      "source": "crates/engine/src/catalog.rs:130"
+    },
+    {
+      "tab": "Home",
+      "group": "Styles",
+      "label": "Apply Styles",
+      "id": "styles.apply",
+      "source": "crates/engine/src/catalog.rs:131"
+    },
+    {
+      "tab": "Home",
+      "group": "Styles",
+      "label": "Character Style",
+      "id": "format.charStyle",
+      "source": "crates/engine/src/catalog.rs:132"
+    },
+    {
+      "tab": "Home",
+      "group": "Editing",
+      "label": "Find",
+      "id": "edit.find",
+      "source": "crates/engine/src/catalog.rs:133"
+    },
+    {
+      "tab": "Home",
+      "group": "Editing",
+      "label": "Find Next",
+      "id": "edit.findNext",
+      "source": "crates/engine/src/catalog.rs:134"
+    },
+    {
+      "tab": "Home",
+      "group": "Editing",
+      "label": "Find Previous",
+      "id": "edit.findPrevious",
+      "source": "crates/engine/src/catalog.rs:135"
+    },
+    {
+      "tab": "Home",
+      "group": "Editing",
+      "label": "Advanced Find",
+      "id": "edit.advancedFind",
+      "source": "crates/engine/src/catalog.rs:136"
+    },
+    {
+      "tab": "Home",
+      "group": "Editing",
+      "label": "Replace",
+      "id": "edit.replace",
+      "source": "crates/engine/src/catalog.rs:137"
+    },
+    {
+      "tab": "Home",
+      "group": "Editing",
+      "label": "Replace All",
+      "id": "edit.replaceAll",
+      "source": "crates/engine/src/catalog.rs:138"
+    },
+    {
+      "tab": "Home",
+      "group": "Editing",
+      "label": "Go To",
+      "id": "edit.goto",
+      "source": "crates/engine/src/catalog.rs:139"
+    },
+    {
+      "tab": "Home",
+      "group": "Editing",
+      "label": "Select All",
+      "id": "select.all",
+      "source": "crates/engine/src/catalog.rs:140"
+    },
+    {
+      "tab": "Home",
+      "group": "Editing",
+      "label": "Select Objects",
+      "id": "select.objects",
+      "source": "crates/engine/src/catalog.rs:141"
+    },
+    {
+      "tab": "Home",
+      "group": "Editing",
+      "label": "Select Similar Formatting",
+      "id": "select.similar",
+      "source": "crates/engine/src/catalog.rs:142"
+    },
+    {
+      "tab": "Home",
+      "group": "Voice",
+      "label": "Dictate",
+      "id": "tools.dictate",
+      "source": "crates/engine/src/catalog.rs:143"
+    },
+    {
+      "tab": "Home",
+      "group": "Editor",
+      "label": "Editor",
+      "id": "review.editor",
+      "source": "crates/engine/src/catalog.rs:144"
+    },
+    {
+      "tab": "Insert",
+      "group": "Pages",
+      "label": "Cover Page",
+      "id": "insert.coverPage",
+      "source": "crates/engine/src/catalog.rs:145"
+    },
+    {
+      "tab": "Insert",
+      "group": "Pages",
+      "label": "Blank Page",
+      "id": "insert.blankPage",
+      "source": "crates/engine/src/catalog.rs:146"
+    },
+    {
+      "tab": "Insert",
+      "group": "Pages",
+      "label": "Page Break",
+      "id": "insert.pageBreak",
+      "source": "crates/engine/src/catalog.rs:147"
+    },
+    {
+      "tab": "Insert",
+      "group": "Tables",
+      "label": "Insert Table",
+      "id": "insert.table",
+      "source": "crates/engine/src/catalog.rs:148"
+    },
+    {
+      "tab": "Insert",
+      "group": "Tables",
+      "label": "Draw Table",
+      "id": "table.draw",
+      "source": "crates/engine/src/catalog.rs:149"
+    },
+    {
+      "tab": "Insert",
+      "group": "Tables",
+      "label": "Convert Text to Table",
+      "id": "table.fromText",
+      "source": "crates/engine/src/catalog.rs:150"
+    },
+    {
+      "tab": "Insert",
+      "group": "Tables",
+      "label": "Excel Spreadsheet",
+      "id": "insert.spreadsheet",
+      "source": "crates/engine/src/catalog.rs:151"
+    },
+    {
+      "tab": "Insert",
+      "group": "Tables",
+      "label": "Quick Tables",
+      "id": "table.quick",
+      "source": "crates/engine/src/catalog.rs:152"
+    },
+    {
+      "tab": "Insert",
+      "group": "Illustrations",
+      "label": "Pictures",
+      "id": "insert.picture",
+      "source": "crates/engine/src/catalog.rs:153"
+    },
+    {
+      "tab": "Insert",
+      "group": "Illustrations",
+      "label": "Online Pictures",
+      "id": "insert.onlinePicture",
+      "source": "crates/engine/src/catalog.rs:154"
+    },
+    {
+      "tab": "Insert",
+      "group": "Illustrations",
+      "label": "Shapes",
+      "id": "insert.shape",
+      "source": "crates/engine/src/catalog.rs:155"
+    },
+    {
+      "tab": "Insert",
+      "group": "Illustrations",
+      "label": "Icons",
+      "id": "insert.icon",
+      "source": "crates/engine/src/catalog.rs:156"
+    },
+    {
+      "tab": "Insert",
+      "group": "Illustrations",
+      "label": "3D Models",
+      "id": "insert.model3d",
+      "source": "crates/engine/src/catalog.rs:157"
+    },
+    {
+      "tab": "Insert",
+      "group": "Illustrations",
+      "label": "SmartArt",
+      "id": "insert.smartArt",
+      "source": "crates/engine/src/catalog.rs:158"
+    },
+    {
+      "tab": "Insert",
+      "group": "Illustrations",
+      "label": "Chart",
+      "id": "insert.chart",
+      "source": "crates/engine/src/catalog.rs:159"
+    },
+    {
+      "tab": "Insert",
+      "group": "Illustrations",
+      "label": "Screenshot",
+      "id": "insert.screenshot",
+      "source": "crates/engine/src/catalog.rs:160"
+    },
+    {
+      "tab": "Insert",
+      "group": "Illustrations",
+      "label": "Drawing Canvas",
+      "id": "insert.canvas",
+      "source": "crates/engine/src/catalog.rs:161"
+    },
+    {
+      "tab": "Insert",
+      "group": "Add-ins",
+      "label": "Get Add-ins",
+      "id": "addins.get",
+      "source": "crates/engine/src/catalog.rs:162"
+    },
+    {
+      "tab": "Insert",
+      "group": "Media",
+      "label": "Online Video",
+      "id": "insert.video",
+      "source": "crates/engine/src/catalog.rs:163"
+    },
+    {
+      "tab": "Insert",
+      "group": "Links",
+      "label": "Link",
+      "id": "insert.link",
+      "source": "crates/engine/src/catalog.rs:164"
+    },
+    {
+      "tab": "Insert",
+      "group": "Links",
+      "label": "Remove Link",
+      "id": "insert.removeLink",
+      "source": "crates/engine/src/catalog.rs:165"
+    },
+    {
+      "tab": "Insert",
+      "group": "Links",
+      "label": "Bookmark",
+      "id": "insert.bookmark",
+      "source": "crates/engine/src/catalog.rs:166"
+    },
+    {
+      "tab": "Insert",
+      "group": "Links",
+      "label": "Cross-reference",
+      "id": "insert.crossReference",
+      "source": "crates/engine/src/catalog.rs:167"
+    },
+    {
+      "tab": "Insert",
+      "group": "Comments",
+      "label": "Comment",
+      "id": "review.newComment",
+      "source": "crates/engine/src/catalog.rs:168"
+    },
+    {
+      "tab": "Insert",
+      "group": "Header & Footer",
+      "label": "Header",
+      "id": "insert.header",
+      "source": "crates/engine/src/catalog.rs:169"
+    },
+    {
+      "tab": "Insert",
+      "group": "Header & Footer",
+      "label": "Footer",
+      "id": "insert.footer",
+      "source": "crates/engine/src/catalog.rs:170"
+    },
+    {
+      "tab": "Insert",
+      "group": "Header & Footer",
+      "label": "Page Number",
+      "id": "insert.pageNumber",
+      "source": "crates/engine/src/catalog.rs:171"
+    },
+    {
+      "tab": "Insert",
+      "group": "Header & Footer",
+      "label": "Edit Header",
+      "id": "insert.editHeader",
+      "source": "crates/engine/src/catalog.rs:172"
+    },
+    {
+      "tab": "Insert",
+      "group": "Header & Footer",
+      "label": "Edit Footer",
+      "id": "insert.editFooter",
+      "source": "crates/engine/src/catalog.rs:173"
+    },
+    {
+      "tab": "Insert",
+      "group": "Header & Footer",
+      "label": "Remove Header",
+      "id": "insert.removeHeader",
+      "source": "crates/engine/src/catalog.rs:174"
+    },
+    {
+      "tab": "Insert",
+      "group": "Header & Footer",
+      "label": "Remove Footer",
+      "id": "insert.removeFooter",
+      "source": "crates/engine/src/catalog.rs:175"
+    },
+    {
+      "tab": "Insert",
+      "group": "Header & Footer",
+      "label": "Format Page Numbers",
+      "id": "layout.pageNumberFormat",
+      "source": "crates/engine/src/catalog.rs:176"
+    },
+    {
+      "tab": "Insert",
+      "group": "Header & Footer",
+      "label": "Close Header and Footer",
+      "id": "insert.closeHeader",
+      "source": "crates/engine/src/catalog.rs:177"
+    },
+    {
+      "tab": "Insert",
+      "group": "Header & Footer",
+      "label": "Different First Page",
+      "id": "layout.differentFirstPage",
+      "source": "crates/engine/src/catalog.rs:178"
+    },
+    {
+      "tab": "Insert",
+      "group": "Header & Footer",
+      "label": "Different Odd & Even",
+      "id": "layout.differentOddEven",
+      "source": "crates/engine/src/catalog.rs:179"
+    },
+    {
+      "tab": "Insert",
+      "group": "Header & Footer",
+      "label": "Link to Previous",
+      "id": "layout.linkToPrevious",
+      "source": "crates/engine/src/catalog.rs:180"
+    },
+    {
+      "tab": "Insert",
+      "group": "Text",
+      "label": "Text Box",
+      "id": "insert.textBox",
+      "source": "crates/engine/src/catalog.rs:181"
+    },
+    {
+      "tab": "Insert",
+      "group": "Text",
+      "label": "Quick Parts",
+      "id": "insert.quickParts",
+      "source": "crates/engine/src/catalog.rs:182"
+    },
+    {
+      "tab": "Insert",
+      "group": "Text",
+      "label": "AutoText",
+      "id": "insert.autoText",
+      "source": "crates/engine/src/catalog.rs:183"
+    },
+    {
+      "tab": "Insert",
+      "group": "Text",
+      "label": "Document Property",
+      "id": "insert.docProperty",
+      "source": "crates/engine/src/catalog.rs:184"
+    },
+    {
+      "tab": "Insert",
+      "group": "Text",
+      "label": "Field",
+      "id": "insert.field",
+      "source": "crates/engine/src/catalog.rs:185"
+    },
+    {
+      "tab": "Insert",
+      "group": "Text",
+      "label": "WordArt",
+      "id": "insert.wordArt",
+      "source": "crates/engine/src/catalog.rs:186"
+    },
+    {
+      "tab": "Insert",
+      "group": "Text",
+      "label": "Drop Cap",
+      "id": "insert.dropCap",
+      "source": "crates/engine/src/catalog.rs:187"
+    },
+    {
+      "tab": "Insert",
+      "group": "Text",
+      "label": "Signature Line",
+      "id": "insert.signatureLine",
+      "source": "crates/engine/src/catalog.rs:188"
+    },
+    {
+      "tab": "Insert",
+      "group": "Text",
+      "label": "Date & Time",
+      "id": "insert.dateTime",
+      "source": "crates/engine/src/catalog.rs:189"
+    },
+    {
+      "tab": "Insert",
+      "group": "Text",
+      "label": "Object",
+      "id": "insert.object",
+      "source": "crates/engine/src/catalog.rs:190"
+    },
+    {
+      "tab": "Insert",
+      "group": "Text",
+      "label": "Text from File",
+      "id": "insert.textFromFile",
+      "source": "crates/engine/src/catalog.rs:191"
+    },
+    {
+      "tab": "Insert",
+      "group": "Symbols",
+      "label": "Equation",
+      "id": "insert.equation",
+      "source": "crates/engine/src/catalog.rs:192"
+    },
+    {
+      "tab": "Insert",
+      "group": "Symbols",
+      "label": "Ink Equation",
+      "id": "insert.inkEquation",
+      "source": "crates/engine/src/catalog.rs:193"
+    },
+    {
+      "tab": "Insert",
+      "group": "Symbols",
+      "label": "Symbol",
+      "id": "insert.symbol",
+      "source": "crates/engine/src/catalog.rs:194"
+    },
+    {
+      "tab": "Insert",
+      "group": "Symbols",
+      "label": "Nonbreaking Space",
+      "id": "text.nbsp",
+      "source": "crates/engine/src/catalog.rs:195"
+    },
+    {
+      "tab": "Insert",
+      "group": "Symbols",
+      "label": "Nonbreaking Hyphen",
+      "id": "text.nbHyphen",
+      "source": "crates/engine/src/catalog.rs:196"
+    },
+    {
+      "tab": "Insert",
+      "group": "Symbols",
+      "label": "Optional Hyphen",
+      "id": "text.optionalHyphen",
+      "source": "crates/engine/src/catalog.rs:197"
+    },
+    {
+      "tab": "Draw",
+      "group": "Tools",
+      "label": "Select",
+      "id": "draw.select",
+      "source": "crates/engine/src/catalog.rs:198"
+    },
+    {
+      "tab": "Draw",
+      "group": "Tools",
+      "label": "Lasso Select",
+      "id": "draw.lasso",
+      "source": "crates/engine/src/catalog.rs:199"
+    },
+    {
+      "tab": "Draw",
+      "group": "Tools",
+      "label": "Eraser",
+      "id": "draw.eraser",
+      "source": "crates/engine/src/catalog.rs:200"
+    },
+    {
+      "tab": "Draw",
+      "group": "Pens",
+      "label": "Pen",
+      "id": "draw.pen",
+      "source": "crates/engine/src/catalog.rs:201"
+    },
+    {
+      "tab": "Draw",
+      "group": "Pens",
+      "label": "Pencil",
+      "id": "draw.pencil",
+      "source": "crates/engine/src/catalog.rs:202"
+    },
+    {
+      "tab": "Draw",
+      "group": "Pens",
+      "label": "Highlighter",
+      "id": "draw.highlighter",
+      "source": "crates/engine/src/catalog.rs:203"
+    },
+    {
+      "tab": "Draw",
+      "group": "Pens",
+      "label": "Add Pen",
+      "id": "draw.addPen",
+      "source": "crates/engine/src/catalog.rs:204"
+    },
+    {
+      "tab": "Draw",
+      "group": "Convert",
+      "label": "Ink to Shape",
+      "id": "draw.inkToShape",
+      "source": "crates/engine/src/catalog.rs:205"
+    },
+    {
+      "tab": "Draw",
+      "group": "Convert",
+      "label": "Ink to Math",
+      "id": "draw.inkToMath",
+      "source": "crates/engine/src/catalog.rs:206"
+    },
+    {
+      "tab": "Draw",
+      "group": "Insert",
+      "label": "Drawing Canvas",
+      "id": "insert.canvas",
+      "source": "crates/engine/src/catalog.rs:207"
+    },
+    {
+      "tab": "Draw",
+      "group": "Replay",
+      "label": "Ink Replay",
+      "id": "draw.replay",
+      "source": "crates/engine/src/catalog.rs:208"
+    },
+    {
+      "tab": "Design",
+      "group": "Document Formatting",
+      "label": "Themes",
+      "id": "design.theme",
+      "source": "crates/engine/src/catalog.rs:209"
+    },
+    {
+      "tab": "Design",
+      "group": "Document Formatting",
+      "label": "Style Set",
+      "id": "design.styleSet",
+      "source": "crates/engine/src/catalog.rs:210"
+    },
+    {
+      "tab": "Design",
+      "group": "Document Formatting",
+      "label": "Colors",
+      "id": "design.themeColors",
+      "source": "crates/engine/src/catalog.rs:211"
+    },
+    {
+      "tab": "Design",
+      "group": "Document Formatting",
+      "label": "Fonts",
+      "id": "design.themeFonts",
+      "source": "crates/engine/src/catalog.rs:212"
+    },
+    {
+      "tab": "Design",
+      "group": "Document Formatting",
+      "label": "Paragraph Spacing",
+      "id": "design.paragraphSpacing",
+      "source": "crates/engine/src/catalog.rs:213"
+    },
+    {
+      "tab": "Design",
+      "group": "Document Formatting",
+      "label": "Effects",
+      "id": "design.effects",
+      "source": "crates/engine/src/catalog.rs:214"
+    },
+    {
+      "tab": "Design",
+      "group": "Document Formatting",
+      "label": "Set as Default",
+      "id": "design.setDefault",
+      "source": "crates/engine/src/catalog.rs:215"
+    },
+    {
+      "tab": "Design",
+      "group": "Page Background",
+      "label": "Watermark",
+      "id": "design.watermark",
+      "source": "crates/engine/src/catalog.rs:216"
+    },
+    {
+      "tab": "Design",
+      "group": "Page Background",
+      "label": "Page Color",
+      "id": "design.pageColor",
+      "source": "crates/engine/src/catalog.rs:217"
+    },
+    {
+      "tab": "Design",
+      "group": "Page Background",
+      "label": "Page Borders",
+      "id": "design.pageBorders",
+      "source": "crates/engine/src/catalog.rs:218"
+    },
+    {
+      "tab": "Layout",
+      "group": "Page Setup",
+      "label": "Margins",
+      "id": "layout.margins",
+      "source": "crates/engine/src/catalog.rs:219"
+    },
+    {
+      "tab": "Layout",
+      "group": "Page Setup",
+      "label": "Orientation",
+      "id": "layout.orientation",
+      "source": "crates/engine/src/catalog.rs:220"
+    },
+    {
+      "tab": "Layout",
+      "group": "Page Setup",
+      "label": "Size",
+      "id": "layout.size",
+      "source": "crates/engine/src/catalog.rs:221"
+    },
+    {
+      "tab": "Layout",
+      "group": "Page Setup",
+      "label": "Columns",
+      "id": "layout.columns",
+      "source": "crates/engine/src/catalog.rs:222"
+    },
+    {
+      "tab": "Layout",
+      "group": "Page Setup",
+      "label": "Breaks",
+      "id": "layout.break",
+      "source": "crates/engine/src/catalog.rs:223"
+    },
+    {
+      "tab": "Layout",
+      "group": "Page Setup",
+      "label": "Line Numbers",
+      "id": "layout.lineNumbers",
+      "source": "crates/engine/src/catalog.rs:224"
+    },
+    {
+      "tab": "Layout",
+      "group": "Page Setup",
+      "label": "Hyphenation",
+      "id": "layout.hyphenation",
+      "source": "crates/engine/src/catalog.rs:225"
+    },
+    {
+      "tab": "Layout",
+      "group": "Page Setup",
+      "label": "Page Setup Dialog",
+      "id": "layout.pageSetup",
+      "source": "crates/engine/src/catalog.rs:226"
+    },
+    {
+      "tab": "Layout",
+      "group": "Page Setup",
+      "label": "Vertical Alignment",
+      "id": "layout.verticalAlign",
+      "source": "crates/engine/src/catalog.rs:227"
+    },
+    {
+      "tab": "Layout",
+      "group": "Page Setup",
+      "label": "Document Grid",
+      "id": "layout.documentGrid",
+      "source": "crates/engine/src/catalog.rs:228"
+    },
+    {
+      "tab": "Layout",
+      "group": "Page Setup",
+      "label": "Section Direction",
+      "id": "layout.sectionRtl",
+      "source": "crates/engine/src/catalog.rs:229"
+    },
+    {
+      "tab": "Layout",
+      "group": "Page Setup",
+      "label": "Text Direction",
+      "id": "layout.textDirection",
+      "source": "crates/engine/src/catalog.rs:230"
+    },
+    {
+      "tab": "Layout",
+      "group": "Paragraph",
+      "label": "Indent",
+      "id": "para.indents",
+      "source": "crates/engine/src/catalog.rs:231"
+    },
+    {
+      "tab": "Layout",
+      "group": "Paragraph",
+      "label": "Spacing",
+      "id": "para.spacing",
+      "source": "crates/engine/src/catalog.rs:232"
+    },
+    {
+      "tab": "Layout",
+      "group": "Arrange",
+      "label": "Position",
+      "id": "arrange.position",
+      "source": "crates/engine/src/catalog.rs:233"
+    },
+    {
+      "tab": "Layout",
+      "group": "Arrange",
+      "label": "Wrap Text",
+      "id": "arrange.wrap",
+      "source": "crates/engine/src/catalog.rs:234"
+    },
+    {
+      "tab": "Layout",
+      "group": "Arrange",
+      "label": "Bring Forward",
+      "id": "arrange.bringForward",
+      "source": "crates/engine/src/catalog.rs:235"
+    },
+    {
+      "tab": "Layout",
+      "group": "Arrange",
+      "label": "Send Backward",
+      "id": "arrange.sendBackward",
+      "source": "crates/engine/src/catalog.rs:236"
+    },
+    {
+      "tab": "Layout",
+      "group": "Arrange",
+      "label": "Selection Pane",
+      "id": "arrange.selectionPane",
+      "source": "crates/engine/src/catalog.rs:237"
+    },
+    {
+      "tab": "Layout",
+      "group": "Arrange",
+      "label": "Align",
+      "id": "arrange.align",
+      "source": "crates/engine/src/catalog.rs:238"
+    },
+    {
+      "tab": "Layout",
+      "group": "Arrange",
+      "label": "Group",
+      "id": "arrange.group",
+      "source": "crates/engine/src/catalog.rs:239"
+    },
+    {
+      "tab": "Layout",
+      "group": "Arrange",
+      "label": "Rotate",
+      "id": "arrange.rotate",
+      "source": "crates/engine/src/catalog.rs:240"
+    },
+    {
+      "tab": "References",
+      "group": "Table of Contents",
+      "label": "Table of Contents",
+      "id": "references.toc",
+      "source": "crates/engine/src/catalog.rs:241"
+    },
+    {
+      "tab": "References",
+      "group": "Table of Contents",
+      "label": "Add Text",
+      "id": "references.addText",
+      "source": "crates/engine/src/catalog.rs:242"
+    },
+    {
+      "tab": "References",
+      "group": "Table of Contents",
+      "label": "Update Table",
+      "id": "references.updateToc",
+      "source": "crates/engine/src/catalog.rs:243"
+    },
+    {
+      "tab": "References",
+      "group": "Table of Contents",
+      "label": "Remove Table of Contents",
+      "id": "references.removeToc",
+      "source": "crates/engine/src/catalog.rs:244"
+    },
+    {
+      "tab": "References",
+      "group": "Footnotes",
+      "label": "Insert Footnote",
+      "id": "references.footnote",
+      "source": "crates/engine/src/catalog.rs:245"
+    },
+    {
+      "tab": "References",
+      "group": "Footnotes",
+      "label": "Insert Endnote",
+      "id": "references.endnote",
+      "source": "crates/engine/src/catalog.rs:246"
+    },
+    {
+      "tab": "References",
+      "group": "Footnotes",
+      "label": "Next Footnote",
+      "id": "references.nextFootnote",
+      "source": "crates/engine/src/catalog.rs:247"
+    },
+    {
+      "tab": "References",
+      "group": "Footnotes",
+      "label": "Show Notes",
+      "id": "references.notes",
+      "source": "crates/engine/src/catalog.rs:248"
+    },
+    {
+      "tab": "References",
+      "group": "Footnotes",
+      "label": "Footnote Options",
+      "id": "references.noteOptions",
+      "source": "crates/engine/src/catalog.rs:249"
+    },
+    {
+      "tab": "References",
+      "group": "Research",
+      "label": "Researcher",
+      "id": "references.researcher",
+      "source": "crates/engine/src/catalog.rs:250"
+    },
+    {
+      "tab": "References",
+      "group": "Citations",
+      "label": "Insert Citation",
+      "id": "references.citation",
+      "source": "crates/engine/src/catalog.rs:251"
+    },
+    {
+      "tab": "References",
+      "group": "Citations",
+      "label": "Manage Sources",
+      "id": "references.sources",
+      "source": "crates/engine/src/catalog.rs:252"
+    },
+    {
+      "tab": "References",
+      "group": "Citations",
+      "label": "Style",
+      "id": "references.citationStyle",
+      "source": "crates/engine/src/catalog.rs:253"
+    },
+    {
+      "tab": "References",
+      "group": "Citations",
+      "label": "Bibliography",
+      "id": "references.bibliography",
+      "source": "crates/engine/src/catalog.rs:254"
+    },
+    {
+      "tab": "References",
+      "group": "Captions",
+      "label": "Insert Caption",
+      "id": "references.caption",
+      "source": "crates/engine/src/catalog.rs:255"
+    },
+    {
+      "tab": "References",
+      "group": "Captions",
+      "label": "Insert Table of Figures",
+      "id": "references.tableOfFigures",
+      "source": "crates/engine/src/catalog.rs:256"
+    },
+    {
+      "tab": "References",
+      "group": "Captions",
+      "label": "Update Table of Figures",
+      "id": "references.updateFigures",
+      "source": "crates/engine/src/catalog.rs:257"
+    },
+    {
+      "tab": "References",
+      "group": "Captions",
+      "label": "Cross-reference",
+      "id": "insert.crossReference",
+      "source": "crates/engine/src/catalog.rs:258"
+    },
+    {
+      "tab": "References",
+      "group": "Index",
+      "label": "Mark Entry",
+      "id": "references.markEntry",
+      "source": "crates/engine/src/catalog.rs:259"
+    },
+    {
+      "tab": "References",
+      "group": "Index",
+      "label": "Insert Index",
+      "id": "references.index",
+      "source": "crates/engine/src/catalog.rs:260"
+    },
+    {
+      "tab": "References",
+      "group": "Index",
+      "label": "Update Index",
+      "id": "references.updateIndex",
+      "source": "crates/engine/src/catalog.rs:261"
+    },
+    {
+      "tab": "References",
+      "group": "Table of Authorities",
+      "label": "Mark Citation",
+      "id": "references.markCitation",
+      "source": "crates/engine/src/catalog.rs:262"
+    },
+    {
+      "tab": "References",
+      "group": "Table of Authorities",
+      "label": "Insert Table of Authorities",
+      "id": "references.tableOfAuthorities",
+      "source": "crates/engine/src/catalog.rs:263"
+    },
+    {
+      "tab": "References",
+      "group": "Table of Authorities",
+      "label": "Update Table",
+      "id": "references.updateAuthorities",
+      "source": "crates/engine/src/catalog.rs:264"
+    },
+    {
+      "tab": "References",
+      "group": "Fields",
+      "label": "Update Fields",
+      "id": "references.updateFields",
+      "source": "crates/engine/src/catalog.rs:265"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Create",
+      "label": "Envelopes",
+      "id": "mailings.envelopes",
+      "source": "crates/engine/src/catalog.rs:266"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Create",
+      "label": "Labels",
+      "id": "mailings.labels",
+      "source": "crates/engine/src/catalog.rs:267"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Start Mail Merge",
+      "label": "Start Mail Merge",
+      "id": "mailings.start",
+      "source": "crates/engine/src/catalog.rs:268"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Start Mail Merge",
+      "label": "Select Recipients",
+      "id": "mailings.recipients",
+      "source": "crates/engine/src/catalog.rs:269"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Start Mail Merge",
+      "label": "Edit Recipient List",
+      "id": "mailings.editRecipients",
+      "source": "crates/engine/src/catalog.rs:270"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Start Mail Merge",
+      "label": "Filter Recipients",
+      "id": "mailings.filterRecipients",
+      "source": "crates/engine/src/catalog.rs:271"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Start Mail Merge",
+      "label": "Sort Recipients",
+      "id": "mailings.sortRecipients",
+      "source": "crates/engine/src/catalog.rs:272"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Write & Insert Fields",
+      "label": "Highlight Merge Fields",
+      "id": "mailings.highlightFields",
+      "source": "crates/engine/src/catalog.rs:273"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Write & Insert Fields",
+      "label": "Address Block",
+      "id": "mailings.addressBlock",
+      "source": "crates/engine/src/catalog.rs:274"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Write & Insert Fields",
+      "label": "Greeting Line",
+      "id": "mailings.greetingLine",
+      "source": "crates/engine/src/catalog.rs:275"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Write & Insert Fields",
+      "label": "Insert Merge Field",
+      "id": "mailings.insertField",
+      "source": "crates/engine/src/catalog.rs:276"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Write & Insert Fields",
+      "label": "Rules",
+      "id": "mailings.rules",
+      "source": "crates/engine/src/catalog.rs:277"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Write & Insert Fields",
+      "label": "Match Fields",
+      "id": "mailings.matchFields",
+      "source": "crates/engine/src/catalog.rs:278"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Preview Results",
+      "label": "Preview Results",
+      "id": "mailings.preview",
+      "source": "crates/engine/src/catalog.rs:279"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Preview Results",
+      "label": "Next Record",
+      "id": "mailings.next",
+      "source": "crates/engine/src/catalog.rs:280"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Preview Results",
+      "label": "Previous Record",
+      "id": "mailings.previous",
+      "source": "crates/engine/src/catalog.rs:281"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Preview Results",
+      "label": "First Record",
+      "id": "mailings.first",
+      "source": "crates/engine/src/catalog.rs:282"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Preview Results",
+      "label": "Last Record",
+      "id": "mailings.last",
+      "source": "crates/engine/src/catalog.rs:283"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Preview Results",
+      "label": "Go to Record",
+      "id": "mailings.goToRecord",
+      "source": "crates/engine/src/catalog.rs:284"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Preview Results",
+      "label": "Find Recipient",
+      "id": "mailings.findRecipient",
+      "source": "crates/engine/src/catalog.rs:285"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Preview Results",
+      "label": "Check for Errors",
+      "id": "mailings.checkErrors",
+      "source": "crates/engine/src/catalog.rs:286"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Finish",
+      "label": "Finish & Merge",
+      "id": "mailings.finish",
+      "source": "crates/engine/src/catalog.rs:287"
+    },
+    {
+      "tab": "Mailings",
+      "group": "Finish",
+      "label": "Print Documents",
+      "id": "mailings.printDocuments",
+      "source": "crates/engine/src/catalog.rs:288"
+    },
+    {
+      "tab": "Review",
+      "group": "Proofing",
+      "label": "Spelling & Grammar",
+      "id": "review.spelling",
+      "source": "crates/engine/src/catalog.rs:289"
+    },
+    {
+      "tab": "Review",
+      "group": "Proofing",
+      "label": "Thesaurus",
+      "id": "review.thesaurus",
+      "source": "crates/engine/src/catalog.rs:290"
+    },
+    {
+      "tab": "Review",
+      "group": "Proofing",
+      "label": "Word Count",
+      "id": "review.wordCount",
+      "source": "crates/engine/src/catalog.rs:291"
+    },
+    {
+      "tab": "Review",
+      "group": "Speech",
+      "label": "Read Aloud",
+      "id": "review.readAloud",
+      "source": "crates/engine/src/catalog.rs:292"
+    },
+    {
+      "tab": "Review",
+      "group": "Accessibility",
+      "label": "Check Accessibility",
+      "id": "file.accessibility",
+      "source": "crates/engine/src/catalog.rs:293"
+    },
+    {
+      "tab": "Review",
+      "group": "Accessibility",
+      "label": "Alt Text",
+      "id": "view.altTextPane",
+      "source": "crates/engine/src/catalog.rs:294"
+    },
+    {
+      "tab": "Review",
+      "group": "Language",
+      "label": "Translate",
+      "id": "review.translate",
+      "source": "crates/engine/src/catalog.rs:295"
+    },
+    {
+      "tab": "Review",
+      "group": "Language",
+      "label": "Language",
+      "id": "review.language",
+      "source": "crates/engine/src/catalog.rs:296"
+    },
+    {
+      "tab": "Review",
+      "group": "Comments",
+      "label": "New Comment",
+      "id": "review.newComment",
+      "source": "crates/engine/src/catalog.rs:297"
+    },
+    {
+      "tab": "Review",
+      "group": "Comments",
+      "label": "Delete",
+      "id": "review.deleteComment",
+      "source": "crates/engine/src/catalog.rs:298"
+    },
+    {
+      "tab": "Review",
+      "group": "Comments",
+      "label": "Previous",
+      "id": "review.previousComment",
+      "source": "crates/engine/src/catalog.rs:299"
+    },
+    {
+      "tab": "Review",
+      "group": "Comments",
+      "label": "Next",
+      "id": "review.nextComment",
+      "source": "crates/engine/src/catalog.rs:300"
+    },
+    {
+      "tab": "Review",
+      "group": "Comments",
+      "label": "Show Comments",
+      "id": "review.comments",
+      "source": "crates/engine/src/catalog.rs:301"
+    },
+    {
+      "tab": "Review",
+      "group": "Comments",
+      "label": "Resolve",
+      "id": "review.resolveComment",
+      "source": "crates/engine/src/catalog.rs:302"
+    },
+    {
+      "tab": "Review",
+      "group": "Comments",
+      "label": "Reply",
+      "id": "review.reply",
+      "source": "crates/engine/src/catalog.rs:303"
+    },
+    {
+      "tab": "Review",
+      "group": "Tracking",
+      "label": "Track Changes",
+      "id": "review.trackChanges",
+      "source": "crates/engine/src/catalog.rs:304"
+    },
+    {
+      "tab": "Review",
+      "group": "Tracking",
+      "label": "Display for Review",
+      "id": "review.markup",
+      "source": "crates/engine/src/catalog.rs:305"
+    },
+    {
+      "tab": "Review",
+      "group": "Tracking",
+      "label": "Show Markup",
+      "id": "review.showMarkup",
+      "source": "crates/engine/src/catalog.rs:306"
+    },
+    {
+      "tab": "Review",
+      "group": "Tracking",
+      "label": "Reviewing Pane",
+      "id": "review.changes",
+      "source": "crates/engine/src/catalog.rs:307"
+    },
+    {
+      "tab": "Review",
+      "group": "Tracking",
+      "label": "Track Changes Options",
+      "id": "review.trackingOptions",
+      "source": "crates/engine/src/catalog.rs:308"
+    },
+    {
+      "tab": "Review",
+      "group": "Changes",
+      "label": "Accept",
+      "id": "review.accept",
+      "source": "crates/engine/src/catalog.rs:309"
+    },
+    {
+      "tab": "Review",
+      "group": "Changes",
+      "label": "Reject",
+      "id": "review.reject",
+      "source": "crates/engine/src/catalog.rs:310"
+    },
+    {
+      "tab": "Review",
+      "group": "Changes",
+      "label": "Accept All",
+      "id": "review.acceptAll",
+      "source": "crates/engine/src/catalog.rs:311"
+    },
+    {
+      "tab": "Review",
+      "group": "Changes",
+      "label": "Reject All",
+      "id": "review.rejectAll",
+      "source": "crates/engine/src/catalog.rs:312"
+    },
+    {
+      "tab": "Review",
+      "group": "Changes",
+      "label": "Previous Change",
+      "id": "review.previousChange",
+      "source": "crates/engine/src/catalog.rs:313"
+    },
+    {
+      "tab": "Review",
+      "group": "Changes",
+      "label": "Next Change",
+      "id": "review.nextChange",
+      "source": "crates/engine/src/catalog.rs:314"
+    },
+    {
+      "tab": "Review",
+      "group": "Compare",
+      "label": "Compare",
+      "id": "review.compare",
+      "source": "crates/engine/src/catalog.rs:315"
+    },
+    {
+      "tab": "Review",
+      "group": "Compare",
+      "label": "Combine",
+      "id": "review.combine",
+      "source": "crates/engine/src/catalog.rs:316"
+    },
+    {
+      "tab": "Review",
+      "group": "Protect",
+      "label": "Block Authors",
+      "id": "review.blockAuthors",
+      "source": "crates/engine/src/catalog.rs:317"
+    },
+    {
+      "tab": "Review",
+      "group": "Protect",
+      "label": "Restrict Editing",
+      "id": "review.restrict",
+      "source": "crates/engine/src/catalog.rs:318"
+    },
+    {
+      "tab": "Review",
+      "group": "Ink",
+      "label": "Hide Ink",
+      "id": "review.hideInk",
+      "source": "crates/engine/src/catalog.rs:319"
+    },
+    {
+      "tab": "View",
+      "group": "Views",
+      "label": "Read Mode",
+      "id": "view.readMode",
+      "source": "crates/engine/src/catalog.rs:320"
+    },
+    {
+      "tab": "View",
+      "group": "Views",
+      "label": "Print Layout",
+      "id": "view.printLayout",
+      "source": "crates/engine/src/catalog.rs:321"
+    },
+    {
+      "tab": "View",
+      "group": "Views",
+      "label": "Web Layout",
+      "id": "view.webLayout",
+      "source": "crates/engine/src/catalog.rs:322"
+    },
+    {
+      "tab": "View",
+      "group": "Views",
+      "label": "Outline",
+      "id": "view.outline",
+      "source": "crates/engine/src/catalog.rs:323"
+    },
+    {
+      "tab": "View",
+      "group": "Views",
+      "label": "Draft",
+      "id": "view.draft",
+      "source": "crates/engine/src/catalog.rs:324"
+    },
+    {
+      "tab": "View",
+      "group": "Immersive",
+      "label": "Focus",
+      "id": "view.focus",
+      "source": "crates/engine/src/catalog.rs:325"
+    },
+    {
+      "tab": "View",
+      "group": "Immersive",
+      "label": "Immersive Reader",
+      "id": "view.immersive",
+      "source": "crates/engine/src/catalog.rs:326"
+    },
+    {
+      "tab": "View",
+      "group": "Page Movement",
+      "label": "Vertical",
+      "id": "view.vertical",
+      "source": "crates/engine/src/catalog.rs:327"
+    },
+    {
+      "tab": "View",
+      "group": "Page Movement",
+      "label": "Side to Side",
+      "id": "view.sideToSide",
+      "source": "crates/engine/src/catalog.rs:328"
+    },
+    {
+      "tab": "View",
+      "group": "Show",
+      "label": "Ruler",
+      "id": "view.ruler",
+      "source": "crates/engine/src/catalog.rs:329"
+    },
+    {
+      "tab": "View",
+      "group": "Show",
+      "label": "Gridlines",
+      "id": "view.gridlines",
+      "source": "crates/engine/src/catalog.rs:330"
+    },
+    {
+      "tab": "View",
+      "group": "Show",
+      "label": "Navigation Pane",
+      "id": "view.navigationPane",
+      "source": "crates/engine/src/catalog.rs:331"
+    },
+    {
+      "tab": "View",
+      "group": "Zoom",
+      "label": "Zoom",
+      "id": "view.zoom",
+      "source": "crates/engine/src/catalog.rs:332"
+    },
+    {
+      "tab": "View",
+      "group": "Zoom",
+      "label": "100%",
+      "id": "view.zoom100",
+      "source": "crates/engine/src/catalog.rs:333"
+    },
+    {
+      "tab": "View",
+      "group": "Zoom",
+      "label": "One Page",
+      "id": "view.onePage",
+      "source": "crates/engine/src/catalog.rs:334"
+    },
+    {
+      "tab": "View",
+      "group": "Zoom",
+      "label": "Multiple Pages",
+      "id": "view.multiplePages",
+      "source": "crates/engine/src/catalog.rs:335"
+    },
+    {
+      "tab": "View",
+      "group": "Zoom",
+      "label": "Page Width",
+      "id": "view.pageWidth",
+      "source": "crates/engine/src/catalog.rs:336"
+    },
+    {
+      "tab": "View",
+      "group": "Zoom",
+      "label": "Zoom In",
+      "id": "view.zoomIn",
+      "source": "crates/engine/src/catalog.rs:337"
+    },
+    {
+      "tab": "View",
+      "group": "Zoom",
+      "label": "Zoom Out",
+      "id": "view.zoomOut",
+      "source": "crates/engine/src/catalog.rs:338"
+    },
+    {
+      "tab": "View",
+      "group": "Dark Mode",
+      "label": "Switch Modes",
+      "id": "view.darkMode",
+      "source": "crates/engine/src/catalog.rs:339"
+    },
+    {
+      "tab": "View",
+      "group": "Window",
+      "label": "New Window",
+      "id": "view.newWindow",
+      "source": "crates/engine/src/catalog.rs:340"
+    },
+    {
+      "tab": "View",
+      "group": "Window",
+      "label": "Arrange All",
+      "id": "view.arrangeAll",
+      "source": "crates/engine/src/catalog.rs:341"
+    },
+    {
+      "tab": "View",
+      "group": "Window",
+      "label": "Split",
+      "id": "view.split",
+      "source": "crates/engine/src/catalog.rs:342"
+    },
+    {
+      "tab": "View",
+      "group": "Window",
+      "label": "View Side by Side",
+      "id": "view.sideBySide",
+      "source": "crates/engine/src/catalog.rs:343"
+    },
+    {
+      "tab": "View",
+      "group": "Window",
+      "label": "Synchronous Scrolling",
+      "id": "view.syncScroll",
+      "source": "crates/engine/src/catalog.rs:344"
+    },
+    {
+      "tab": "View",
+      "group": "Window",
+      "label": "Switch Windows",
+      "id": "view.switchWindows",
+      "source": "crates/engine/src/catalog.rs:345"
+    },
+    {
+      "tab": "View",
+      "group": "Macros",
+      "label": "Macros",
+      "id": "tools.macros",
+      "source": "crates/engine/src/catalog.rs:346"
+    },
+    {
+      "tab": "View",
+      "group": "Macros",
+      "label": "Record Macro",
+      "id": "tools.recordMacro",
+      "source": "crates/engine/src/catalog.rs:347"
+    },
+    {
+      "tab": "View",
+      "group": "SharePoint",
+      "label": "Properties",
+      "id": "file.properties",
+      "source": "crates/engine/src/catalog.rs:348"
+    },
+    {
+      "tab": "Read Mode",
+      "group": "View",
+      "label": "Column Width",
+      "id": "view.readColumnWidth",
+      "source": "crates/engine/src/catalog.rs:349"
+    },
+    {
+      "tab": "Read Mode",
+      "group": "View",
+      "label": "Page Color",
+      "id": "view.readPageColor",
+      "source": "crates/engine/src/catalog.rs:350"
+    },
+    {
+      "tab": "Read Mode",
+      "group": "View",
+      "label": "Layout",
+      "id": "view.readLayout",
+      "source": "crates/engine/src/catalog.rs:351"
+    },
+    {
+      "tab": "Developer",
+      "group": "Controls",
+      "label": "Rich Text Content Control",
+      "id": "developer.richText",
+      "source": "crates/engine/src/catalog.rs:352"
+    },
+    {
+      "tab": "Developer",
+      "group": "Controls",
+      "label": "Plain Text Content Control",
+      "id": "developer.plainText",
+      "source": "crates/engine/src/catalog.rs:353"
+    },
+    {
+      "tab": "Developer",
+      "group": "Controls",
+      "label": "Picture Content Control",
+      "id": "developer.picture",
+      "source": "crates/engine/src/catalog.rs:354"
+    },
+    {
+      "tab": "Developer",
+      "group": "Controls",
+      "label": "Building Block Gallery Content Control",
+      "id": "developer.buildingBlock",
+      "source": "crates/engine/src/catalog.rs:355"
+    },
+    {
+      "tab": "Developer",
+      "group": "Controls",
+      "label": "Check Box Content Control",
+      "id": "developer.checkBox",
+      "source": "crates/engine/src/catalog.rs:356"
+    },
+    {
+      "tab": "Developer",
+      "group": "Controls",
+      "label": "Combo Box Content Control",
+      "id": "developer.comboBox",
+      "source": "crates/engine/src/catalog.rs:357"
+    },
+    {
+      "tab": "Developer",
+      "group": "Controls",
+      "label": "Drop-Down List Content Control",
+      "id": "developer.dropDown",
+      "source": "crates/engine/src/catalog.rs:358"
+    },
+    {
+      "tab": "Developer",
+      "group": "Controls",
+      "label": "Date Picker Content Control",
+      "id": "developer.datePicker",
+      "source": "crates/engine/src/catalog.rs:359"
+    },
+    {
+      "tab": "Developer",
+      "group": "Controls",
+      "label": "Repeating Section Content Control",
+      "id": "developer.repeatingSection",
+      "source": "crates/engine/src/catalog.rs:360"
+    },
+    {
+      "tab": "Developer",
+      "group": "Controls",
+      "label": "Design Mode",
+      "id": "developer.designMode",
+      "source": "crates/engine/src/catalog.rs:361"
+    },
+    {
+      "tab": "Developer",
+      "group": "Controls",
+      "label": "Properties",
+      "id": "developer.properties",
+      "source": "crates/engine/src/catalog.rs:362"
+    },
+    {
+      "tab": "Table Design",
+      "group": "Table Style Options",
+      "label": "Table Style Options",
+      "id": "table.look",
+      "source": "crates/engine/src/catalog.rs:363"
+    },
+    {
+      "tab": "Table Design",
+      "group": "Table Styles",
+      "label": "Table Styles",
+      "id": "table.style",
+      "source": "crates/engine/src/catalog.rs:364"
+    },
+    {
+      "tab": "Table Design",
+      "group": "Table Styles",
+      "label": "New Table Style",
+      "id": "table.newStyle",
+      "source": "crates/engine/src/catalog.rs:365"
+    },
+    {
+      "tab": "Table Design",
+      "group": "Table Styles",
+      "label": "Modify Table Style",
+      "id": "table.modifyStyle",
+      "source": "crates/engine/src/catalog.rs:366"
+    },
+    {
+      "tab": "Table Design",
+      "group": "Table Styles",
+      "label": "Delete Table Style",
+      "id": "table.deleteStyle",
+      "source": "crates/engine/src/catalog.rs:367"
+    },
+    {
+      "tab": "Table Design",
+      "group": "Table Styles",
+      "label": "Shading",
+      "id": "table.shading",
+      "source": "crates/engine/src/catalog.rs:368"
+    },
+    {
+      "tab": "Table Design",
+      "group": "Borders",
+      "label": "Borders",
+      "id": "table.borders",
+      "source": "crates/engine/src/catalog.rs:369"
+    },
+    {
+      "tab": "Table Design",
+      "group": "Borders",
+      "label": "Border Painter",
+      "id": "table.borderPainter",
+      "source": "crates/engine/src/catalog.rs:370"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Table",
+      "label": "Select Table",
+      "id": "table.selectTable",
+      "source": "crates/engine/src/catalog.rs:371"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Table",
+      "label": "Select Row",
+      "id": "table.selectRow",
+      "source": "crates/engine/src/catalog.rs:372"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Table",
+      "label": "Select Column",
+      "id": "table.selectColumn",
+      "source": "crates/engine/src/catalog.rs:373"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Table",
+      "label": "Select Cell",
+      "id": "table.selectCell",
+      "source": "crates/engine/src/catalog.rs:374"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Table",
+      "label": "View Gridlines",
+      "id": "table.viewGridlines",
+      "source": "crates/engine/src/catalog.rs:375"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Table",
+      "label": "Properties",
+      "id": "table.properties",
+      "source": "crates/engine/src/catalog.rs:376"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Table",
+      "label": "Alt Text",
+      "id": "table.altText",
+      "source": "crates/engine/src/catalog.rs:377"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Table",
+      "label": "Table Direction",
+      "id": "table.rtl",
+      "source": "crates/engine/src/catalog.rs:378"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Draw",
+      "label": "Draw Table",
+      "id": "table.draw",
+      "source": "crates/engine/src/catalog.rs:379"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Draw",
+      "label": "Eraser",
+      "id": "table.eraser",
+      "source": "crates/engine/src/catalog.rs:380"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Rows & Columns",
+      "label": "Delete Cells",
+      "id": "table.deleteCells",
+      "source": "crates/engine/src/catalog.rs:381"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Rows & Columns",
+      "label": "Delete Rows",
+      "id": "table.deleteRow",
+      "source": "crates/engine/src/catalog.rs:382"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Rows & Columns",
+      "label": "Delete Columns",
+      "id": "table.deleteColumn",
+      "source": "crates/engine/src/catalog.rs:383"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Rows & Columns",
+      "label": "Delete Table",
+      "id": "table.deleteTable",
+      "source": "crates/engine/src/catalog.rs:384"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Rows & Columns",
+      "label": "Insert Above",
+      "id": "table.insertRowAbove",
+      "source": "crates/engine/src/catalog.rs:385"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Rows & Columns",
+      "label": "Insert Below",
+      "id": "table.insertRowBelow",
+      "source": "crates/engine/src/catalog.rs:386"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Rows & Columns",
+      "label": "Insert Left",
+      "id": "table.insertColumnLeft",
+      "source": "crates/engine/src/catalog.rs:387"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Rows & Columns",
+      "label": "Insert Right",
+      "id": "table.insertColumnRight",
+      "source": "crates/engine/src/catalog.rs:388"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Merge",
+      "label": "Merge Cells",
+      "id": "table.merge",
+      "source": "crates/engine/src/catalog.rs:389"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Merge",
+      "label": "Split Cells",
+      "id": "table.split",
+      "source": "crates/engine/src/catalog.rs:390"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Merge",
+      "label": "Split Table",
+      "id": "table.splitTable",
+      "source": "crates/engine/src/catalog.rs:391"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Cell Size",
+      "label": "AutoFit",
+      "id": "table.autofit",
+      "source": "crates/engine/src/catalog.rs:392"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Cell Size",
+      "label": "Row Height",
+      "id": "table.rowHeight",
+      "source": "crates/engine/src/catalog.rs:393"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Cell Size",
+      "label": "Column Width",
+      "id": "table.columnWidth",
+      "source": "crates/engine/src/catalog.rs:394"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Cell Size",
+      "label": "Distribute Rows",
+      "id": "table.distributeRows",
+      "source": "crates/engine/src/catalog.rs:395"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Cell Size",
+      "label": "Distribute Columns",
+      "id": "table.distributeColumns",
+      "source": "crates/engine/src/catalog.rs:396"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Alignment",
+      "label": "Alignment",
+      "id": "table.cellAlign",
+      "source": "crates/engine/src/catalog.rs:397"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Alignment",
+      "label": "Text Direction",
+      "id": "table.textDirection",
+      "source": "crates/engine/src/catalog.rs:398"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Alignment",
+      "label": "Cell Margins",
+      "id": "table.cellMargins",
+      "source": "crates/engine/src/catalog.rs:399"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Data",
+      "label": "Sort",
+      "id": "table.sort",
+      "source": "crates/engine/src/catalog.rs:400"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Data",
+      "label": "Repeat Header Rows",
+      "id": "table.repeatHeader",
+      "source": "crates/engine/src/catalog.rs:401"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Data",
+      "label": "Convert to Text",
+      "id": "table.toText",
+      "source": "crates/engine/src/catalog.rs:402"
+    },
+    {
+      "tab": "Table Layout",
+      "group": "Data",
+      "label": "Formula",
+      "id": "table.formula",
+      "source": "crates/engine/src/catalog.rs:403"
+    },
+    {
+      "tab": "Equation",
+      "group": "Tools",
+      "label": "Equation",
+      "id": "insert.equation",
+      "source": "crates/engine/src/catalog.rs:404"
+    },
+    {
+      "tab": "Equation",
+      "group": "Tools",
+      "label": "Ink Equation",
+      "id": "insert.inkEquation",
+      "source": "crates/engine/src/catalog.rs:405"
+    },
+    {
+      "tab": "Equation",
+      "group": "Conversions",
+      "label": "Unicode",
+      "id": "equation.inputFormat",
+      "source": "crates/engine/src/catalog.rs:406"
+    },
+    {
+      "tab": "Equation",
+      "group": "Conversions",
+      "label": "LaTeX",
+      "id": "equation.inputFormat",
+      "source": "crates/engine/src/catalog.rs:407"
+    },
+    {
+      "tab": "Equation",
+      "group": "Conversions",
+      "label": "Convert",
+      "id": "equation.convert",
+      "source": "crates/engine/src/catalog.rs:408"
+    },
+    {
+      "tab": "Equation",
+      "group": "Conversions",
+      "label": "Normal Text",
+      "id": "equation.normalText",
+      "source": "crates/engine/src/catalog.rs:409"
+    },
+    {
+      "tab": "Equation",
+      "group": "Symbols",
+      "label": "Symbols",
+      "id": "equation.insertSymbol",
+      "source": "crates/engine/src/catalog.rs:410"
+    },
+    {
+      "tab": "Equation",
+      "group": "Structures",
+      "label": "Fraction",
+      "id": "equation.insertStructure",
+      "source": "crates/engine/src/catalog.rs:411"
+    },
+    {
+      "tab": "Equation",
+      "group": "Structures",
+      "label": "Script",
+      "id": "equation.insertStructure",
+      "source": "crates/engine/src/catalog.rs:412"
+    },
+    {
+      "tab": "Equation",
+      "group": "Structures",
+      "label": "Radical",
+      "id": "equation.insertStructure",
+      "source": "crates/engine/src/catalog.rs:413"
+    },
+    {
+      "tab": "Equation",
+      "group": "Structures",
+      "label": "Integral",
+      "id": "equation.insertStructure",
+      "source": "crates/engine/src/catalog.rs:414"
+    },
+    {
+      "tab": "Equation",
+      "group": "Structures",
+      "label": "Large Operator",
+      "id": "equation.insertStructure",
+      "source": "crates/engine/src/catalog.rs:415"
+    },
+    {
+      "tab": "Equation",
+      "group": "Structures",
+      "label": "Bracket",
+      "id": "equation.insertStructure",
+      "source": "crates/engine/src/catalog.rs:416"
+    },
+    {
+      "tab": "Equation",
+      "group": "Structures",
+      "label": "Function",
+      "id": "equation.insertStructure",
+      "source": "crates/engine/src/catalog.rs:417"
+    },
+    {
+      "tab": "Equation",
+      "group": "Structures",
+      "label": "Accent",
+      "id": "equation.insertStructure",
+      "source": "crates/engine/src/catalog.rs:418"
+    },
+    {
+      "tab": "Equation",
+      "group": "Structures",
+      "label": "Limit and Log",
+      "id": "equation.insertStructure",
+      "source": "crates/engine/src/catalog.rs:419"
+    },
+    {
+      "tab": "Equation",
+      "group": "Structures",
+      "label": "Operator",
+      "id": "equation.insertStructure",
+      "source": "crates/engine/src/catalog.rs:420"
+    },
+    {
+      "tab": "Equation",
+      "group": "Structures",
+      "label": "Matrix",
+      "id": "equation.insertStructure",
+      "source": "crates/engine/src/catalog.rs:421"
+    },
+    {
+      "tab": "Equation",
+      "group": "Equation Options",
+      "label": "Change to Inline / Display",
+      "id": "equation.display",
+      "source": "crates/engine/src/catalog.rs:422"
+    },
+    {
+      "tab": "Equation",
+      "group": "Equation Options",
+      "label": "Justification",
+      "id": "equation.justify",
+      "source": "crates/engine/src/catalog.rs:423"
+    },
+    {
+      "tab": "Equation",
+      "group": "Equation Options",
+      "label": "Equation Number (#)",
+      "id": "equation.number",
+      "source": "crates/engine/src/catalog.rs:424"
+    },
+    {
+      "tab": "Equation",
+      "group": "Equation Options",
+      "label": "Structure Commands",
+      "id": "equation.structure",
+      "source": "crates/engine/src/catalog.rs:425"
+    },
+    {
+      "tab": "Outlining",
+      "group": "Outline Tools",
+      "label": "Promote to Heading 1",
+      "id": "outline.promoteToHeading1",
+      "source": "crates/engine/src/catalog.rs:426"
+    },
+    {
+      "tab": "Outlining",
+      "group": "Outline Tools",
+      "label": "Promote",
+      "id": "outline.promote",
+      "source": "crates/engine/src/catalog.rs:427"
+    },
+    {
+      "tab": "Outlining",
+      "group": "Outline Tools",
+      "label": "Outline Level",
+      "id": "outline.level",
+      "source": "crates/engine/src/catalog.rs:428"
+    },
+    {
+      "tab": "Outlining",
+      "group": "Outline Tools",
+      "label": "Demote",
+      "id": "outline.demote",
+      "source": "crates/engine/src/catalog.rs:429"
+    },
+    {
+      "tab": "Outlining",
+      "group": "Outline Tools",
+      "label": "Demote to Body Text",
+      "id": "outline.demoteToBody",
+      "source": "crates/engine/src/catalog.rs:430"
+    },
+    {
+      "tab": "Outlining",
+      "group": "Outline Tools",
+      "label": "Move Up",
+      "id": "outline.moveUp",
+      "source": "crates/engine/src/catalog.rs:431"
+    },
+    {
+      "tab": "Outlining",
+      "group": "Outline Tools",
+      "label": "Move Down",
+      "id": "outline.moveDown",
+      "source": "crates/engine/src/catalog.rs:432"
+    },
+    {
+      "tab": "Outlining",
+      "group": "Outline Tools",
+      "label": "Expand",
+      "id": "outline.expand",
+      "source": "crates/engine/src/catalog.rs:433"
+    },
+    {
+      "tab": "Outlining",
+      "group": "Outline Tools",
+      "label": "Collapse",
+      "id": "outline.collapse",
+      "source": "crates/engine/src/catalog.rs:434"
+    },
+    {
+      "tab": "Outlining",
+      "group": "Outline Tools",
+      "label": "Show Level",
+      "id": "outline.showLevel",
+      "source": "crates/engine/src/catalog.rs:435"
+    },
+    {
+      "tab": "Outlining",
+      "group": "Outline Tools",
+      "label": "Show Text Formatting",
+      "id": "outline.showFormatting",
+      "source": "crates/engine/src/catalog.rs:436"
+    },
+    {
+      "tab": "Outlining",
+      "group": "Outline Tools",
+      "label": "Show First Line Only",
+      "id": "outline.firstLineOnly",
+      "source": "crates/engine/src/catalog.rs:437"
+    },
+    {
+      "tab": "Outlining",
+      "group": "Close",
+      "label": "Close Outline View",
+      "id": "outline.close",
+      "source": "crates/engine/src/catalog.rs:438"
+    },
+    {
+      "tab": "Picture Format",
+      "group": "Adjust",
+      "label": "Remove Background",
+      "id": "picture.removeBackground",
+      "source": "crates/engine/src/catalog.rs:439"
+    },
+    {
+      "tab": "Picture Format",
+      "group": "Adjust",
+      "label": "Corrections",
+      "id": "picture.corrections",
+      "source": "crates/engine/src/catalog.rs:440"
+    },
+    {
+      "tab": "Picture Format",
+      "group": "Adjust",
+      "label": "Color",
+      "id": "picture.color",
+      "source": "crates/engine/src/catalog.rs:441"
+    },
+    {
+      "tab": "Picture Format",
+      "group": "Adjust",
+      "label": "Artistic Effects",
+      "id": "picture.effects",
+      "source": "crates/engine/src/catalog.rs:442"
+    },
+    {
+      "tab": "Picture Format",
+      "group": "Adjust",
+      "label": "Transparency",
+      "id": "picture.transparency",
+      "source": "crates/engine/src/catalog.rs:443"
+    },
+    {
+      "tab": "Picture Format",
+      "group": "Adjust",
+      "label": "Compress Pictures",
+      "id": "picture.compress",
+      "source": "crates/engine/src/catalog.rs:444"
+    },
+    {
+      "tab": "Picture Format",
+      "group": "Adjust",
+      "label": "Change Picture",
+      "id": "picture.change",
+      "source": "crates/engine/src/catalog.rs:445"
+    },
+    {
+      "tab": "Picture Format",
+      "group": "Adjust",
+      "label": "Reset Picture",
+      "id": "picture.reset",
+      "source": "crates/engine/src/catalog.rs:446"
+    },
+    {
+      "tab": "Picture Format",
+      "group": "Picture Styles",
+      "label": "Picture Styles",
+      "id": "picture.style",
+      "source": "crates/engine/src/catalog.rs:447"
+    },
+    {
+      "tab": "Picture Format",
+      "group": "Picture Styles",
+      "label": "Picture Border",
+      "id": "picture.border",
+      "source": "crates/engine/src/catalog.rs:448"
+    },
+    {
+      "tab": "Picture Format",
+      "group": "Accessibility",
+      "label": "Alt Text",
+      "id": "picture.altText",
+      "source": "crates/engine/src/catalog.rs:449"
+    },
+    {
+      "tab": "Shape Format",
+      "group": "Accessibility",
+      "label": "Alt Text",
+      "id": "object.altText",
+      "source": "crates/engine/src/catalog.rs:450"
+    },
+    {
+      "tab": "Picture Format",
+      "group": "Size",
+      "label": "Crop",
+      "id": "picture.crop",
+      "source": "crates/engine/src/catalog.rs:451"
+    },
+    {
+      "tab": "Picture Format",
+      "group": "Size",
+      "label": "Size",
+      "id": "picture.size",
+      "source": "crates/engine/src/catalog.rs:452"
+    },
+    {
+      "tab": "Picture Format",
+      "group": "Size",
+      "label": "Rotation",
+      "id": "arrange.rotation",
+      "source": "crates/engine/src/catalog.rs:453"
+    },
+    {
+      "tab": "SmartArt Design",
+      "group": "Create Graphic",
+      "label": "Add Shape",
+      "id": "smartArt.addShape",
+      "source": "crates/engine/src/catalog.rs:454"
+    },
+    {
+      "tab": "SmartArt Design",
+      "group": "Create Graphic",
+      "label": "Promote",
+      "id": "smartArt.promote",
+      "source": "crates/engine/src/catalog.rs:455"
+    },
+    {
+      "tab": "SmartArt Design",
+      "group": "Create Graphic",
+      "label": "Demote",
+      "id": "smartArt.demote",
+      "source": "crates/engine/src/catalog.rs:456"
+    },
+    {
+      "tab": "SmartArt Design",
+      "group": "Create Graphic",
+      "label": "Text Pane",
+      "id": "smartArt.textPane",
+      "source": "crates/engine/src/catalog.rs:457"
+    },
+    {
+      "tab": "SmartArt Design",
+      "group": "Layouts",
+      "label": "Layouts",
+      "id": "smartArt.layout",
+      "source": "crates/engine/src/catalog.rs:458"
+    },
+    {
+      "tab": "SmartArt Design",
+      "group": "SmartArt Styles",
+      "label": "Change Colors",
+      "id": "smartArt.colors",
+      "source": "crates/engine/src/catalog.rs:459"
+    },
+    {
+      "tab": "SmartArt Design",
+      "group": "Reset",
+      "label": "Reset Graphic",
+      "id": "smartArt.reset",
+      "source": "crates/engine/src/catalog.rs:460"
+    },
+    {
+      "tab": "Chart Design",
+      "group": "Type",
+      "label": "Change Chart Type",
+      "id": "chart.type",
+      "source": "crates/engine/src/catalog.rs:461"
+    },
+    {
+      "tab": "Chart Design",
+      "group": "Data",
+      "label": "Edit Data",
+      "id": "chart.editData",
+      "source": "crates/engine/src/catalog.rs:462"
+    },
+    {
+      "tab": "Chart Design",
+      "group": "Chart Layouts",
+      "label": "Chart Title",
+      "id": "chart.title",
+      "source": "crates/engine/src/catalog.rs:463"
+    },
+    {
+      "tab": "Chart Design",
+      "group": "Chart Layouts",
+      "label": "Legend",
+      "id": "chart.legend",
+      "source": "crates/engine/src/catalog.rs:464"
+    },
+    {
+      "tab": "Chart Design",
+      "group": "Chart Layouts",
+      "label": "Data Labels",
+      "id": "chart.dataLabels",
+      "source": "crates/engine/src/catalog.rs:465"
+    },
+    {
+      "tab": "Shape Format",
+      "group": "Shape Styles",
+      "label": "Shape Fill",
+      "id": "shape.fill",
+      "source": "crates/engine/src/catalog.rs:466"
+    },
+    {
+      "tab": "Shape Format",
+      "group": "Shape Styles",
+      "label": "Shape Fill Gradient",
+      "id": "shape.fill",
+      "source": "crates/engine/src/catalog.rs:467"
+    },
+    {
+      "tab": "Shape Format",
+      "group": "Shape Styles",
+      "label": "Format Shape Pane",
+      "id": "view.formatShapePane",
+      "source": "crates/engine/src/catalog.rs:468"
+    },
+    {
+      "tab": "Shape Format",
+      "group": "Shape Styles",
+      "label": "Shape Outline",
+      "id": "shape.outline",
+      "source": "crates/engine/src/catalog.rs:469"
+    },
+    {
+      "tab": "Shape Format",
+      "group": "Shape Styles",
+      "label": "Shape Effects",
+      "id": "shape.effects",
+      "source": "crates/engine/src/catalog.rs:470"
+    },
+    {
+      "tab": "Shape Format",
+      "group": "WordArt Styles",
+      "label": "WordArt Quick Styles",
+      "id": "wordArt.style",
+      "source": "crates/engine/src/catalog.rs:471"
+    },
+    {
+      "tab": "Shape Format",
+      "group": "WordArt Styles",
+      "label": "Text Fill",
+      "id": "wordArt.textFill",
+      "source": "crates/engine/src/catalog.rs:472"
+    },
+    {
+      "tab": "Shape Format",
+      "group": "WordArt Styles",
+      "label": "Text Outline",
+      "id": "wordArt.textOutline",
+      "source": "crates/engine/src/catalog.rs:473"
+    },
+    {
+      "tab": "Shape Format",
+      "group": "WordArt Styles",
+      "label": "Text Effects Transform",
+      "id": "wordArt.transform",
+      "source": "crates/engine/src/catalog.rs:474"
+    },
+    {
+      "tab": "Shape Format",
+      "group": "Text",
+      "label": "Text Direction",
+      "id": "shape.textDirection",
+      "source": "crates/engine/src/catalog.rs:475"
+    },
+    {
+      "tab": "Shape Format",
+      "group": "Text",
+      "label": "Align Text",
+      "id": "shape.alignText",
+      "source": "crates/engine/src/catalog.rs:476"
+    },
+    {
+      "tab": "Shape Format",
+      "group": "Text",
+      "label": "Create Link",
+      "id": "shape.link",
+      "source": "crates/engine/src/catalog.rs:477"
+    },
+    {
+      "tab": "Header & Footer",
+      "group": "Navigation",
+      "label": "Go to Header",
+      "id": "insert.editHeader",
+      "source": "crates/engine/src/catalog.rs:478"
+    },
+    {
+      "tab": "Header & Footer",
+      "group": "Navigation",
+      "label": "Go to Footer",
+      "id": "insert.editFooter",
+      "source": "crates/engine/src/catalog.rs:479"
+    },
+    {
+      "tab": "Header & Footer",
+      "group": "Navigation",
+      "label": "Previous Section",
+      "id": "hf.previous",
+      "source": "crates/engine/src/catalog.rs:480"
+    },
+    {
+      "tab": "Header & Footer",
+      "group": "Navigation",
+      "label": "Next Section",
+      "id": "hf.next",
+      "source": "crates/engine/src/catalog.rs:481"
+    },
+    {
+      "tab": "Header & Footer",
+      "group": "Position",
+      "label": "Header from Top",
+      "id": "hf.position",
+      "source": "crates/engine/src/catalog.rs:482"
+    },
+    {
+      "tab": "Editing",
+      "group": "Keyboard",
+      "label": "Type Text",
+      "id": "text.insert",
+      "source": "crates/engine/src/catalog.rs:483"
+    },
+    {
+      "tab": "Editing",
+      "group": "Keyboard",
+      "label": "New Paragraph",
+      "id": "text.newParagraph",
+      "source": "crates/engine/src/catalog.rs:484"
+    },
+    {
+      "tab": "Editing",
+      "group": "Keyboard",
+      "label": "Line Break",
+      "id": "text.lineBreak",
+      "source": "crates/engine/src/catalog.rs:485"
+    },
+    {
+      "tab": "Editing",
+      "group": "Keyboard",
+      "label": "Column Break",
+      "id": "text.columnBreak",
+      "source": "crates/engine/src/catalog.rs:486"
+    },
+    {
+      "tab": "Editing",
+      "group": "Keyboard",
+      "label": "Tab",
+      "id": "text.tab",
+      "source": "crates/engine/src/catalog.rs:487"
+    },
+    {
+      "tab": "Editing",
+      "group": "Keyboard",
+      "label": "Tab Character",
+      "id": "text.insertTab",
+      "source": "crates/engine/src/catalog.rs:488"
+    },
+    {
+      "tab": "Editing",
+      "group": "Keyboard",
+      "label": "Backspace",
+      "id": "text.backspace",
+      "source": "crates/engine/src/catalog.rs:489"
+    },
+    {
+      "tab": "Editing",
+      "group": "Keyboard",
+      "label": "Delete",
+      "id": "text.delete",
+      "source": "crates/engine/src/catalog.rs:490"
+    },
+    {
+      "tab": "Editing",
+      "group": "Keyboard",
+      "label": "Delete Previous Word",
+      "id": "text.deleteWordBack",
+      "source": "crates/engine/src/catalog.rs:491"
+    },
+    {
+      "tab": "Editing",
+      "group": "Keyboard",
+      "label": "Delete Next Word",
+      "id": "text.deleteWordForward",
+      "source": "crates/engine/src/catalog.rs:492"
+    },
+    {
+      "tab": "Editing",
+      "group": "Keyboard",
+      "label": "Move Paragraph Up",
+      "id": "para.moveUp",
+      "source": "crates/engine/src/catalog.rs:493"
+    },
+    {
+      "tab": "Editing",
+      "group": "Keyboard",
+      "label": "Move Paragraph Down",
+      "id": "para.moveDown",
+      "source": "crates/engine/src/catalog.rs:494"
+    },
+    {
+      "tab": "Editing",
+      "group": "Keyboard",
+      "label": "Promote",
+      "id": "para.promote",
+      "source": "crates/engine/src/catalog.rs:495"
+    },
+    {
+      "tab": "Editing",
+      "group": "Keyboard",
+      "label": "Demote",
+      "id": "para.demote",
+      "source": "crates/engine/src/catalog.rs:496"
+    },
+    {
+      "tab": "Editing",
+      "group": "Keyboard",
+      "label": "Toggle Unicode Character",
+      "id": "text.toggleUnicode",
+      "source": "crates/engine/src/catalog.rs:497"
+    },
+    {
+      "tab": "Editing",
+      "group": "Keyboard",
+      "label": "Spike",
+      "id": "edit.spike",
+      "source": "crates/engine/src/catalog.rs:498"
+    },
+    {
+      "tab": "Editing",
+      "group": "Keyboard",
+      "label": "Insert Spike",
+      "id": "edit.insertSpike",
+      "source": "crates/engine/src/catalog.rs:499"
+    },
+    {
+      "tab": "Editing",
+      "group": "Navigation",
+      "label": "Word Left",
+      "id": "caret.wordLeft",
+      "source": "crates/engine/src/catalog.rs:500"
+    },
+    {
+      "tab": "Editing",
+      "group": "Navigation",
+      "label": "Word Right",
+      "id": "caret.wordRight",
+      "source": "crates/engine/src/catalog.rs:501"
+    },
+    {
+      "tab": "Editing",
+      "group": "Navigation",
+      "label": "Line Start",
+      "id": "caret.home",
+      "source": "crates/engine/src/catalog.rs:502"
+    },
+    {
+      "tab": "Editing",
+      "group": "Navigation",
+      "label": "Line End",
+      "id": "caret.end",
+      "source": "crates/engine/src/catalog.rs:503"
+    },
+    {
+      "tab": "Editing",
+      "group": "Navigation",
+      "label": "Paragraph Up",
+      "id": "caret.paraUp",
+      "source": "crates/engine/src/catalog.rs:504"
+    },
+    {
+      "tab": "Editing",
+      "group": "Navigation",
+      "label": "Paragraph Down",
+      "id": "caret.paraDown",
+      "source": "crates/engine/src/catalog.rs:505"
+    },
+    {
+      "tab": "Editing",
+      "group": "Navigation",
+      "label": "Document Start",
+      "id": "caret.docStart",
+      "source": "crates/engine/src/catalog.rs:506"
+    },
+    {
+      "tab": "Editing",
+      "group": "Navigation",
+      "label": "Document End",
+      "id": "caret.docEnd",
+      "source": "crates/engine/src/catalog.rs:507"
+    },
+    {
+      "tab": "Editing",
+      "group": "Navigation",
+      "label": "Page Up",
+      "id": "caret.pageUp",
+      "source": "crates/engine/src/catalog.rs:508"
+    },
+    {
+      "tab": "Editing",
+      "group": "Navigation",
+      "label": "Page Down",
+      "id": "caret.pageDown",
+      "source": "crates/engine/src/catalog.rs:509"
+    },
+    {
+      "tab": "Editing",
+      "group": "Navigation",
+      "label": "Go Back",
+      "id": "edit.goBack",
+      "source": "crates/engine/src/catalog.rs:510"
+    },
+    {
+      "tab": "Editing",
+      "group": "Selection",
+      "label": "Select Word",
+      "id": "select.word",
+      "source": "crates/engine/src/catalog.rs:511"
+    },
+    {
+      "tab": "Editing",
+      "group": "Selection",
+      "label": "Select Sentence",
+      "id": "select.sentence",
+      "source": "crates/engine/src/catalog.rs:512"
+    },
+    {
+      "tab": "Editing",
+      "group": "Selection",
+      "label": "Select Paragraph",
+      "id": "select.paragraph",
+      "source": "crates/engine/src/catalog.rs:513"
+    },
+    {
+      "tab": "Editing",
+      "group": "Selection",
+      "label": "Extend Selection (F8)",
+      "id": "select.extend",
+      "source": "crates/engine/src/catalog.rs:514"
+    },
+    {
+      "tab": "Editing",
+      "group": "Selection",
+      "label": "Column Selection",
+      "id": "select.column",
+      "source": "crates/engine/src/catalog.rs:515"
+    },
+    {
+      "tab": "Editing",
+      "group": "Fields",
+      "label": "Show Field Codes",
+      "id": "view.fieldCodes",
+      "source": "crates/engine/src/catalog.rs:516"
+    },
+    {
+      "tab": "Editing",
+      "group": "Fields",
+      "label": "Toggle Field Codes",
+      "id": "fields.toggleCode",
+      "source": "crates/engine/src/catalog.rs:517"
+    },
+    {
+      "tab": "Editing",
+      "group": "Fields",
+      "label": "Edit Field Code",
+      "id": "fields.setCode",
+      "source": "crates/engine/src/catalog.rs:518"
+    },
+    {
+      "tab": "Editing",
+      "group": "Fields",
+      "label": "Unlink Fields",
+      "id": "fields.unlink",
+      "source": "crates/engine/src/catalog.rs:519"
+    },
+    {
+      "tab": "Editing",
+      "group": "Fields",
+      "label": "Lock Fields",
+      "id": "fields.lock",
+      "source": "crates/engine/src/catalog.rs:520"
+    },
+    {
+      "tab": "Editing",
+      "group": "Fields",
+      "label": "Unlock Fields",
+      "id": "fields.unlock",
+      "source": "crates/engine/src/catalog.rs:521"
+    },
+    {
+      "tab": "Editing",
+      "group": "Fields",
+      "label": "Next Field",
+      "id": "fields.next",
+      "source": "crates/engine/src/catalog.rs:522"
+    },
+    {
+      "tab": "Editing",
+      "group": "Fields",
+      "label": "Previous Field",
+      "id": "fields.previous",
+      "source": "crates/engine/src/catalog.rs:523"
+    },
+    {
+      "tab": "Tools",
+      "group": "Proofing",
+      "label": "AutoCorrect Options",
+      "id": "tools.autocorrect",
+      "source": "crates/engine/src/catalog.rs:524"
+    },
+    {
+      "tab": "Tools",
+      "group": "Proofing",
+      "label": "Set Proofing Language",
+      "id": "review.language",
+      "source": "crates/engine/src/catalog.rs:525"
+    },
+    {
+      "tab": "Tools",
+      "group": "Customize",
+      "label": "Customize Ribbon",
+      "id": "tools.customizeRibbon",
+      "source": "crates/engine/src/catalog.rs:526"
+    },
+    {
+      "tab": "Tools",
+      "group": "Customize",
+      "label": "Customize Keyboard",
+      "id": "tools.customizeKeyboard",
+      "source": "crates/engine/src/catalog.rs:527"
+    },
+    {
+      "tab": "Tools",
+      "group": "Protection",
+      "label": "Encrypt with Password",
+      "id": "file.encrypt",
+      "source": "crates/engine/src/catalog.rs:528"
+    },
+    {
+      "tab": "Tools",
+      "group": "Templates",
+      "label": "Templates and Add-ins",
+      "id": "tools.templates",
+      "source": "crates/engine/src/catalog.rs:529"
+    },
+    {
+      "tab": "Tools",
+      "group": "Views",
+      "label": "Full Screen View",
+      "id": "view.fullScreenView",
+      "source": "crates/engine/src/catalog.rs:530"
+    }
+  ],
+  "commands": [
+    {
+      "id": "arrange.align",
+      "label": "Align",
+      "source": "crates/engine/src/cmd/objects/specs.rs:229"
+    },
+    {
+      "id": "arrange.bounds",
+      "label": "Move or Resize",
+      "source": "crates/engine/src/cmd/objects/specs.rs:249"
+    },
+    {
+      "id": "arrange.bringForward",
+      "label": "Bring Forward",
+      "source": "crates/engine/src/cmd/objects/specs.rs:227"
+    },
+    {
+      "id": "arrange.copyTo",
+      "label": "Copy to",
+      "source": "crates/engine/src/cmd/objects/specs.rs:252"
+    },
+    {
+      "id": "arrange.group",
+      "label": "Group",
+      "source": "crates/engine/src/cmd/objects/specs.rs:266"
+    },
+    {
+      "id": "arrange.moveWithText",
+      "label": "Move with Text",
+      "source": "crates/engine/src/cmd/objects/specs.rs:203"
+    },
+    {
+      "id": "arrange.nudge",
+      "label": "Nudge",
+      "source": "crates/engine/src/cmd/objects/specs.rs:255"
+    },
+    {
+      "id": "arrange.position",
+      "label": "Position",
+      "source": "crates/engine/src/cmd/objects/specs.rs:206"
+    },
+    {
+      "id": "arrange.rotate",
+      "label": "Rotate",
+      "source": "crates/engine/src/cmd/objects/specs.rs:165"
+    },
+    {
+      "id": "arrange.rotation",
+      "label": "Rotation",
+      "source": "crates/engine/src/cmd/objects/specs.rs:180"
+    },
+    {
+      "id": "arrange.selectionPane",
+      "label": "Selection Pane",
+      "source": "crates/engine/src/cmd/objects/specs.rs:248"
+    },
+    {
+      "id": "arrange.sendBackward",
+      "label": "Send Backward",
+      "source": "crates/engine/src/cmd/objects/specs.rs:228"
+    },
+    {
+      "id": "arrange.ungroup",
+      "label": "Ungroup",
+      "source": "crates/engine/src/cmd/objects/specs.rs:269"
+    },
+    {
+      "id": "arrange.wrap",
+      "label": "Wrap Text",
+      "source": "crates/engine/src/cmd/objects/specs.rs:190"
+    },
+    {
+      "id": "arrange.wrapText",
+      "label": "Wrap Text Sides",
+      "source": "crates/engine/src/cmd/objects/specs.rs:196"
+    },
+    {
+      "id": "canvas.expand",
+      "label": "Expand",
+      "source": "crates/engine/src/cmd/canvas.rs:44"
+    },
+    {
+      "id": "canvas.fit",
+      "label": "Fit",
+      "source": "crates/engine/src/cmd/canvas.rs:41"
+    },
+    {
+      "id": "canvas.member",
+      "label": "Canvas Member",
+      "source": "crates/engine/src/cmd/canvas.rs:50"
+    },
+    {
+      "id": "canvas.scale",
+      "label": "Scale Drawing",
+      "source": "crates/engine/src/cmd/canvas.rs:47"
+    },
+    {
+      "id": "caret.docEnd",
+      "label": "Document End",
+      "source": "crates/engine/src/cmd/caret.rs:44"
+    },
+    {
+      "id": "caret.docStart",
+      "label": "Document Start",
+      "source": "crates/engine/src/cmd/caret.rs:40"
+    },
+    {
+      "id": "caret.down",
+      "label": "Down",
+      "source": "crates/engine/src/cmd/caret.rs:16"
+    },
+    {
+      "id": "caret.end",
+      "label": "Line End",
+      "source": "crates/engine/src/cmd/caret.rs:31"
+    },
+    {
+      "id": "caret.home",
+      "label": "Line Start",
+      "source": "crates/engine/src/cmd/caret.rs:27"
+    },
+    {
+      "id": "caret.left",
+      "label": "Left",
+      "source": "crates/engine/src/cmd/caret.rs:13"
+    },
+    {
+      "id": "caret.pageDown",
+      "label": "Page Down",
+      "source": "crates/engine/src/cmd/caret.rs:49"
+    },
+    {
+      "id": "caret.pageUp",
+      "label": "Page Up",
+      "source": "crates/engine/src/cmd/caret.rs:48"
+    },
+    {
+      "id": "caret.paraDown",
+      "label": "Paragraph Down",
+      "source": "crates/engine/src/cmd/caret.rs:36"
+    },
+    {
+      "id": "caret.paraUp",
+      "label": "Paragraph Up",
+      "source": "crates/engine/src/cmd/caret.rs:35"
+    },
+    {
+      "id": "caret.pastCitation",
+      "label": "Move Past Citation",
+      "source": "crates/engine/src/cmd/speech.rs:29"
+    },
+    {
+      "id": "caret.right",
+      "label": "Right",
+      "source": "crates/engine/src/cmd/caret.rs:14"
+    },
+    {
+      "id": "caret.set",
+      "label": "Set Caret",
+      "source": "crates/engine/src/cmd/caret.rs:50"
+    },
+    {
+      "id": "caret.up",
+      "label": "Up",
+      "source": "crates/engine/src/cmd/caret.rs:15"
+    },
+    {
+      "id": "caret.wordLeft",
+      "label": "Word Left",
+      "source": "crates/engine/src/cmd/caret.rs:19"
+    },
+    {
+      "id": "caret.wordRight",
+      "label": "Word Right",
+      "source": "crates/engine/src/cmd/caret.rs:23"
+    },
+    {
+      "id": "chart.dataLabels",
+      "label": "Data Labels",
+      "source": "crates/engine/src/cmd/chart.rs:98"
+    },
+    {
+      "id": "chart.editData",
+      "label": "Edit Data",
+      "source": "crates/engine/src/cmd/chart.rs:42"
+    },
+    {
+      "id": "chart.legend",
+      "label": "Legend",
+      "source": "crates/engine/src/cmd/chart.rs:81"
+    },
+    {
+      "id": "chart.title",
+      "label": "Chart Title",
+      "source": "crates/engine/src/cmd/chart.rs:62"
+    },
+    {
+      "id": "chart.type",
+      "label": "Change Chart Type",
+      "source": "crates/engine/src/cmd/chart.rs:33"
+    },
+    {
+      "id": "design.effects",
+      "label": "Effects",
+      "source": "crates/engine/src/cmd/tools/specs.rs:366"
+    },
+    {
+      "id": "design.pageBorders",
+      "label": "Page Borders",
+      "source": "crates/engine/src/cmd/design.rs:80"
+    },
+    {
+      "id": "design.pageColor",
+      "label": "Page Color",
+      "source": "crates/engine/src/cmd/design.rs:74"
+    },
+    {
+      "id": "design.paragraphSpacing",
+      "label": "Paragraph Spacing",
+      "source": "crates/engine/src/cmd/design.rs:68"
+    },
+    {
+      "id": "design.scaleFontSizes",
+      "label": "Scale Font Sizes",
+      "source": "crates/engine/src/cmd/design.rs:70"
+    },
+    {
+      "id": "design.setDefault",
+      "label": "Set as Default",
+      "source": "crates/engine/src/cmd/design.rs:83"
+    },
+    {
+      "id": "design.styleSet",
+      "label": "Style Set",
+      "source": "crates/engine/src/cmd/design.rs:66"
+    },
+    {
+      "id": "design.theme",
+      "label": "Themes",
+      "source": "crates/engine/src/cmd/design.rs:52"
+    },
+    {
+      "id": "design.themeColors",
+      "label": "Colors",
+      "source": "crates/engine/src/cmd/design.rs:60"
+    },
+    {
+      "id": "design.themeFonts",
+      "label": "Fonts",
+      "source": "crates/engine/src/cmd/design.rs:53"
+    },
+    {
+      "id": "design.themes",
+      "label": "Theme List",
+      "source": "crates/engine/src/cmd/design.rs:88"
+    },
+    {
+      "id": "design.watermark",
+      "label": "Watermark",
+      "source": "crates/engine/src/cmd/design.rs:72"
+    },
+    {
+      "id": "developer.buildingBlock",
+      "label": "Building Block Gallery Content Control",
+      "source": "crates/engine/src/cmd/controls.rs:31"
+    },
+    {
+      "id": "developer.checkBox",
+      "label": "Check Box Content Control",
+      "source": "crates/engine/src/cmd/controls.rs:35"
+    },
+    {
+      "id": "developer.chooseItem",
+      "label": "Choose List Item",
+      "source": "crates/engine/src/cmd/controls.rs:63"
+    },
+    {
+      "id": "developer.comboBox",
+      "label": "Combo Box Content Control",
+      "source": "crates/engine/src/cmd/controls.rs:37"
+    },
+    {
+      "id": "developer.control",
+      "label": "Content Control at Selection",
+      "source": "crates/engine/src/cmd/controls.rs:61"
+    },
+    {
+      "id": "developer.datePicker",
+      "label": "Date Picker Content Control",
+      "source": "crates/engine/src/cmd/controls.rs:45"
+    },
+    {
+      "id": "developer.designMode",
+      "label": "Design Mode",
+      "source": "crates/engine/src/cmd/controls.rs:57"
+    },
+    {
+      "id": "developer.dropDown",
+      "label": "Drop-Down List Content Control",
+      "source": "crates/engine/src/cmd/controls.rs:41"
+    },
+    {
+      "id": "developer.picture",
+      "label": "Picture Content Control",
+      "source": "crates/engine/src/cmd/controls.rs:30"
+    },
+    {
+      "id": "developer.plainText",
+      "label": "Plain Text Content Control",
+      "source": "crates/engine/src/cmd/controls.rs:28"
+    },
+    {
+      "id": "developer.properties",
+      "label": "Properties",
+      "source": "crates/engine/src/cmd/controls.rs:58"
+    },
+    {
+      "id": "developer.removeControl",
+      "label": "Remove Content Control",
+      "source": "crates/engine/src/cmd/controls.rs:66"
+    },
+    {
+      "id": "developer.repeatingSection",
+      "label": "Repeating Section Content Control",
+      "source": "crates/engine/src/cmd/controls.rs:53"
+    },
+    {
+      "id": "developer.richText",
+      "label": "Rich Text Content Control",
+      "source": "crates/engine/src/cmd/controls.rs:27"
+    },
+    {
+      "id": "developer.setDate",
+      "label": "Set Date",
+      "source": "crates/engine/src/cmd/controls.rs:65"
+    },
+    {
+      "id": "developer.toggleCheckBox",
+      "label": "Toggle Check Box",
+      "source": "crates/engine/src/cmd/controls.rs:62"
+    },
+    {
+      "id": "document.inspect",
+      "label": "Inspect Document",
+      "source": "crates/engine/src/cmd/file.rs:177"
+    },
+    {
+      "id": "document.layout",
+      "label": "Layout Summary",
+      "source": "crates/engine/src/cmd/file.rs:193"
+    },
+    {
+      "id": "document.paragraph",
+      "label": "Paragraph Details",
+      "source": "crates/engine/src/cmd/file.rs:183"
+    },
+    {
+      "id": "document.selection",
+      "label": "Selection",
+      "source": "crates/engine/src/cmd/file.rs:184"
+    },
+    {
+      "id": "document.setText",
+      "label": "Replace Document Text",
+      "source": "crates/engine/src/cmd/file.rs:194"
+    },
+    {
+      "id": "document.text",
+      "label": "Document Text",
+      "source": "crates/engine/src/cmd/file.rs:178"
+    },
+    {
+      "id": "draw.addPen",
+      "label": "Add Pen",
+      "source": "crates/engine/src/cmd/draw.rs:221"
+    },
+    {
+      "id": "draw.convertInk",
+      "label": "Convert to Shapes",
+      "source": "crates/engine/src/cmd/draw.rs:253"
+    },
+    {
+      "id": "draw.erase",
+      "label": "Erase Ink",
+      "source": "crates/engine/src/cmd/draw.rs:237"
+    },
+    {
+      "id": "draw.eraser",
+      "label": "Eraser",
+      "source": "crates/engine/src/cmd/draw.rs:208"
+    },
+    {
+      "id": "draw.highlighter",
+      "label": "Highlighter",
+      "source": "crates/engine/src/cmd/draw.rs:220"
+    },
+    {
+      "id": "draw.inkToShape",
+      "label": "Ink to Shape",
+      "source": "crates/engine/src/cmd/draw.rs:238"
+    },
+    {
+      "id": "draw.lasso",
+      "label": "Lasso Select",
+      "source": "crates/engine/src/cmd/draw.rs:202"
+    },
+    {
+      "id": "draw.lassoColor",
+      "label": "Recolor Selected Ink",
+      "source": "crates/engine/src/cmd/draw.rs:207"
+    },
+    {
+      "id": "draw.lassoDelete",
+      "label": "Delete Selected Ink",
+      "source": "crates/engine/src/cmd/draw.rs:206"
+    },
+    {
+      "id": "draw.lassoMove",
+      "label": "Move Selected Ink",
+      "source": "crates/engine/src/cmd/draw.rs:205"
+    },
+    {
+      "id": "draw.pen",
+      "label": "Pen",
+      "source": "crates/engine/src/cmd/draw.rs:218"
+    },
+    {
+      "id": "draw.pencil",
+      "label": "Pencil",
+      "source": "crates/engine/src/cmd/draw.rs:219"
+    },
+    {
+      "id": "draw.removePen",
+      "label": "Remove Pen",
+      "source": "crates/engine/src/cmd/draw.rs:224"
+    },
+    {
+      "id": "draw.replay",
+      "label": "Ink Replay",
+      "source": "crates/engine/src/cmd/draw.rs:254"
+    },
+    {
+      "id": "draw.select",
+      "label": "Select",
+      "source": "crates/engine/src/cmd/draw.rs:197"
+    },
+    {
+      "id": "draw.stroke",
+      "label": "Draw Ink",
+      "source": "crates/engine/src/cmd/draw.rs:234"
+    },
+    {
+      "id": "edit.advancedFind",
+      "label": "Advanced Find",
+      "source": "crates/engine/src/cmd/edit.rs:117"
+    },
+    {
+      "id": "edit.clearClipboard",
+      "label": "Clear All",
+      "source": "crates/engine/src/cmd/edit.rs:108"
+    },
+    {
+      "id": "edit.clipboardItems",
+      "label": "Clipboard Items",
+      "source": "crates/engine/src/cmd/edit.rs:95"
+    },
+    {
+      "id": "edit.clipboardPane",
+      "label": "Clipboard Pane",
+      "source": "crates/engine/src/cmd/edit.rs:88"
+    },
+    {
+      "id": "edit.copy",
+      "label": "Copy",
+      "source": "crates/engine/src/cmd/edit.rs:69"
+    },
+    {
+      "id": "edit.copyFormat",
+      "label": "Copy Formatting",
+      "source": "crates/engine/src/cmd/edit.rs:165"
+    },
+    {
+      "id": "edit.cut",
+      "label": "Cut",
+      "source": "crates/engine/src/cmd/edit.rs:68"
+    },
+    {
+      "id": "edit.deleteClipboardItem",
+      "label": "Delete Clipboard Item",
+      "source": "crates/engine/src/cmd/edit.rs:100"
+    },
+    {
+      "id": "edit.find",
+      "label": "Find",
+      "source": "crates/engine/src/cmd/edit.rs:113"
+    },
+    {
+      "id": "edit.findNext",
+      "label": "Find Next",
+      "source": "crates/engine/src/cmd/edit.rs:120"
+    },
+    {
+      "id": "edit.findPrevious",
+      "label": "Find Previous",
+      "source": "crates/engine/src/cmd/edit.rs:127"
+    },
+    {
+      "id": "edit.findReplace",
+      "label": "Find and Replace",
+      "source": "crates/engine/src/cmd/edit.rs:138"
+    },
+    {
+      "id": "edit.formatPainter",
+      "label": "Format Painter",
+      "source": "crates/engine/src/cmd/edit.rs:164"
+    },
+    {
+      "id": "edit.goBack",
+      "label": "Go Back",
+      "source": "crates/engine/src/cmd/edit.rs:156"
+    },
+    {
+      "id": "edit.goto",
+      "label": "Go To",
+      "source": "crates/engine/src/cmd/edit.rs:152"
+    },
+    {
+      "id": "edit.insertSpike",
+      "label": "Insert Spike",
+      "source": "crates/engine/src/cmd/edit.rs:73"
+    },
+    {
+      "id": "edit.paste",
+      "label": "Paste",
+      "source": "crates/engine/src/cmd/edit.rs:82"
+    },
+    {
+      "id": "edit.pasteAllClipboard",
+      "label": "Paste All",
+      "source": "crates/engine/src/cmd/edit.rs:99"
+    },
+    {
+      "id": "edit.pasteClipboardItem",
+      "label": "Paste Clipboard Item",
+      "source": "crates/engine/src/cmd/edit.rs:96"
+    },
+    {
+      "id": "edit.pasteFormat",
+      "label": "Paste Formatting",
+      "source": "crates/engine/src/cmd/edit.rs:171"
+    },
+    {
+      "id": "edit.pasteMerge",
+      "label": "Paste: Merge Formatting",
+      "source": "crates/engine/src/cmd/edit.rs:86"
+    },
+    {
+      "id": "edit.pasteSpecial",
+      "label": "Paste Special",
+      "source": "crates/engine/src/cmd/paste.rs:39"
+    },
+    {
+      "id": "edit.pasteText",
+      "label": "Paste: Keep Text Only",
+      "source": "crates/engine/src/cmd/edit.rs:83"
+    },
+    {
+      "id": "edit.redo",
+      "label": "Redo",
+      "source": "crates/engine/src/cmd/edit.rs:59"
+    },
+    {
+      "id": "edit.repeat",
+      "label": "Repeat",
+      "source": "crates/engine/src/cmd/tools/specs.rs:17"
+    },
+    {
+      "id": "edit.replace",
+      "label": "Replace",
+      "source": "crates/engine/src/cmd/edit.rs:135"
+    },
+    {
+      "id": "edit.replaceAll",
+      "label": "Replace All",
+      "source": "crates/engine/src/cmd/edit.rs:150"
+    },
+    {
+      "id": "edit.spike",
+      "label": "Spike",
+      "source": "crates/engine/src/cmd/edit.rs:72"
+    },
+    {
+      "id": "edit.undo",
+      "label": "Undo",
+      "source": "crates/engine/src/cmd/edit.rs:42"
+    },
+    {
+      "id": "edit.undoHistory",
+      "label": "Undo History",
+      "source": "crates/engine/src/cmd/edit.rs:55"
+    },
+    {
+      "id": "edit.undoTo",
+      "label": "Undo Actions",
+      "source": "crates/engine/src/cmd/edit.rs:51"
+    },
+    {
+      "id": "equation.backspace",
+      "label": "Delete Back in Equation",
+      "source": "crates/engine/src/cmd/equation.rs:44"
+    },
+    {
+      "id": "equation.convert",
+      "label": "Convert",
+      "source": "crates/engine/src/cmd/equation.rs:50"
+    },
+    {
+      "id": "equation.delete",
+      "label": "Delete in Equation",
+      "source": "crates/engine/src/cmd/equation.rs:45"
+    },
+    {
+      "id": "equation.deleteSurrounding",
+      "label": "Delete Around Caret in Equation",
+      "source": "crates/engine/src/cmd/equation.rs:46"
+    },
+    {
+      "id": "equation.display",
+      "label": "Change to Display",
+      "source": "crates/engine/src/cmd/equation.rs:67"
+    },
+    {
+      "id": "equation.edit",
+      "label": "Edit Equation",
+      "source": "crates/engine/src/cmd/equation.rs:31"
+    },
+    {
+      "id": "equation.enter",
+      "label": "Enter in Equation",
+      "source": "crates/engine/src/cmd/equation.rs:49"
+    },
+    {
+      "id": "equation.exit",
+      "label": "Leave Equation",
+      "source": "crates/engine/src/cmd/equation.rs:35"
+    },
+    {
+      "id": "equation.gallery",
+      "label": "Equation Gallery",
+      "source": "crates/engine/src/cmd/equation.rs:74"
+    },
+    {
+      "id": "equation.get",
+      "label": "Equation Info",
+      "source": "crates/engine/src/cmd/equation.rs:73"
+    },
+    {
+      "id": "equation.inputFormat",
+      "label": "Input Format",
+      "source": "crates/engine/src/cmd/equation.rs:53"
+    },
+    {
+      "id": "equation.insertStructure",
+      "label": "Insert Structure",
+      "source": "crates/engine/src/cmd/equation.rs:37"
+    },
+    {
+      "id": "equation.insertSymbol",
+      "label": "Insert Symbol",
+      "source": "crates/engine/src/cmd/equation.rs:39"
+    },
+    {
+      "id": "equation.justify",
+      "label": "Justification",
+      "source": "crates/engine/src/cmd/equation.rs:68"
+    },
+    {
+      "id": "equation.move",
+      "label": "Move in Equation",
+      "source": "crates/engine/src/cmd/equation.rs:40"
+    },
+    {
+      "id": "equation.normalText",
+      "label": "Normal Text",
+      "source": "crates/engine/src/cmd/equation.rs:61"
+    },
+    {
+      "id": "equation.number",
+      "label": "Equation Number",
+      "source": "crates/engine/src/cmd/equation.rs:71"
+    },
+    {
+      "id": "equation.set",
+      "label": "Set Equation",
+      "source": "crates/engine/src/cmd/equation.rs:72"
+    },
+    {
+      "id": "equation.structure",
+      "label": "Change Structure",
+      "source": "crates/engine/src/cmd/equation.rs:76"
+    },
+    {
+      "id": "equation.structureActions",
+      "label": "Structure Actions",
+      "source": "crates/engine/src/cmd/equation.rs:75"
+    },
+    {
+      "id": "equation.type",
+      "label": "Type in Equation",
+      "source": "crates/engine/src/cmd/equation.rs:36"
+    },
+    {
+      "id": "fields.lock",
+      "label": "Lock Fields",
+      "source": "crates/engine/src/cmd/fields.rs:33"
+    },
+    {
+      "id": "fields.next",
+      "label": "Next Field",
+      "source": "crates/engine/src/cmd/fields.rs:35"
+    },
+    {
+      "id": "fields.previous",
+      "label": "Previous Field",
+      "source": "crates/engine/src/cmd/fields.rs:36"
+    },
+    {
+      "id": "fields.selected",
+      "label": "Selected Fields",
+      "source": "crates/engine/src/cmd/fields.rs:39"
+    },
+    {
+      "id": "fields.setCode",
+      "label": "Edit Field Code",
+      "source": "crates/engine/src/cmd/fields.rs:31"
+    },
+    {
+      "id": "fields.toggleCode",
+      "label": "Toggle Field Codes",
+      "source": "crates/engine/src/cmd/fields.rs:30"
+    },
+    {
+      "id": "fields.unlink",
+      "label": "Unlink Fields",
+      "source": "crates/engine/src/cmd/fields.rs:32"
+    },
+    {
+      "id": "fields.unlock",
+      "label": "Unlock Fields",
+      "source": "crates/engine/src/cmd/fields.rs:34"
+    },
+    {
+      "id": "file.accessibility",
+      "label": "Check Accessibility",
+      "source": "crates/engine/src/cmd/tools/specs.rs:63"
+    },
+    {
+      "id": "file.autosave",
+      "label": "AutoSave",
+      "source": "crates/engine/src/cmd/tools/specs.rs:141"
+    },
+    {
+      "id": "file.close",
+      "label": "Close",
+      "source": "crates/engine/src/cmd/file.rs:139"
+    },
+    {
+      "id": "file.closeDocument",
+      "label": "Close Document",
+      "source": "crates/engine/src/cmd/file.rs:146"
+    },
+    {
+      "id": "file.compatibility",
+      "label": "Check Compatibility",
+      "source": "crates/engine/src/cmd/tools/specs.rs:146"
+    },
+    {
+      "id": "file.encrypt",
+      "label": "Encrypt with Password",
+      "source": "crates/engine/src/cmd/file.rs:101"
+    },
+    {
+      "id": "file.exportPdf",
+      "label": "Export PDF",
+      "source": "crates/engine/src/cmd/file.rs:104"
+    },
+    {
+      "id": "file.exportPng",
+      "label": "Export Page as PNG",
+      "source": "crates/engine/src/cmd/file.rs:118"
+    },
+    {
+      "id": "file.info",
+      "label": "Info",
+      "source": "crates/engine/src/cmd/file.rs:151"
+    },
+    {
+      "id": "file.inspect",
+      "label": "Inspect Document",
+      "source": "crates/engine/src/cmd/tools/specs.rs:64"
+    },
+    {
+      "id": "file.listTemplates",
+      "label": "Personal Templates",
+      "source": "crates/engine/src/cmd/user_templates.rs:39"
+    },
+    {
+      "id": "file.new",
+      "label": "New",
+      "source": "crates/engine/src/cmd/file.rs:89"
+    },
+    {
+      "id": "file.newFromTemplate",
+      "label": "New from Template",
+      "source": "crates/engine/src/cmd/tools/specs.rs:121"
+    },
+    {
+      "id": "file.open",
+      "label": "Open",
+      "source": "crates/engine/src/cmd/file.rs:90"
+    },
+    {
+      "id": "file.options",
+      "label": "Options",
+      "source": "crates/engine/src/cmd/options.rs:23"
+    },
+    {
+      "id": "file.print",
+      "label": "Print",
+      "source": "crates/engine/src/cmd/file.rs:133"
+    },
+    {
+      "id": "file.printMarkup",
+      "label": "Print Markup",
+      "source": "crates/engine/src/cmd/file.rs:122"
+    },
+    {
+      "id": "file.printPdf",
+      "label": "Print to PDF",
+      "source": "crates/engine/src/cmd/file.rs:128"
+    },
+    {
+      "id": "file.privacy",
+      "label": "Privacy Settings",
+      "source": "crates/engine/src/cmd/file.rs:174"
+    },
+    {
+      "id": "file.privacyOptions",
+      "label": "Privacy Options",
+      "source": "crates/engine/src/cmd/file.rs:159"
+    },
+    {
+      "id": "file.properties",
+      "label": "Properties",
+      "source": "crates/engine/src/cmd/file.rs:149"
+    },
+    {
+      "id": "file.protect",
+      "label": "Protect Document",
+      "source": "crates/engine/src/cmd/tools/specs.rs:66"
+    },
+    {
+      "id": "file.recover",
+      "label": "Recover Unsaved Documents",
+      "source": "crates/engine/src/cmd/tools/specs.rs:118"
+    },
+    {
+      "id": "file.rename",
+      "label": "Rename Document",
+      "source": "crates/engine/src/cmd/file.rs:88"
+    },
+    {
+      "id": "file.save",
+      "label": "Save",
+      "source": "crates/engine/src/cmd/file.rs:94"
+    },
+    {
+      "id": "file.saveAs",
+      "label": "Save As",
+      "source": "crates/engine/src/cmd/file.rs:98"
+    },
+    {
+      "id": "file.saveTemplate",
+      "label": "Save as Template",
+      "source": "crates/engine/src/cmd/tools/specs.rs:132"
+    },
+    {
+      "id": "file.setAuthor",
+      "label": "User Name",
+      "source": "crates/engine/src/cmd/file.rs:152"
+    },
+    {
+      "id": "file.share",
+      "label": "Share",
+      "source": "crates/engine/src/cmd/tools/specs.rs:158"
+    },
+    {
+      "id": "file.versions",
+      "label": "Version History",
+      "source": "crates/engine/src/cmd/tools/specs.rs:71"
+    },
+    {
+      "id": "font.add",
+      "label": "Add Font…",
+      "source": "crates/engine/src/cmd/font.rs:16"
+    },
+    {
+      "id": "font.list",
+      "label": "Added Fonts",
+      "source": "crates/engine/src/cmd/font.rs:19"
+    },
+    {
+      "id": "font.loadSystem",
+      "label": "Load System Installed Fonts…",
+      "source": "crates/engine/src/cmd/font.rs:21"
+    },
+    {
+      "id": "font.remove",
+      "label": "Remove Added Font",
+      "source": "crates/engine/src/cmd/font.rs:20"
+    },
+    {
+      "id": "format.allCaps",
+      "label": "All Caps",
+      "source": "crates/engine/src/cmd/format.rs:86"
+    },
+    {
+      "id": "format.bold",
+      "label": "Bold",
+      "source": "crates/engine/src/cmd/format.rs:19"
+    },
+    {
+      "id": "format.border",
+      "label": "Character Border",
+      "source": "crates/engine/src/cmd/format.rs:61"
+    },
+    {
+      "id": "format.changeCase",
+      "label": "Change Case",
+      "source": "crates/engine/src/cmd/format.rs:120"
+    },
+    {
+      "id": "format.charStyle",
+      "label": "Apply Character Style",
+      "source": "crates/engine/src/cmd/format.rs:141"
+    },
+    {
+      "id": "format.clear",
+      "label": "Clear All Formatting",
+      "source": "crates/engine/src/cmd/format.rs:123"
+    },
+    {
+      "id": "format.color",
+      "label": "Font Color",
+      "source": "crates/engine/src/cmd/format.rs:106"
+    },
+    {
+      "id": "format.doubleStrikethrough",
+      "label": "Double Strikethrough",
+      "source": "crates/engine/src/cmd/format.rs:65"
+    },
+    {
+      "id": "format.doubleUnderline",
+      "label": "Double Underline",
+      "source": "crates/engine/src/cmd/format.rs:49"
+    },
+    {
+      "id": "format.emboss",
+      "label": "Emboss",
+      "source": "crates/engine/src/cmd/format.rs:98"
+    },
+    {
+      "id": "format.enclose",
+      "label": "Enclose Characters",
+      "source": "crates/engine/src/cmd/format.rs:149"
+    },
+    {
+      "id": "format.engrave",
+      "label": "Engrave",
+      "source": "crates/engine/src/cmd/format.rs:99"
+    },
+    {
+      "id": "format.font",
+      "label": "Font",
+      "source": "crates/engine/src/cmd/format.rs:100"
+    },
+    {
+      "id": "format.fontDialog",
+      "label": "Font Dialog",
+      "source": "crates/engine/src/cmd/format.rs:143"
+    },
+    {
+      "id": "format.growFont",
+      "label": "Increase Font Size",
+      "source": "crates/engine/src/cmd/format.rs:102"
+    },
+    {
+      "id": "format.growFont1",
+      "label": "Grow Font 1 Point",
+      "source": "crates/engine/src/cmd/format.rs:104"
+    },
+    {
+      "id": "format.hidden",
+      "label": "Hidden",
+      "source": "crates/engine/src/cmd/format.rs:92"
+    },
+    {
+      "id": "format.highlight",
+      "label": "Text Highlight Color",
+      "source": "crates/engine/src/cmd/format.rs:109"
+    },
+    {
+      "id": "format.italic",
+      "label": "Italic",
+      "source": "crates/engine/src/cmd/format.rs:33"
+    },
+    {
+      "id": "format.outline",
+      "label": "Outline",
+      "source": "crates/engine/src/cmd/format.rs:94"
+    },
+    {
+      "id": "format.phonetic",
+      "label": "Phonetic Guide",
+      "source": "crates/engine/src/cmd/phonetic.rs:15"
+    },
+    {
+      "id": "format.position",
+      "label": "Character Position",
+      "source": "crates/engine/src/cmd/format.rs:136"
+    },
+    {
+      "id": "format.resetChar",
+      "label": "Reset Character Formatting",
+      "source": "crates/engine/src/cmd/format.rs:125"
+    },
+    {
+      "id": "format.scale",
+      "label": "Character Scale",
+      "source": "crates/engine/src/cmd/format.rs:131"
+    },
+    {
+      "id": "format.set",
+      "label": "Set Character Formatting",
+      "source": "crates/engine/src/cmd/format.rs:142"
+    },
+    {
+      "id": "format.shading",
+      "label": "Character Shading",
+      "source": "crates/engine/src/cmd/format.rs:115"
+    },
+    {
+      "id": "format.shadow",
+      "label": "Shadow",
+      "source": "crates/engine/src/cmd/format.rs:97"
+    },
+    {
+      "id": "format.shrinkFont",
+      "label": "Decrease Font Size",
+      "source": "crates/engine/src/cmd/format.rs:103"
+    },
+    {
+      "id": "format.shrinkFont1",
+      "label": "Shrink Font 1 Point",
+      "source": "crates/engine/src/cmd/format.rs:105"
+    },
+    {
+      "id": "format.size",
+      "label": "Font Size",
+      "source": "crates/engine/src/cmd/format.rs:101"
+    },
+    {
+      "id": "format.smallCaps",
+      "label": "Small Caps",
+      "source": "crates/engine/src/cmd/format.rs:88"
+    },
+    {
+      "id": "format.spacing",
+      "label": "Character Spacing",
+      "source": "crates/engine/src/cmd/format.rs:126"
+    },
+    {
+      "id": "format.state",
+      "label": "Formatting at Selection",
+      "source": "crates/engine/src/cmd/format.rs:151"
+    },
+    {
+      "id": "format.strikethrough",
+      "label": "Strikethrough",
+      "source": "crates/engine/src/cmd/format.rs:57"
+    },
+    {
+      "id": "format.subscript",
+      "label": "Subscript",
+      "source": "crates/engine/src/cmd/format.rs:68"
+    },
+    {
+      "id": "format.superscript",
+      "label": "Superscript",
+      "source": "crates/engine/src/cmd/format.rs:77"
+    },
+    {
+      "id": "format.textEffects",
+      "label": "Text Effects",
+      "source": "crates/engine/src/cmd/wordart.rs:25"
+    },
+    {
+      "id": "format.underline",
+      "label": "Underline",
+      "source": "crates/engine/src/cmd/format.rs:46"
+    },
+    {
+      "id": "format.underlineColor",
+      "label": "Underline Color",
+      "source": "crates/engine/src/cmd/format.rs:107"
+    },
+    {
+      "id": "format.wordUnderline",
+      "label": "Underline Words Only",
+      "source": "crates/engine/src/cmd/format.rs:53"
+    },
+    {
+      "id": "hf.next",
+      "label": "Next Section",
+      "source": "crates/engine/src/cmd/tools/specs.rs:248"
+    },
+    {
+      "id": "hf.position",
+      "label": "Header/Footer Position",
+      "source": "crates/engine/src/cmd/tools/specs.rs:250"
+    },
+    {
+      "id": "hf.previous",
+      "label": "Previous Section",
+      "source": "crates/engine/src/cmd/tools/specs.rs:249"
+    },
+    {
+      "id": "insert.autoText",
+      "label": "AutoText",
+      "source": "crates/engine/src/cmd/tools/specs.rs:166"
+    },
+    {
+      "id": "insert.blankPage",
+      "label": "Blank Page",
+      "source": "crates/engine/src/cmd/insert.rs:32"
+    },
+    {
+      "id": "insert.bookmark",
+      "label": "Bookmark",
+      "source": "crates/engine/src/cmd/insert.rs:64"
+    },
+    {
+      "id": "insert.canvas",
+      "label": "Drawing Canvas",
+      "source": "crates/engine/src/cmd/canvas.rs:35"
+    },
+    {
+      "id": "insert.chart",
+      "label": "Chart",
+      "source": "crates/engine/src/cmd/chart.rs:30"
+    },
+    {
+      "id": "insert.closeHeader",
+      "label": "Close Header and Footer",
+      "source": "crates/engine/src/cmd/insert.rs:82"
+    },
+    {
+      "id": "insert.coverPage",
+      "label": "Cover Page",
+      "source": "crates/engine/src/cmd/insert.rs:40"
+    },
+    {
+      "id": "insert.createFooter",
+      "label": "Footer",
+      "source": "crates/engine/src/cmd/insert.rs:80"
+    },
+    {
+      "id": "insert.createHeader",
+      "label": "Header",
+      "source": "crates/engine/src/cmd/insert.rs:78"
+    },
+    {
+      "id": "insert.crossReference",
+      "label": "Cross-reference",
+      "source": "crates/engine/src/cmd/citations.rs:84"
+    },
+    {
+      "id": "insert.dateField",
+      "label": "Insert Date Field",
+      "source": "crates/engine/src/cmd/insert.rs:120"
+    },
+    {
+      "id": "insert.dateTime",
+      "label": "Date & Time",
+      "source": "crates/engine/src/cmd/insert.rs:116"
+    },
+    {
+      "id": "insert.deleteBookmark",
+      "label": "Delete Bookmark",
+      "source": "crates/engine/src/cmd/insert.rs:65"
+    },
+    {
+      "id": "insert.docProperty",
+      "label": "Document Property",
+      "source": "crates/engine/src/cmd/tools/specs.rs:169"
+    },
+    {
+      "id": "insert.dropCap",
+      "label": "Drop Cap",
+      "source": "crates/engine/src/cmd/insert.rs:126"
+    },
+    {
+      "id": "insert.editFooter",
+      "label": "Edit Footer",
+      "source": "crates/engine/src/cmd/insert.rs:75"
+    },
+    {
+      "id": "insert.editHeader",
+      "label": "Edit Header",
+      "source": "crates/engine/src/cmd/insert.rs:72"
+    },
+    {
+      "id": "insert.equation",
+      "label": "Equation",
+      "source": "crates/engine/src/cmd/equation.rs:28"
+    },
+    {
+      "id": "insert.field",
+      "label": "Field",
+      "source": "crates/engine/src/cmd/insert.rs:118"
+    },
+    {
+      "id": "insert.footer",
+      "label": "Footer",
+      "source": "crates/engine/src/cmd/insert.rs:67"
+    },
+    {
+      "id": "insert.header",
+      "label": "Header",
+      "source": "crates/engine/src/cmd/insert.rs:66"
+    },
+    {
+      "id": "insert.horizontalLine",
+      "label": "Horizontal Line",
+      "source": "crates/engine/src/cmd/insert.rs:129"
+    },
+    {
+      "id": "insert.icon",
+      "label": "Icons",
+      "source": "crates/engine/src/cmd/insert.rs:43"
+    },
+    {
+      "id": "insert.link",
+      "label": "Link",
+      "source": "crates/engine/src/cmd/insert.rs:54"
+    },
+    {
+      "id": "insert.object",
+      "label": "Object",
+      "source": "crates/engine/src/cmd/tools/specs.rs:213"
+    },
+    {
+      "id": "insert.pageBreak",
+      "label": "Page Break",
+      "source": "crates/engine/src/cmd/insert.rs:28"
+    },
+    {
+      "id": "insert.pageField",
+      "label": "Insert Page Field",
+      "source": "crates/engine/src/cmd/insert.rs:124"
+    },
+    {
+      "id": "insert.pageNumber",
+      "label": "Page Number",
+      "source": "crates/engine/src/cmd/insert.rs:68"
+    },
+    {
+      "id": "insert.picture",
+      "label": "Pictures",
+      "source": "crates/engine/src/cmd/insert.rs:42"
+    },
+    {
+      "id": "insert.quickParts",
+      "label": "Quick Parts",
+      "source": "crates/engine/src/cmd/tools/specs.rs:163"
+    },
+    {
+      "id": "insert.removeEmptyHeaders",
+      "label": "Close Header and Footer",
+      "source": "crates/engine/src/cmd/insert.rs:93"
+    },
+    {
+      "id": "insert.removeFooter",
+      "label": "Remove Footer",
+      "source": "crates/engine/src/cmd/insert.rs:112"
+    },
+    {
+      "id": "insert.removeHeader",
+      "label": "Remove Header",
+      "source": "crates/engine/src/cmd/insert.rs:100"
+    },
+    {
+      "id": "insert.removeLink",
+      "label": "Remove Hyperlink",
+      "source": "crates/engine/src/cmd/insert.rs:58"
+    },
+    {
+      "id": "insert.shape",
+      "label": "Shapes",
+      "source": "crates/engine/src/cmd/insert.rs:45"
+    },
+    {
+      "id": "insert.signatureLine",
+      "label": "Signature Line",
+      "source": "crates/engine/src/cmd/tools/specs.rs:193"
+    },
+    {
+      "id": "insert.smartArt",
+      "label": "SmartArt",
+      "source": "crates/engine/src/cmd/smart_art.rs:31"
+    },
+    {
+      "id": "insert.spreadsheet",
+      "label": "Spreadsheet Table",
+      "source": "crates/engine/src/cmd/tools/specs.rs:218"
+    },
+    {
+      "id": "insert.symbol",
+      "label": "Symbol",
+      "source": "crates/engine/src/cmd/insert.rs:117"
+    },
+    {
+      "id": "insert.table",
+      "label": "Table",
+      "source": "crates/engine/src/cmd/insert.rs:41"
+    },
+    {
+      "id": "insert.textBox",
+      "label": "Text Box",
+      "source": "crates/engine/src/cmd/insert.rs:47"
+    },
+    {
+      "id": "insert.textFromFile",
+      "label": "Text from File",
+      "source": "crates/engine/src/cmd/insert.rs:134"
+    },
+    {
+      "id": "insert.timeField",
+      "label": "Insert Time Field",
+      "source": "crates/engine/src/cmd/insert.rs:122"
+    },
+    {
+      "id": "insert.wordArt",
+      "label": "WordArt",
+      "source": "crates/engine/src/cmd/wordart.rs:22"
+    },
+    {
+      "id": "layout.break",
+      "label": "Breaks",
+      "source": "crates/engine/src/cmd/page.rs:32"
+    },
+    {
+      "id": "layout.columns",
+      "label": "Columns",
+      "source": "crates/engine/src/cmd/page.rs:28"
+    },
+    {
+      "id": "layout.differentFirstPage",
+      "label": "Different First Page",
+      "source": "crates/engine/src/cmd/page.rs:65"
+    },
+    {
+      "id": "layout.differentOddEven",
+      "label": "Different Odd & Even Pages",
+      "source": "crates/engine/src/cmd/page.rs:69"
+    },
+    {
+      "id": "layout.documentGrid",
+      "label": "Document Grid",
+      "source": "crates/engine/src/cmd/page.rs:90"
+    },
+    {
+      "id": "layout.hyphenation",
+      "label": "Hyphenation",
+      "source": "crates/engine/src/cmd/page.rs:37"
+    },
+    {
+      "id": "layout.lineNumbers",
+      "label": "Line Numbers",
+      "source": "crates/engine/src/cmd/page.rs:34"
+    },
+    {
+      "id": "layout.linkToPrevious",
+      "label": "Link to Previous",
+      "source": "crates/engine/src/cmd/tools/specs.rs:235"
+    },
+    {
+      "id": "layout.manualHyphenation",
+      "label": "Manual Hyphenation",
+      "source": "crates/engine/src/cmd/page.rs:39"
+    },
+    {
+      "id": "layout.margins",
+      "label": "Margins",
+      "source": "crates/engine/src/cmd/page.rs:15"
+    },
+    {
+      "id": "layout.orientation",
+      "label": "Orientation",
+      "source": "crates/engine/src/cmd/page.rs:18"
+    },
+    {
+      "id": "layout.pageNumberFormat",
+      "label": "Format Page Numbers",
+      "source": "crates/engine/src/cmd/page.rs:73"
+    },
+    {
+      "id": "layout.pageSetup",
+      "label": "Page Setup",
+      "source": "crates/engine/src/cmd/page.rs:42"
+    },
+    {
+      "id": "layout.section",
+      "label": "Section Properties",
+      "source": "crates/engine/src/cmd/page.rs:93"
+    },
+    {
+      "id": "layout.sectionRtl",
+      "label": "Right-to-Left Section",
+      "source": "crates/engine/src/cmd/page.rs:57"
+    },
+    {
+      "id": "layout.size",
+      "label": "Size",
+      "source": "crates/engine/src/cmd/page.rs:27"
+    },
+    {
+      "id": "layout.textDirection",
+      "label": "Text Direction",
+      "source": "crates/engine/src/cmd/page.rs:62"
+    },
+    {
+      "id": "layout.verticalAlign",
+      "label": "Vertical Alignment",
+      "source": "crates/engine/src/cmd/page.rs:52"
+    },
+    {
+      "id": "link.targets",
+      "label": "Link",
+      "source": "crates/engine/src/cmd/insert.rs:57"
+    },
+    {
+      "id": "list.define",
+      "label": "Define New Multilevel List",
+      "source": "crates/engine/src/cmd/lists.rs:20"
+    },
+    {
+      "id": "list.get",
+      "label": "List Definition",
+      "source": "crates/engine/src/cmd/lists.rs:23"
+    },
+    {
+      "id": "list.multilevelPreset",
+      "label": "Multilevel List Library",
+      "source": "crates/engine/src/cmd/lists.rs:26"
+    },
+    {
+      "id": "mailings.addressBlock",
+      "label": "Address Block",
+      "source": "crates/engine/src/cmd/mailings.rs:129"
+    },
+    {
+      "id": "mailings.checkErrors",
+      "label": "Check for Errors",
+      "source": "crates/engine/src/cmd/mailings.rs:195"
+    },
+    {
+      "id": "mailings.editRecipients",
+      "label": "Edit Recipient List",
+      "source": "crates/engine/src/cmd/mailings.rs:77"
+    },
+    {
+      "id": "mailings.envelopes",
+      "label": "Envelopes",
+      "source": "crates/engine/src/cmd/mailings.rs:221"
+    },
+    {
+      "id": "mailings.filterRecipients",
+      "label": "Filter Recipients",
+      "source": "crates/engine/src/cmd/mailings.rs:100"
+    },
+    {
+      "id": "mailings.findRecipient",
+      "label": "Find Recipient",
+      "source": "crates/engine/src/cmd/mailings.rs:181"
+    },
+    {
+      "id": "mailings.finish",
+      "label": "Finish & Merge",
+      "source": "crates/engine/src/cmd/mailings.rs:205"
+    },
+    {
+      "id": "mailings.first",
+      "label": "First Record",
+      "source": "crates/engine/src/cmd/mailings.rs:172"
+    },
+    {
+      "id": "mailings.goToRecord",
+      "label": "Go to Record",
+      "source": "crates/engine/src/cmd/mailings.rs:174"
+    },
+    {
+      "id": "mailings.greetingLine",
+      "label": "Greeting Line",
+      "source": "crates/engine/src/cmd/mailings.rs:132"
+    },
+    {
+      "id": "mailings.highlightFields",
+      "label": "Highlight Merge Fields",
+      "source": "crates/engine/src/cmd/mailings.rs:158"
+    },
+    {
+      "id": "mailings.insertField",
+      "label": "Insert Merge Field",
+      "source": "crates/engine/src/cmd/mailings.rs:123"
+    },
+    {
+      "id": "mailings.labels",
+      "label": "Labels",
+      "source": "crates/engine/src/cmd/mailings.rs:224"
+    },
+    {
+      "id": "mailings.last",
+      "label": "Last Record",
+      "source": "crates/engine/src/cmd/mailings.rs:173"
+    },
+    {
+      "id": "mailings.matchFields",
+      "label": "Match Fields",
+      "source": "crates/engine/src/cmd/mailings.rs:154"
+    },
+    {
+      "id": "mailings.next",
+      "label": "Next Record",
+      "source": "crates/engine/src/cmd/mailings.rs:170"
+    },
+    {
+      "id": "mailings.preview",
+      "label": "Preview Results",
+      "source": "crates/engine/src/cmd/mailings.rs:163"
+    },
+    {
+      "id": "mailings.previous",
+      "label": "Previous Record",
+      "source": "crates/engine/src/cmd/mailings.rs:171"
+    },
+    {
+      "id": "mailings.printDocuments",
+      "label": "Print Documents",
+      "source": "crates/engine/src/cmd/mailings.rs:209"
+    },
+    {
+      "id": "mailings.recipients",
+      "label": "Select Recipients",
+      "source": "crates/engine/src/cmd/mailings.rs:74"
+    },
+    {
+      "id": "mailings.rules",
+      "label": "Rules",
+      "source": "crates/engine/src/cmd/mailings.rs:135"
+    },
+    {
+      "id": "mailings.sortRecipients",
+      "label": "Sort Recipients",
+      "source": "crates/engine/src/cmd/mailings.rs:115"
+    },
+    {
+      "id": "mailings.start",
+      "label": "Start Mail Merge",
+      "source": "crates/engine/src/cmd/mailings.rs:64"
+    },
+    {
+      "id": "object.altText",
+      "label": "Alt Text",
+      "source": "crates/engine/src/cmd/objects/specs.rs:30"
+    },
+    {
+      "id": "outline.close",
+      "label": "Close Outline View",
+      "source": "crates/engine/src/cmd/outline.rs:172"
+    },
+    {
+      "id": "outline.collapse",
+      "label": "Collapse",
+      "source": "crates/engine/src/cmd/outline.rs:84"
+    },
+    {
+      "id": "outline.demote",
+      "label": "Demote",
+      "source": "crates/engine/src/cmd/outline.rs:63"
+    },
+    {
+      "id": "outline.demoteToBody",
+      "label": "Demote to Body Text",
+      "source": "crates/engine/src/cmd/outline.rs:64"
+    },
+    {
+      "id": "outline.expand",
+      "label": "Expand",
+      "source": "crates/engine/src/cmd/outline.rs:79"
+    },
+    {
+      "id": "outline.firstLineOnly",
+      "label": "Show First Line Only",
+      "source": "crates/engine/src/cmd/outline.rs:156"
+    },
+    {
+      "id": "outline.level",
+      "label": "Outline Level",
+      "source": "crates/engine/src/cmd/outline.rs:65"
+    },
+    {
+      "id": "outline.moveDown",
+      "label": "Move Down",
+      "source": "crates/engine/src/cmd/outline.rs:78"
+    },
+    {
+      "id": "outline.moveUp",
+      "label": "Move Up",
+      "source": "crates/engine/src/cmd/outline.rs:77"
+    },
+    {
+      "id": "outline.promote",
+      "label": "Promote",
+      "source": "crates/engine/src/cmd/outline.rs:62"
+    },
+    {
+      "id": "outline.promoteToHeading1",
+      "label": "Promote to Heading 1",
+      "source": "crates/engine/src/cmd/outline.rs:61"
+    },
+    {
+      "id": "outline.selectSubtree",
+      "label": "Select Heading and Content",
+      "source": "crates/engine/src/cmd/outline.rs:98"
+    },
+    {
+      "id": "outline.showAll",
+      "label": "Show All Levels",
+      "source": "crates/engine/src/cmd/outline.rs:152"
+    },
+    {
+      "id": "outline.showFormatting",
+      "label": "Show Text Formatting",
+      "source": "crates/engine/src/cmd/outline.rs:164"
+    },
+    {
+      "id": "outline.showLevel",
+      "label": "Show Level",
+      "source": "crates/engine/src/cmd/outline.rs:102"
+    },
+    {
+      "id": "outline.showLevel1",
+      "label": "Show Level 1",
+      "source": "crates/engine/src/cmd/outline.rs:116"
+    },
+    {
+      "id": "outline.showLevel2",
+      "label": "Show Level 2",
+      "source": "crates/engine/src/cmd/outline.rs:120"
+    },
+    {
+      "id": "outline.showLevel3",
+      "label": "Show Level 3",
+      "source": "crates/engine/src/cmd/outline.rs:124"
+    },
+    {
+      "id": "outline.showLevel4",
+      "label": "Show Level 4",
+      "source": "crates/engine/src/cmd/outline.rs:128"
+    },
+    {
+      "id": "outline.showLevel5",
+      "label": "Show Level 5",
+      "source": "crates/engine/src/cmd/outline.rs:132"
+    },
+    {
+      "id": "outline.showLevel6",
+      "label": "Show Level 6",
+      "source": "crates/engine/src/cmd/outline.rs:136"
+    },
+    {
+      "id": "outline.showLevel7",
+      "label": "Show Level 7",
+      "source": "crates/engine/src/cmd/outline.rs:140"
+    },
+    {
+      "id": "outline.showLevel8",
+      "label": "Show Level 8",
+      "source": "crates/engine/src/cmd/outline.rs:144"
+    },
+    {
+      "id": "outline.showLevel9",
+      "label": "Show Level 9",
+      "source": "crates/engine/src/cmd/outline.rs:148"
+    },
+    {
+      "id": "outline.state",
+      "label": "Outline State",
+      "source": "crates/engine/src/cmd/outline.rs:175"
+    },
+    {
+      "id": "outline.toggle",
+      "label": "Expand or Collapse Heading",
+      "source": "crates/engine/src/cmd/outline.rs:90"
+    },
+    {
+      "id": "para.addSpaceBefore",
+      "label": "Add Space Before Paragraph",
+      "source": "crates/engine/src/cmd/para.rs:119"
+    },
+    {
+      "id": "para.align",
+      "label": "Alignment",
+      "source": "crates/engine/src/cmd/para.rs:36"
+    },
+    {
+      "id": "para.alignCenter",
+      "label": "Center",
+      "source": "crates/engine/src/cmd/para.rs:32"
+    },
+    {
+      "id": "para.alignLeft",
+      "label": "Align Left",
+      "source": "crates/engine/src/cmd/para.rs:31"
+    },
+    {
+      "id": "para.alignRight",
+      "label": "Align Right",
+      "source": "crates/engine/src/cmd/para.rs:33"
+    },
+    {
+      "id": "para.asianTypography",
+      "label": "Asian Typography",
+      "source": "crates/engine/src/cmd/para.rs:204"
+    },
+    {
+      "id": "para.borders",
+      "label": "Borders",
+      "source": "crates/engine/src/cmd/para.rs:188"
+    },
+    {
+      "id": "para.bullets",
+      "label": "Bullets",
+      "source": "crates/engine/src/cmd/para.rs:161"
+    },
+    {
+      "id": "para.defineBullet",
+      "label": "Define New Bullet",
+      "source": "crates/engine/src/cmd/tools/specs.rs:316"
+    },
+    {
+      "id": "para.defineNumber",
+      "label": "Define New Number Format",
+      "source": "crates/engine/src/cmd/tools/specs.rs:320"
+    },
+    {
+      "id": "para.demote",
+      "label": "Demote",
+      "source": "crates/engine/src/cmd/para.rs:181"
+    },
+    {
+      "id": "para.dialog",
+      "label": "Paragraph Settings",
+      "source": "crates/engine/src/cmd/para.rs:217"
+    },
+    {
+      "id": "para.distribute",
+      "label": "Distributed",
+      "source": "crates/engine/src/cmd/para.rs:35"
+    },
+    {
+      "id": "para.double",
+      "label": "Double Spacing",
+      "source": "crates/engine/src/cmd/para.rs:94"
+    },
+    {
+      "id": "para.hangingIndent",
+      "label": "Hanging Indent",
+      "source": "crates/engine/src/cmd/para.rs:58"
+    },
+    {
+      "id": "para.heading1",
+      "label": "Heading 1",
+      "source": "crates/engine/src/cmd/para.rs:158"
+    },
+    {
+      "id": "para.heading2",
+      "label": "Heading 2",
+      "source": "crates/engine/src/cmd/para.rs:159"
+    },
+    {
+      "id": "para.heading3",
+      "label": "Heading 3",
+      "source": "crates/engine/src/cmd/para.rs:160"
+    },
+    {
+      "id": "para.indent",
+      "label": "Increase Indent",
+      "source": "crates/engine/src/cmd/para.rs:56"
+    },
+    {
+      "id": "para.indents",
+      "label": "Indents",
+      "source": "crates/engine/src/cmd/para.rs:75"
+    },
+    {
+      "id": "para.justify",
+      "label": "Justify",
+      "source": "crates/engine/src/cmd/para.rs:34"
+    },
+    {
+      "id": "para.keepLines",
+      "label": "Keep Lines Together",
+      "source": "crates/engine/src/cmd/para.rs:194"
+    },
+    {
+      "id": "para.keepNext",
+      "label": "Keep with Next",
+      "source": "crates/engine/src/cmd/para.rs:192"
+    },
+    {
+      "id": "para.lineSpacing",
+      "label": "Line and Paragraph Spacing",
+      "source": "crates/engine/src/cmd/para.rs:91"
+    },
+    {
+      "id": "para.listLevel",
+      "label": "Change List Level",
+      "source": "crates/engine/src/cmd/para.rs:165"
+    },
+    {
+      "id": "para.ltr",
+      "label": "Left-to-Right Text Direction",
+      "source": "crates/engine/src/cmd/para.rs:54"
+    },
+    {
+      "id": "para.moveDown",
+      "label": "Move Paragraph Down",
+      "source": "crates/engine/src/cmd/para.rs:177"
+    },
+    {
+      "id": "para.moveUp",
+      "label": "Move Paragraph Up",
+      "source": "crates/engine/src/cmd/para.rs:175"
+    },
+    {
+      "id": "para.multilevel",
+      "label": "Multilevel List",
+      "source": "crates/engine/src/cmd/para.rs:164"
+    },
+    {
+      "id": "para.normal",
+      "label": "Normal Style",
+      "source": "crates/engine/src/cmd/para.rs:157"
+    },
+    {
+      "id": "para.numbering",
+      "label": "Numbering",
+      "source": "crates/engine/src/cmd/para.rs:162"
+    },
+    {
+      "id": "para.oneAndHalf",
+      "label": "1.5 Line Spacing",
+      "source": "crates/engine/src/cmd/para.rs:95"
+    },
+    {
+      "id": "para.outdent",
+      "label": "Decrease Indent",
+      "source": "crates/engine/src/cmd/para.rs:57"
+    },
+    {
+      "id": "para.outlineLevel",
+      "label": "Outline Level",
+      "source": "crates/engine/src/cmd/para.rs:210"
+    },
+    {
+      "id": "para.pageBreakBefore",
+      "label": "Page Break Before",
+      "source": "crates/engine/src/cmd/para.rs:196"
+    },
+    {
+      "id": "para.promote",
+      "label": "Promote",
+      "source": "crates/engine/src/cmd/para.rs:179"
+    },
+    {
+      "id": "para.removeHanging",
+      "label": "Reduce Hanging Indent",
+      "source": "crates/engine/src/cmd/para.rs:67"
+    },
+    {
+      "id": "para.removeSpaceAfter",
+      "label": "Remove Space After Paragraph",
+      "source": "crates/engine/src/cmd/para.rs:130"
+    },
+    {
+      "id": "para.reset",
+      "label": "Reset Paragraph Formatting",
+      "source": "crates/engine/src/cmd/para.rs:142"
+    },
+    {
+      "id": "para.restartNumbering",
+      "label": "Restart at 1",
+      "source": "crates/engine/src/cmd/para.rs:174"
+    },
+    {
+      "id": "para.rtl",
+      "label": "Right-to-Left Text Direction",
+      "source": "crates/engine/src/cmd/para.rs:52"
+    },
+    {
+      "id": "para.set",
+      "label": "Set Paragraph Formatting",
+      "source": "crates/engine/src/cmd/para.rs:214"
+    },
+    {
+      "id": "para.setNumberingValue",
+      "label": "Set Numbering Value",
+      "source": "crates/engine/src/cmd/tools/specs.rs:291"
+    },
+    {
+      "id": "para.shading",
+      "label": "Shading",
+      "source": "crates/engine/src/cmd/para.rs:183"
+    },
+    {
+      "id": "para.single",
+      "label": "Single Spacing",
+      "source": "crates/engine/src/cmd/para.rs:93"
+    },
+    {
+      "id": "para.sort",
+      "label": "Sort",
+      "source": "crates/engine/src/cmd/para.rs:191"
+    },
+    {
+      "id": "para.spacing",
+      "label": "Paragraph Spacing",
+      "source": "crates/engine/src/cmd/para.rs:96"
+    },
+    {
+      "id": "para.style",
+      "label": "Apply Style",
+      "source": "crates/engine/src/cmd/para.rs:156"
+    },
+    {
+      "id": "para.tabs",
+      "label": "Tabs",
+      "source": "crates/engine/src/cmd/para.rs:207"
+    },
+    {
+      "id": "para.widowControl",
+      "label": "Widow/Orphan Control",
+      "source": "crates/engine/src/cmd/para.rs:200"
+    },
+    {
+      "id": "picture.altText",
+      "label": "Alt Text",
+      "source": "crates/engine/src/cmd/objects/specs.rs:24"
+    },
+    {
+      "id": "picture.border",
+      "label": "Picture Border",
+      "source": "crates/engine/src/cmd/objects/specs.rs:157"
+    },
+    {
+      "id": "picture.change",
+      "label": "Change Picture",
+      "source": "crates/engine/src/cmd/objects/specs.rs:126"
+    },
+    {
+      "id": "picture.color",
+      "label": "Color",
+      "source": "crates/engine/src/cmd/objects/specs.rs:61"
+    },
+    {
+      "id": "picture.compress",
+      "label": "Compress Pictures",
+      "source": "crates/engine/src/cmd/objects/specs.rs:119"
+    },
+    {
+      "id": "picture.corrections",
+      "label": "Corrections",
+      "source": "crates/engine/src/cmd/objects/specs.rs:33"
+    },
+    {
+      "id": "picture.crop",
+      "label": "Crop",
+      "source": "crates/engine/src/cmd/objects/specs.rs:18"
+    },
+    {
+      "id": "picture.effects",
+      "label": "Artistic Effects",
+      "source": "crates/engine/src/cmd/objects/specs.rs:86"
+    },
+    {
+      "id": "picture.iconColor",
+      "label": "Icon Color",
+      "source": "crates/engine/src/cmd/objects/specs.rs:72"
+    },
+    {
+      "id": "picture.removeBackground",
+      "label": "Remove Background",
+      "source": "crates/engine/src/cmd/objects/specs.rs:113"
+    },
+    {
+      "id": "picture.reset",
+      "label": "Reset Picture",
+      "source": "crates/engine/src/cmd/objects/specs.rs:125"
+    },
+    {
+      "id": "picture.size",
+      "label": "Size",
+      "source": "crates/engine/src/cmd/objects/specs.rs:13"
+    },
+    {
+      "id": "picture.style",
+      "label": "Picture Styles",
+      "source": "crates/engine/src/cmd/objects/specs.rs:147"
+    },
+    {
+      "id": "picture.transparency",
+      "label": "Transparency",
+      "source": "crates/engine/src/cmd/objects/specs.rs:93"
+    },
+    {
+      "id": "readAloud.next",
+      "label": "Next Sentence",
+      "source": "crates/engine/src/cmd/speech.rs:21"
+    },
+    {
+      "id": "readAloud.playPause",
+      "label": "Play/Pause",
+      "source": "crates/engine/src/cmd/speech.rs:20"
+    },
+    {
+      "id": "readAloud.previous",
+      "label": "Previous Sentence",
+      "source": "crates/engine/src/cmd/speech.rs:22"
+    },
+    {
+      "id": "readAloud.skipCitations",
+      "label": "Skip Citations and Bibliography",
+      "source": "crates/engine/src/cmd/speech.rs:25"
+    },
+    {
+      "id": "readAloud.speed",
+      "label": "Reading Speed",
+      "source": "crates/engine/src/cmd/speech.rs:24"
+    },
+    {
+      "id": "readAloud.status",
+      "label": "Read Aloud Status",
+      "source": "crates/engine/src/cmd/speech.rs:28"
+    },
+    {
+      "id": "readAloud.stop",
+      "label": "Stop Reading",
+      "source": "crates/engine/src/cmd/speech.rs:23"
+    },
+    {
+      "id": "references.addText",
+      "label": "Add Text",
+      "source": "crates/engine/src/cmd/references.rs:45"
+    },
+    {
+      "id": "references.bibliography",
+      "label": "Bibliography",
+      "source": "crates/engine/src/cmd/citations.rs:52"
+    },
+    {
+      "id": "references.caption",
+      "label": "Insert Caption",
+      "source": "crates/engine/src/cmd/references.rs:88"
+    },
+    {
+      "id": "references.citation",
+      "label": "Insert Citation",
+      "source": "crates/engine/src/cmd/citations.rs:37"
+    },
+    {
+      "id": "references.citationStyle",
+      "label": "Style",
+      "source": "crates/engine/src/cmd/citations.rs:38"
+    },
+    {
+      "id": "references.convertNotes",
+      "label": "Convert Notes",
+      "source": "crates/engine/src/cmd/references.rs:57"
+    },
+    {
+      "id": "references.endnote",
+      "label": "Insert Endnote",
+      "source": "crates/engine/src/cmd/references.rs:53"
+    },
+    {
+      "id": "references.footnote",
+      "label": "Insert Footnote",
+      "source": "crates/engine/src/cmd/references.rs:50"
+    },
+    {
+      "id": "references.index",
+      "label": "Insert Index",
+      "source": "crates/engine/src/cmd/index.rs:26"
+    },
+    {
+      "id": "references.markCitation",
+      "label": "Mark Citation",
+      "source": "crates/engine/src/cmd/citations.rs:65"
+    },
+    {
+      "id": "references.markEntry",
+      "label": "Mark Entry",
+      "source": "crates/engine/src/cmd/index.rs:22"
+    },
+    {
+      "id": "references.nextFootnote",
+      "label": "Next Footnote",
+      "source": "crates/engine/src/cmd/references.rs:68"
+    },
+    {
+      "id": "references.noteOptions",
+      "label": "Footnote and Endnote",
+      "source": "crates/engine/src/cmd/citations.rs:86"
+    },
+    {
+      "id": "references.notes",
+      "label": "Show Notes",
+      "source": "crates/engine/src/cmd/references.rs:78"
+    },
+    {
+      "id": "references.removeToc",
+      "label": "Remove Table of Contents",
+      "source": "crates/engine/src/cmd/references.rs:38"
+    },
+    {
+      "id": "references.researcher",
+      "label": "Researcher",
+      "source": "crates/engine/src/cmd/citations.rs:89"
+    },
+    {
+      "id": "references.sources",
+      "label": "Manage Sources",
+      "source": "crates/engine/src/cmd/citations.rs:35"
+    },
+    {
+      "id": "references.tableOfAuthorities",
+      "label": "Insert Table of Authorities",
+      "source": "crates/engine/src/cmd/citations.rs:76"
+    },
+    {
+      "id": "references.tableOfFigures",
+      "label": "Insert Table of Figures",
+      "source": "crates/engine/src/cmd/citations.rs:58"
+    },
+    {
+      "id": "references.toc",
+      "label": "Table of Contents",
+      "source": "crates/engine/src/cmd/references.rs:31"
+    },
+    {
+      "id": "references.updateAuthorities",
+      "label": "Update Table",
+      "source": "crates/engine/src/cmd/citations.rs:80"
+    },
+    {
+      "id": "references.updateFields",
+      "label": "Update Field",
+      "source": "crates/engine/src/cmd/references.rs:91"
+    },
+    {
+      "id": "references.updateFigures",
+      "label": "Update Table",
+      "source": "crates/engine/src/cmd/citations.rs:61"
+    },
+    {
+      "id": "references.updateIndex",
+      "label": "Update Index",
+      "source": "crates/engine/src/cmd/index.rs:29"
+    },
+    {
+      "id": "references.updateToc",
+      "label": "Update Table",
+      "source": "crates/engine/src/cmd/references.rs:34"
+    },
+    {
+      "id": "review.accept",
+      "label": "Accept",
+      "source": "crates/engine/src/cmd/review.rs:57"
+    },
+    {
+      "id": "review.acceptAll",
+      "label": "Accept All Changes",
+      "source": "crates/engine/src/cmd/review.rs:53"
+    },
+    {
+      "id": "review.addToDictionary",
+      "label": "Add to Dictionary",
+      "source": "crates/engine/src/cmd/review.rs:86"
+    },
+    {
+      "id": "review.applySuggestion",
+      "label": "Change",
+      "source": "crates/engine/src/cmd/review.rs:123"
+    },
+    {
+      "id": "review.changes",
+      "label": "Reviewing Pane",
+      "source": "crates/engine/src/cmd/review.rs:80"
+    },
+    {
+      "id": "review.combine",
+      "label": "Combine",
+      "source": "crates/engine/src/cmd/tools/specs.rs:62"
+    },
+    {
+      "id": "review.comments",
+      "label": "Show Comments",
+      "source": "crates/engine/src/cmd/review.rs:46"
+    },
+    {
+      "id": "review.compare",
+      "label": "Compare",
+      "source": "crates/engine/src/cmd/tools/specs.rs:61"
+    },
+    {
+      "id": "review.deleteComment",
+      "label": "Delete",
+      "source": "crates/engine/src/cmd/review.rs:35"
+    },
+    {
+      "id": "review.editComment",
+      "label": "Edit Comment",
+      "source": "crates/engine/src/cmd/review.rs:32"
+    },
+    {
+      "id": "review.editor",
+      "label": "Editor",
+      "source": "crates/engine/src/cmd/tools/specs.rs:348"
+    },
+    {
+      "id": "review.hideInk",
+      "label": "Hide Ink",
+      "source": "crates/engine/src/cmd/draw.rs:257"
+    },
+    {
+      "id": "review.ignoreAll",
+      "label": "Ignore All",
+      "source": "crates/engine/src/cmd/review.rs:108"
+    },
+    {
+      "id": "review.issues",
+      "label": "Proofing Issues",
+      "source": "crates/engine/src/cmd/review.rs:84"
+    },
+    {
+      "id": "review.language",
+      "label": "Language",
+      "source": "crates/engine/src/cmd/tools/specs.rs:339"
+    },
+    {
+      "id": "review.markup",
+      "label": "Display for Review",
+      "source": "crates/engine/src/cmd/review.rs:63"
+    },
+    {
+      "id": "review.newComment",
+      "label": "New Comment",
+      "source": "crates/engine/src/cmd/review.rs:28"
+    },
+    {
+      "id": "review.nextChange",
+      "label": "Next Change",
+      "source": "crates/engine/src/cmd/review.rs:61"
+    },
+    {
+      "id": "review.nextComment",
+      "label": "Next",
+      "source": "crates/engine/src/cmd/review.rs:44"
+    },
+    {
+      "id": "review.previousChange",
+      "label": "Previous Change",
+      "source": "crates/engine/src/cmd/review.rs:62"
+    },
+    {
+      "id": "review.previousComment",
+      "label": "Previous",
+      "source": "crates/engine/src/cmd/review.rs:45"
+    },
+    {
+      "id": "review.proofing",
+      "label": "Check Spelling as You Type",
+      "source": "crates/engine/src/cmd/review.rs:133"
+    },
+    {
+      "id": "review.readAloud",
+      "label": "Read Aloud",
+      "source": "crates/engine/src/cmd/speech.rs:16"
+    },
+    {
+      "id": "review.reject",
+      "label": "Reject",
+      "source": "crates/engine/src/cmd/review.rs:59"
+    },
+    {
+      "id": "review.rejectAll",
+      "label": "Reject All Changes",
+      "source": "crates/engine/src/cmd/review.rs:55"
+    },
+    {
+      "id": "review.reply",
+      "label": "Reply",
+      "source": "crates/engine/src/cmd/review.rs:29"
+    },
+    {
+      "id": "review.resolveComment",
+      "label": "Resolve",
+      "source": "crates/engine/src/cmd/review.rs:36"
+    },
+    {
+      "id": "review.restrict",
+      "label": "Restrict Editing",
+      "source": "crates/engine/src/cmd/protect.rs:23"
+    },
+    {
+      "id": "review.showMarkup",
+      "label": "Show Markup",
+      "source": "crates/engine/src/cmd/tools/specs.rs:342"
+    },
+    {
+      "id": "review.spelling",
+      "label": "Spelling & Grammar",
+      "source": "crates/engine/src/cmd/review.rs:81"
+    },
+    {
+      "id": "review.suggestions",
+      "label": "Spelling Suggestions",
+      "source": "crates/engine/src/cmd/review.rs:85"
+    },
+    {
+      "id": "review.thesaurus",
+      "label": "Thesaurus",
+      "source": "crates/engine/src/cmd/review.rs:139"
+    },
+    {
+      "id": "review.trackChanges",
+      "label": "Track Changes",
+      "source": "crates/engine/src/cmd/review.rs:47"
+    },
+    {
+      "id": "review.trackingOptions",
+      "label": "Track Changes Options",
+      "source": "crates/engine/src/cmd/review.rs:70"
+    },
+    {
+      "id": "review.wordCount",
+      "label": "Word Count",
+      "source": "crates/engine/src/cmd/review.rs:75"
+    },
+    {
+      "id": "select.addObject",
+      "label": "Add Object to Selection",
+      "source": "crates/engine/src/cmd/objects/specs.rs:270"
+    },
+    {
+      "id": "select.all",
+      "label": "Select All",
+      "source": "crates/engine/src/cmd/caret.rs:53"
+    },
+    {
+      "id": "select.collapse",
+      "label": "Collapse Selection",
+      "source": "crates/engine/src/cmd/caret.rs:63"
+    },
+    {
+      "id": "select.column",
+      "label": "Column Selection",
+      "source": "crates/engine/src/cmd/column.rs:25"
+    },
+    {
+      "id": "select.dragUnit",
+      "label": "Extend Selection by Units",
+      "source": "crates/engine/src/cmd/caret.rs:58"
+    },
+    {
+      "id": "select.extend",
+      "label": "Extend Selection",
+      "source": "crates/engine/src/cmd/tools/specs.rs:350"
+    },
+    {
+      "id": "select.line",
+      "label": "Select Line",
+      "source": "crates/engine/src/cmd/caret.rs:61"
+    },
+    {
+      "id": "select.objects",
+      "label": "Select Objects",
+      "source": "crates/engine/src/cmd/objects/specs.rs:273"
+    },
+    {
+      "id": "select.paragraph",
+      "label": "Select Paragraph",
+      "source": "crates/engine/src/cmd/caret.rs:57"
+    },
+    {
+      "id": "select.range",
+      "label": "Select Range",
+      "source": "crates/engine/src/cmd/caret.rs:54"
+    },
+    {
+      "id": "select.sentence",
+      "label": "Select Sentence",
+      "source": "crates/engine/src/cmd/caret.rs:56"
+    },
+    {
+      "id": "select.similar",
+      "label": "Select Text with Similar Formatting",
+      "source": "crates/engine/src/cmd/tools/specs.rs:349"
+    },
+    {
+      "id": "select.text",
+      "label": "Select Text",
+      "source": "crates/engine/src/cmd/caret.rs:62"
+    },
+    {
+      "id": "select.word",
+      "label": "Select Word",
+      "source": "crates/engine/src/cmd/caret.rs:55"
+    },
+    {
+      "id": "shape.alignText",
+      "label": "Align Text",
+      "source": "crates/engine/src/cmd/objects/specs.rs:332"
+    },
+    {
+      "id": "shape.breakLink",
+      "label": "Break Link",
+      "source": "crates/engine/src/cmd/objects/specs.rs:346"
+    },
+    {
+      "id": "shape.change",
+      "label": "Change Shape",
+      "source": "crates/engine/src/cmd/objects/specs.rs:309"
+    },
+    {
+      "id": "shape.connect",
+      "label": "Connect Shapes",
+      "source": "crates/engine/src/cmd/connectors.rs:32"
+    },
+    {
+      "id": "shape.effects",
+      "label": "Shape Effects",
+      "source": "crates/engine/src/cmd/objects/specs.rs:304"
+    },
+    {
+      "id": "shape.fill",
+      "label": "Shape Fill",
+      "source": "crates/engine/src/cmd/shape_fill.rs:22"
+    },
+    {
+      "id": "shape.link",
+      "label": "Create Link",
+      "source": "crates/engine/src/cmd/objects/specs.rs:343"
+    },
+    {
+      "id": "shape.outline",
+      "label": "Shape Outline",
+      "source": "crates/engine/src/cmd/objects/specs.rs:283"
+    },
+    {
+      "id": "shape.textDirection",
+      "label": "Text Direction",
+      "source": "crates/engine/src/cmd/objects/specs.rs:319"
+    },
+    {
+      "id": "smartArt.addShape",
+      "label": "Add Shape",
+      "source": "crates/engine/src/cmd/smart_art.rs:50"
+    },
+    {
+      "id": "smartArt.colors",
+      "label": "Change Colors",
+      "source": "crates/engine/src/cmd/smart_art.rs:123"
+    },
+    {
+      "id": "smartArt.demote",
+      "label": "Demote",
+      "source": "crates/engine/src/cmd/smart_art.rs:94"
+    },
+    {
+      "id": "smartArt.items",
+      "label": "Edit Items",
+      "source": "crates/engine/src/cmd/smart_art.rs:34"
+    },
+    {
+      "id": "smartArt.layout",
+      "label": "Change Layout",
+      "source": "crates/engine/src/cmd/smart_art.rs:114"
+    },
+    {
+      "id": "smartArt.promote",
+      "label": "Promote",
+      "source": "crates/engine/src/cmd/smart_art.rs:77"
+    },
+    {
+      "id": "smartArt.reset",
+      "label": "Reset Graphic",
+      "source": "crates/engine/src/cmd/smart_art.rs:132"
+    },
+    {
+      "id": "smartArt.textPane",
+      "label": "Text Pane",
+      "source": "crates/engine/src/cmd/smart_art.rs:43"
+    },
+    {
+      "id": "styles.addToGallery",
+      "label": "Add to Style Gallery",
+      "source": "crates/engine/src/cmd/para.rs:256"
+    },
+    {
+      "id": "styles.apply",
+      "label": "Apply Styles",
+      "source": "crates/engine/src/cmd/para.rs:251"
+    },
+    {
+      "id": "styles.copyFrom",
+      "label": "Copy Styles",
+      "source": "crates/engine/src/cmd/templates.rs:51"
+    },
+    {
+      "id": "styles.create",
+      "label": "Create a Style",
+      "source": "crates/engine/src/cmd/para.rs:222"
+    },
+    {
+      "id": "styles.delete",
+      "label": "Delete Style",
+      "source": "crates/engine/src/cmd/para.rs:225"
+    },
+    {
+      "id": "styles.inspect",
+      "label": "Inspect Styles at Selection",
+      "source": "crates/engine/src/cmd/inspector.rs:33"
+    },
+    {
+      "id": "styles.inspector",
+      "label": "Style Inspector",
+      "source": "crates/engine/src/cmd/inspector.rs:22"
+    },
+    {
+      "id": "styles.inspectorClear",
+      "label": "Clear Formatting Level",
+      "source": "crates/engine/src/cmd/inspector.rs:34"
+    },
+    {
+      "id": "styles.list",
+      "label": "Styles",
+      "source": "crates/engine/src/cmd/para.rs:239"
+    },
+    {
+      "id": "styles.manage",
+      "label": "Manage Styles",
+      "source": "crates/engine/src/cmd/para.rs:226"
+    },
+    {
+      "id": "styles.modify",
+      "label": "Modify Style",
+      "source": "crates/engine/src/cmd/para.rs:223"
+    },
+    {
+      "id": "styles.organizer",
+      "label": "Organizer",
+      "source": "crates/engine/src/cmd/templates.rs:48"
+    },
+    {
+      "id": "styles.pane",
+      "label": "Styles Pane",
+      "source": "crates/engine/src/cmd/para.rs:245"
+    },
+    {
+      "id": "styles.rename",
+      "label": "Rename Style",
+      "source": "crates/engine/src/cmd/templates.rs:53"
+    },
+    {
+      "id": "styles.setVisibility",
+      "label": "Show or Hide Style",
+      "source": "crates/engine/src/cmd/para.rs:237"
+    },
+    {
+      "id": "styles.updateToMatch",
+      "label": "Update Style to Match Selection",
+      "source": "crates/engine/src/cmd/para.rs:224"
+    },
+    {
+      "id": "table.altText",
+      "label": "Alt Text",
+      "source": "crates/engine/src/cmd/table.rs:181"
+    },
+    {
+      "id": "table.autofit",
+      "label": "AutoFit",
+      "source": "crates/engine/src/cmd/table.rs:127"
+    },
+    {
+      "id": "table.borderPainter",
+      "label": "Border Painter",
+      "source": "crates/engine/src/cmd/tools/specs.rs:285"
+    },
+    {
+      "id": "table.borders",
+      "label": "Borders",
+      "source": "crates/engine/src/cmd/table.rs:99"
+    },
+    {
+      "id": "table.cellAlign",
+      "label": "Alignment",
+      "source": "crates/engine/src/cmd/table.rs:101"
+    },
+    {
+      "id": "table.cellMargins",
+      "label": "Cell Margins",
+      "source": "crates/engine/src/cmd/tools/specs.rs:263"
+    },
+    {
+      "id": "table.columnWidth",
+      "label": "Table Column Width",
+      "source": "crates/engine/src/cmd/table.rs:144"
+    },
+    {
+      "id": "table.deleteCells",
+      "label": "Delete Cells",
+      "source": "crates/engine/src/cmd/table.rs:51"
+    },
+    {
+      "id": "table.deleteColumn",
+      "label": "Delete Columns",
+      "source": "crates/engine/src/cmd/table.rs:49"
+    },
+    {
+      "id": "table.deleteRow",
+      "label": "Delete Rows",
+      "source": "crates/engine/src/cmd/table.rs:48"
+    },
+    {
+      "id": "table.deleteStyle",
+      "label": "Delete Table Style",
+      "source": "crates/engine/src/cmd/table_style.rs:65"
+    },
+    {
+      "id": "table.deleteTable",
+      "label": "Delete Table",
+      "source": "crates/engine/src/cmd/table.rs:50"
+    },
+    {
+      "id": "table.distributeColumns",
+      "label": "Distribute Columns",
+      "source": "crates/engine/src/cmd/table.rs:128"
+    },
+    {
+      "id": "table.distributeRows",
+      "label": "Distribute Rows",
+      "source": "crates/engine/src/cmd/table.rs:136"
+    },
+    {
+      "id": "table.draw",
+      "label": "Draw Table",
+      "source": "crates/engine/src/cmd/table_draw.rs:28"
+    },
+    {
+      "id": "table.eraser",
+      "label": "Eraser",
+      "source": "crates/engine/src/cmd/table_draw.rs:31"
+    },
+    {
+      "id": "table.fitColumn",
+      "label": "AutoFit Column by Double-Clicking",
+      "source": "crates/engine/src/cmd/table_mouse.rs:56"
+    },
+    {
+      "id": "table.formula",
+      "label": "Formula",
+      "source": "crates/engine/src/cmd/table.rs:201"
+    },
+    {
+      "id": "table.fromText",
+      "label": "Convert Text to Table",
+      "source": "crates/engine/src/cmd/table.rs:230"
+    },
+    {
+      "id": "table.insertAt",
+      "label": "Insert Row or Column by Clicking",
+      "source": "crates/engine/src/cmd/table_mouse.rs:50"
+    },
+    {
+      "id": "table.insertColumnLeft",
+      "label": "Insert Left",
+      "source": "crates/engine/src/cmd/table.rs:46"
+    },
+    {
+      "id": "table.insertColumnRight",
+      "label": "Insert Right",
+      "source": "crates/engine/src/cmd/table.rs:47"
+    },
+    {
+      "id": "table.insertRowAbove",
+      "label": "Insert Above",
+      "source": "crates/engine/src/cmd/table.rs:44"
+    },
+    {
+      "id": "table.insertRowBelow",
+      "label": "Insert Below",
+      "source": "crates/engine/src/cmd/table.rs:45"
+    },
+    {
+      "id": "table.look",
+      "label": "Table Style Options",
+      "source": "crates/engine/src/cmd/table.rs:79"
+    },
+    {
+      "id": "table.merge",
+      "label": "Merge Cells",
+      "source": "crates/engine/src/cmd/table.rs:69"
+    },
+    {
+      "id": "table.modifyStyle",
+      "label": "Modify Table Style",
+      "source": "crates/engine/src/cmd/table_style.rs:63"
+    },
+    {
+      "id": "table.moveDrag",
+      "label": "Move Table by Dragging",
+      "source": "crates/engine/src/cmd/table_mouse.rs:53"
+    },
+    {
+      "id": "table.newStyle",
+      "label": "New Table Style",
+      "source": "crates/engine/src/cmd/table_style.rs:62"
+    },
+    {
+      "id": "table.properties",
+      "label": "Properties",
+      "source": "crates/engine/src/cmd/table.rs:227"
+    },
+    {
+      "id": "table.quick",
+      "label": "Quick Tables",
+      "source": "crates/engine/src/cmd/table.rs:232"
+    },
+    {
+      "id": "table.repeatHeader",
+      "label": "Repeat Header Rows",
+      "source": "crates/engine/src/cmd/table.rs:171"
+    },
+    {
+      "id": "table.resizeDrag",
+      "label": "Resize Table by Dragging",
+      "source": "crates/engine/src/cmd/table_resize.rs:31"
+    },
+    {
+      "id": "table.rowHeight",
+      "label": "Table Row Height",
+      "source": "crates/engine/src/cmd/table.rs:152"
+    },
+    {
+      "id": "table.rtl",
+      "label": "Right-to-Left Table",
+      "source": "crates/engine/src/cmd/table.rs:218"
+    },
+    {
+      "id": "table.selectAt",
+      "label": "Select Table Cells by Clicking",
+      "source": "crates/engine/src/cmd/table_mouse.rs:45"
+    },
+    {
+      "id": "table.selectCell",
+      "label": "Select Cell",
+      "source": "crates/engine/src/cmd/table.rs:213"
+    },
+    {
+      "id": "table.selectColumn",
+      "label": "Select Column",
+      "source": "crates/engine/src/cmd/table.rs:212"
+    },
+    {
+      "id": "table.selectRow",
+      "label": "Select Row",
+      "source": "crates/engine/src/cmd/table.rs:207"
+    },
+    {
+      "id": "table.selectTable",
+      "label": "Select Table",
+      "source": "crates/engine/src/cmd/table.rs:202"
+    },
+    {
+      "id": "table.shading",
+      "label": "Shading",
+      "source": "crates/engine/src/cmd/table.rs:94"
+    },
+    {
+      "id": "table.sort",
+      "label": "Sort",
+      "source": "crates/engine/src/cmd/table.rs:197"
+    },
+    {
+      "id": "table.split",
+      "label": "Split Cells",
+      "source": "crates/engine/src/cmd/table.rs:70"
+    },
+    {
+      "id": "table.splitTable",
+      "label": "Split Table",
+      "source": "crates/engine/src/cmd/table.rs:72"
+    },
+    {
+      "id": "table.style",
+      "label": "Table Styles",
+      "source": "crates/engine/src/cmd/table.rs:73"
+    },
+    {
+      "id": "table.textDirection",
+      "label": "Text Direction",
+      "source": "crates/engine/src/cmd/table.rs:125"
+    },
+    {
+      "id": "table.toText",
+      "label": "Convert to Text",
+      "source": "crates/engine/src/cmd/table.rs:199"
+    },
+    {
+      "id": "table.viewGridlines",
+      "label": "View Gridlines",
+      "source": "crates/engine/src/cmd/view.rs:69"
+    },
+    {
+      "id": "text.backspace",
+      "label": "Backspace",
+      "source": "crates/engine/src/cmd/text.rs:36"
+    },
+    {
+      "id": "text.backTab",
+      "label": "Shift+Tab",
+      "source": "crates/engine/src/cmd/text.rs:32"
+    },
+    {
+      "id": "text.columnBreak",
+      "label": "Column Break",
+      "source": "crates/engine/src/cmd/text.rs:30"
+    },
+    {
+      "id": "text.copyright",
+      "label": "Copyright Sign",
+      "source": "crates/engine/src/cmd/text.rs:54"
+    },
+    {
+      "id": "text.delete",
+      "label": "Delete",
+      "source": "crates/engine/src/cmd/text.rs:37"
+    },
+    {
+      "id": "text.deleteWordBack",
+      "label": "Delete Previous Word",
+      "source": "crates/engine/src/cmd/text.rs:38"
+    },
+    {
+      "id": "text.deleteWordForward",
+      "label": "Delete Next Word",
+      "source": "crates/engine/src/cmd/text.rs:39"
+    },
+    {
+      "id": "text.ellipsis",
+      "label": "Ellipsis",
+      "source": "crates/engine/src/cmd/text.rs:57"
+    },
+    {
+      "id": "text.emDash",
+      "label": "Em Dash",
+      "source": "crates/engine/src/cmd/text.rs:52"
+    },
+    {
+      "id": "text.insert",
+      "label": "Type Text",
+      "source": "crates/engine/src/cmd/text.rs:26"
+    },
+    {
+      "id": "text.insertTab",
+      "label": "Tab Character",
+      "source": "crates/engine/src/cmd/text.rs:34"
+    },
+    {
+      "id": "text.lineBreak",
+      "label": "Line Break",
+      "source": "crates/engine/src/cmd/text.rs:28"
+    },
+    {
+      "id": "text.nbHyphen",
+      "label": "Nonbreaking Hyphen",
+      "source": "crates/engine/src/cmd/text.rs:41"
+    },
+    {
+      "id": "text.nbsp",
+      "label": "Nonbreaking Space",
+      "source": "crates/engine/src/cmd/text.rs:40"
+    },
+    {
+      "id": "text.newParagraph",
+      "label": "New Paragraph",
+      "source": "crates/engine/src/cmd/text.rs:27"
+    },
+    {
+      "id": "text.optionalHyphen",
+      "label": "Optional Hyphen",
+      "source": "crates/engine/src/cmd/text.rs:42"
+    },
+    {
+      "id": "text.overtype",
+      "label": "Overtype",
+      "source": "crates/engine/src/cmd/options.rs:28"
+    },
+    {
+      "id": "text.pageBreak",
+      "label": "Page Break",
+      "source": "crates/engine/src/cmd/text.rs:29"
+    },
+    {
+      "id": "text.registered",
+      "label": "Registered Sign",
+      "source": "crates/engine/src/cmd/text.rs:55"
+    },
+    {
+      "id": "text.tab",
+      "label": "Tab",
+      "source": "crates/engine/src/cmd/text.rs:31"
+    },
+    {
+      "id": "text.toggleUnicode",
+      "label": "Toggle Unicode Character",
+      "source": "crates/engine/src/cmd/text.rs:44"
+    },
+    {
+      "id": "text.trademark",
+      "label": "Trademark Sign",
+      "source": "crates/engine/src/cmd/text.rs:56"
+    },
+    {
+      "id": "text.typeCode",
+      "label": "Type Character Code",
+      "source": "crates/engine/src/cmd/text.rs:50"
+    },
+    {
+      "id": "tools.attachTemplate",
+      "label": "Attach Template",
+      "source": "crates/engine/src/cmd/templates.rs:34"
+    },
+    {
+      "id": "tools.autocorrect",
+      "label": "AutoCorrect Options",
+      "source": "crates/engine/src/cmd/tools/specs.rs:41"
+    },
+    {
+      "id": "tools.customizeKeyboard",
+      "label": "Customize Keyboard",
+      "source": "crates/engine/src/cmd/tools/specs.rs:46"
+    },
+    {
+      "id": "tools.customizeRibbon",
+      "label": "Customize Ribbon",
+      "source": "crates/engine/src/cmd/tools/specs.rs:51"
+    },
+    {
+      "id": "tools.detachTemplate",
+      "label": "Detach Template",
+      "source": "crates/engine/src/cmd/templates.rs:36"
+    },
+    {
+      "id": "tools.linkStyles",
+      "label": "Automatically Update Document Styles",
+      "source": "crates/engine/src/cmd/templates.rs:41"
+    },
+    {
+      "id": "tools.macros",
+      "label": "Macros",
+      "source": "crates/engine/src/cmd/tools/specs.rs:37"
+    },
+    {
+      "id": "tools.recordMacro",
+      "label": "Record Macro",
+      "source": "crates/engine/src/cmd/tools/specs.rs:23"
+    },
+    {
+      "id": "tools.search",
+      "label": "Search",
+      "source": "crates/engine/src/cmd/tools/specs.rs:57"
+    },
+    {
+      "id": "tools.templates",
+      "label": "Templates and Add-ins",
+      "source": "crates/engine/src/cmd/templates.rs:31"
+    },
+    {
+      "id": "tools.updateStyles",
+      "label": "Update Styles from Template",
+      "source": "crates/engine/src/cmd/templates.rs:46"
+    },
+    {
+      "id": "view.accessibilityPane",
+      "label": "Accessibility Pane",
+      "source": "crates/engine/src/cmd/view.rs:117"
+    },
+    {
+      "id": "view.altTextPane",
+      "label": "Alt Text Pane",
+      "source": "crates/engine/src/cmd/view.rs:122"
+    },
+    {
+      "id": "view.commentsPane",
+      "label": "Comments Pane",
+      "source": "crates/engine/src/cmd/view.rs:116"
+    },
+    {
+      "id": "view.darkMode",
+      "label": "Switch Modes",
+      "source": "crates/engine/src/cmd/view.rs:90"
+    },
+    {
+      "id": "view.draft",
+      "label": "Draft",
+      "source": "crates/engine/src/cmd/view.rs:27"
+    },
+    {
+      "id": "view.fieldCodes",
+      "label": "Field Codes",
+      "source": "crates/engine/src/cmd/fields.rs:22"
+    },
+    {
+      "id": "view.focus",
+      "label": "Focus",
+      "source": "crates/engine/src/cmd/view.rs:49"
+    },
+    {
+      "id": "view.formatShapePane",
+      "label": "Format Shape Pane",
+      "source": "crates/engine/src/cmd/view.rs:125"
+    },
+    {
+      "id": "view.fullScreen",
+      "label": "Full Screen",
+      "source": "crates/engine/src/cmd/view.rs:147"
+    },
+    {
+      "id": "view.fullScreenView",
+      "label": "Full Screen View",
+      "source": "crates/engine/src/cmd/view.rs:56"
+    },
+    {
+      "id": "view.gridlines",
+      "label": "Gridlines",
+      "source": "crates/engine/src/cmd/view.rs:65"
+    },
+    {
+      "id": "view.hideWhiteSpace",
+      "label": "Hide White Space",
+      "source": "crates/engine/src/cmd/view.rs:44"
+    },
+    {
+      "id": "view.immersive",
+      "label": "Immersive Reader",
+      "source": "crates/engine/src/cmd/tools/specs.rs:371"
+    },
+    {
+      "id": "view.interfaceTheme",
+      "label": "Interface Theme",
+      "source": "crates/engine/src/cmd/view.rs:95"
+    },
+    {
+      "id": "view.marks",
+      "label": "Show/Hide ¶",
+      "source": "crates/engine/src/cmd/view.rs:18"
+    },
+    {
+      "id": "view.multiplePages",
+      "label": "Multiple Pages",
+      "source": "crates/engine/src/cmd/view.rs:88"
+    },
+    {
+      "id": "view.navigationPane",
+      "label": "Navigation Pane",
+      "source": "crates/engine/src/cmd/view.rs:72"
+    },
+    {
+      "id": "view.newWindow",
+      "label": "New Window",
+      "source": "crates/engine/src/cmd/view.rs:130"
+    },
+    {
+      "id": "view.numeral",
+      "label": "Numerals",
+      "source": "crates/engine/src/cmd/view.rs:156"
+    },
+    {
+      "id": "view.onePage",
+      "label": "One Page",
+      "source": "crates/engine/src/cmd/view.rs:87"
+    },
+    {
+      "id": "view.outline",
+      "label": "Outline",
+      "source": "crates/engine/src/cmd/view.rs:29"
+    },
+    {
+      "id": "view.pageWidth",
+      "label": "Page Width",
+      "source": "crates/engine/src/cmd/view.rs:89"
+    },
+    {
+      "id": "view.printLayout",
+      "label": "Print Layout",
+      "source": "crates/engine/src/cmd/view.rs:25"
+    },
+    {
+      "id": "view.readColumnWidth",
+      "label": "Reading Column Width",
+      "source": "crates/engine/src/cmd/view.rs:31"
+    },
+    {
+      "id": "view.readLineSpacing",
+      "label": "Reading Line Spacing",
+      "source": "crates/engine/src/cmd/view.rs:37"
+    },
+    {
+      "id": "view.readMode",
+      "label": "Read Mode",
+      "source": "crates/engine/src/cmd/view.rs:30"
+    },
+    {
+      "id": "view.readPageColor",
+      "label": "Reading Page Color",
+      "source": "crates/engine/src/cmd/view.rs:40"
+    },
+    {
+      "id": "view.readTextSize",
+      "label": "Reading Text Size",
+      "source": "crates/engine/src/cmd/view.rs:34"
+    },
+    {
+      "id": "view.ruler",
+      "label": "Ruler",
+      "source": "crates/engine/src/cmd/view.rs:63"
+    },
+    {
+      "id": "view.sideToSide",
+      "label": "Side to Side",
+      "source": "crates/engine/src/cmd/tools/specs.rs:382"
+    },
+    {
+      "id": "view.split",
+      "label": "Split",
+      "source": "crates/engine/src/cmd/view.rs:138"
+    },
+    {
+      "id": "view.state",
+      "label": "View State",
+      "source": "crates/engine/src/cmd/view.rs:152"
+    },
+    {
+      "id": "view.stylesPane",
+      "label": "Styles Pane",
+      "source": "crates/engine/src/cmd/view.rs:111"
+    },
+    {
+      "id": "view.stylesPaneDock",
+      "label": "Styles Pane Position",
+      "source": "crates/engine/src/cmd/view.rs:113"
+    },
+    {
+      "id": "view.switchWindows",
+      "label": "Switch Windows",
+      "source": "crates/engine/src/cmd/view.rs:135"
+    },
+    {
+      "id": "view.vertical",
+      "label": "Vertical",
+      "source": "crates/engine/src/cmd/tools/specs.rs:376"
+    },
+    {
+      "id": "view.webLayout",
+      "label": "Web Layout",
+      "source": "crates/engine/src/cmd/view.rs:26"
+    },
+    {
+      "id": "view.zoom",
+      "label": "Zoom",
+      "source": "crates/engine/src/cmd/view.rs:73"
+    },
+    {
+      "id": "view.zoom100",
+      "label": "100%",
+      "source": "crates/engine/src/cmd/view.rs:76"
+    },
+    {
+      "id": "view.zoomIn",
+      "label": "Zoom In",
+      "source": "crates/engine/src/cmd/view.rs:77"
+    },
+    {
+      "id": "view.zoomOut",
+      "label": "Zoom Out",
+      "source": "crates/engine/src/cmd/view.rs:82"
+    },
+    {
+      "id": "wordArt.style",
+      "label": "WordArt Styles",
+      "source": "crates/engine/src/cmd/wordart.rs:26"
+    },
+    {
+      "id": "wordArt.textFill",
+      "label": "Text Fill",
+      "source": "crates/engine/src/cmd/wordart.rs:31"
+    },
+    {
+      "id": "wordArt.textOutline",
+      "label": "Text Outline",
+      "source": "crates/engine/src/cmd/wordart.rs:35"
+    },
+    {
+      "id": "wordArt.transform",
+      "label": "Transform",
+      "source": "crates/engine/src/cmd/wordart.rs:39"
+    }
+  ],
+  "modelModules": [
+    "crates/doc/src/bidi.rs",
+    "crates/doc/src/block.rs",
+    "crates/doc/src/byte_store.rs",
+    "crates/doc/src/cfb_guard.rs",
+    "crates/doc/src/chart.rs",
+    "crates/doc/src/cjk_numbers.rs",
+    "crates/doc/src/cluster.rs",
+    "crates/doc/src/collate.rs",
+    "crates/doc/src/compare.rs",
+    "crates/doc/src/connector.rs",
+    "crates/doc/src/control.rs",
+    "crates/doc/src/document.rs",
+    "crates/doc/src/edit.rs",
+    "crates/doc/src/effects.rs",
+    "crates/doc/src/encoding.rs",
+    "crates/doc/src/eq.rs",
+    "crates/doc/src/error.rs",
+    "crates/doc/src/fields.rs",
+    "crates/doc/src/fill.rs",
+    "crates/doc/src/freeform.rs",
+    "crates/doc/src/graphic.rs",
+    "crates/doc/src/ime_text.rs",
+    "crates/doc/src/legacy_form.rs",
+    "crates/doc/src/lib.rs",
+    "crates/doc/src/line_dash.rs",
+    "crates/doc/src/link.rs",
+    "crates/doc/src/locale_number.rs",
+    "crates/doc/src/math.rs",
+    "crates/doc/src/math_edit.rs",
+    "crates/doc/src/math_latex.rs",
+    "crates/doc/src/math_linear.rs",
+    "crates/doc/src/math_symbols.rs",
+    "crates/doc/src/numbering.rs",
+    "crates/doc/src/para.rs",
+    "crates/doc/src/para/float.rs",
+    "crates/doc/src/para/inline_kinds.rs",
+    "crates/doc/src/para/inline_object.rs",
+    "crates/doc/src/para/run.rs",
+    "crates/doc/src/parts.rs",
+    "crates/doc/src/position.rs",
+    "crates/doc/src/props.rs",
+    "crates/doc/src/props/char_props.rs",
+    "crates/doc/src/props/color.rs",
+    "crates/doc/src/props/para_props.rs",
+    "crates/doc/src/props/table_props.rs",
+    "crates/doc/src/resolve.rs",
+    "crates/doc/src/review.rs",
+    "crates/doc/src/section.rs",
+    "crates/doc/src/settings.rs",
+    "crates/doc/src/smart_art.rs",
+    "crates/doc/src/styles.rs",
+    "crates/doc/src/symbol_fonts.rs",
+    "crates/doc/src/table.rs",
+    "crates/doc/src/test_log.rs",
+    "crates/doc/src/text_walk.rs",
+    "crates/doc/src/wordart.rs",
+    "crates/doc/src/wrap.rs"
+  ]
+}

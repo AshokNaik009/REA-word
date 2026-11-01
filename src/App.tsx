@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState, type CSSProperties, type Dispatch, type SetStateAction } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type Dispatch, type SetStateAction } from 'react'
 import { EditorContent, useEditor, useEditorState } from '@tiptap/react'
 import {
   ArrowDownToLine, ArrowLeft, Check, CheckCheck, ChevronDown, CircleHelp, Command,
@@ -14,8 +14,11 @@ import { IconButton } from './components/Button'
 import { Modal } from './components/Modal'
 import { Ribbon, type RibbonTab } from './components/Ribbon'
 import { Sidebar } from './components/Sidebar'
+import { ParagraphDialog } from './components/ParagraphDialog'
+import { EditorSession } from './engine/session'
+import { createAutomation } from './engine/automation'
 
-type Dialog = 'file' | 'export' | 'link' | 'commands' | 'about' | null
+type Dialog = 'file' | 'export' | 'link' | 'commands' | 'about' | 'paragraph' | null
 type Notice = { message: string; error?: boolean } | undefined
 
 export function App() {
@@ -60,6 +63,41 @@ function Writer({ workspace, notice, setNotice }: { workspace: ReturnType<typeof
     words: e.storage.characterCount.words() as number,
     characters: e.storage.characterCount.characters() as number,
   }) })
+  const session = useMemo(() => editor ? new EditorSession(editor) : null, [editor])
+  const execute = (id: string, params: unknown = {}) => {
+    if (!session) return false
+    const result = session.execute(id, params)
+    if (!result.ok) setNotice({ message: result.error.message, error: true })
+    return result.ok
+  }
+
+  useEffect(() => {
+    if (!session) return
+    const api = createAutomation(session)
+    window.wordcraft = api
+    return () => { if (window.wordcraft === api) delete window.wordcraft }
+  }, [session])
+
+  useEffect(() => {
+    if (!session) return
+    const keydown = (event: KeyboardEvent) => {
+      const target = event.target as HTMLElement | null
+      if (!(event.metaKey || event.ctrlKey) || !target?.closest('.document-content')) return
+      const id = event.key === 'Enter' && !event.shiftKey ? 'insert.pageBreak'
+        : event.key.toLowerCase() === 'a' && !event.shiftKey ? 'select.all'
+        : event.key.toLowerCase() === 'z' ? event.shiftKey ? 'edit.redo' : 'edit.undo'
+        : event.key.toLowerCase() === 'y' ? 'edit.redo'
+        : event.key.toLowerCase() === 'b' && !event.shiftKey ? 'format.bold'
+        : event.key.toLowerCase() === 'i' && !event.shiftKey ? 'format.italic'
+        : event.key.toLowerCase() === 'u' && !event.shiftKey ? 'format.underline'
+        : event.key === '=' && !event.shiftKey ? 'format.subscript'
+        : event.key === '+' && event.shiftKey ? 'format.superscript'
+        : null
+      if (id) { event.preventDefault(); event.stopPropagation(); execute(id) }
+    }
+    document.addEventListener('keydown', keydown, true)
+    return () => document.removeEventListener('keydown', keydown, true)
+  }, [session])
 
   useEffect(() => {
     const element = viewport.current
@@ -152,10 +190,14 @@ function Writer({ workspace, notice, setNotice }: { workspace: ReturnType<typeof
     { label: 'Open a document', hint: 'Cmd/Ctrl O', action: open, icon: FolderOpen },
     { label: 'Export document', hint: 'Cmd/Ctrl Shift S', action: () => setDialog('export'), icon: ArrowDownToLine },
     { label: 'Find and replace', hint: 'Cmd/Ctrl F', action: find, icon: Search },
-    { label: 'Insert a table', hint: '3 rows, 3 columns', action: () => { editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run(); setDialog(null) }, icon: FileText },
+    { label: 'Paragraph settings', hint: 'Spacing, indents, direction', action: () => setDialog('paragraph'), icon: FileText },
     { label: 'Focus mode', hint: 'Escape to exit', action: () => { setFocus(value => !value); setDialog(null) }, icon: Focus },
     { label: 'Print or save as PDF', hint: 'Cmd/Ctrl P', action: print, icon: Printer },
-  ].filter(command => command.label.toLowerCase().includes(commandQuery.toLowerCase()))
+    ...(session?.commands().filter(command => command.preset !== undefined).map(command => ({
+      label: command.label, hint: command.id, icon: FileText,
+      action: () => { execute(command.id, command.preset); setDialog(null); editor.commands.focus() },
+    })) ?? []),
+  ].filter(command => `${command.label} ${command.hint}`.toLowerCase().includes(commandQuery.toLowerCase()))
 
   return <div className={`app ${focus ? 'focus-mode' : ''}`} aria-busy={busy}>
     <header className="titlebar">
@@ -169,7 +211,7 @@ function Writer({ workspace, notice, setNotice }: { workspace: ReturnType<typeof
       <div className="workspace-state"><span />LOCAL WORKSPACE</div>
       <button className="export-button" onClick={() => setDialog('export')} disabled={busy}><ArrowDownToLine size={16} /><span>Export</span><ChevronDown size={13} /></button>
     </div>
-    <Ribbon editor={editor} tab={tab} document={doc} onPageChange={page => workspace.update({ page })} onLink={showLink} onImage={() => imageInput.current?.click()} onFind={find} onNew={newDocument} onOpen={open} onExport={() => setDialog('export')} onPrint={print} focus={focus} onFocus={() => setFocus(value => !value)} showMarks={marks} onMarks={() => setMarks(value => !value)} />
+    <Ribbon editor={editor} execute={execute} onParagraph={() => setDialog('paragraph')} tab={tab} document={doc} onPageChange={page => workspace.update({ page })} onLink={showLink} onImage={() => imageInput.current?.click()} onFind={find} onNew={newDocument} onOpen={open} onExport={() => setDialog('export')} onPrint={print} focus={focus} onFocus={() => setFocus(value => !value)} showMarks={marks} onMarks={() => setMarks(value => !value)} />
     {(notice || workspace.error) && <div role={notice?.error || workspace.error ? 'alert' : 'status'} className={`notice ${notice?.error || workspace.error ? 'error' : ''}`}><span>{workspace.error || notice?.message}</span>{workspace.error && <button onClick={() => void perform(workspace.persist)}>Retry save</button>}<IconButton icon={X} label="Dismiss message" onClick={() => setNotice(undefined)} /></div>}
     <div className="workspace">
       {sidebar && <Sidebar editor={editor} current={doc} documents={workspace.documents} onActivate={next => void perform(async () => { await workspace.activate(next) })} onNew={newDocument} finding={finding} onFinding={setFinding} onClose={() => setSidebar(false)} />}
@@ -190,6 +232,7 @@ function Writer({ workspace, notice, setNotice }: { workspace: ReturnType<typeof
     {focus && <button className="exit-focus" onClick={() => setFocus(false)}><ArrowLeft size={15} />Exit focus <kbd>esc</kbd></button>}
     <input ref={fileInput} className="hidden-input" type="file" aria-label="Open document file" accept=".wordcraft,.docx,.html,.htm,.txt" onChange={event => { const file = event.target.files?.[0]; event.target.value = ''; if (file) void perform(async () => { if (file.size > MAX_FILE_BYTES) throw new Error('Please choose a document smaller than 20 MB.'); await acceptFile({ name: file.name, bytes: new Uint8Array(await file.arrayBuffer()) }) }) }} />
     <input ref={imageInput} className="hidden-input" type="file" aria-label="Insert image file" accept="image/png,image/jpeg,image/gif,image/webp" onChange={event => { const file = event.target.files?.[0]; event.target.value = ''; if (!file) return; void perform(async () => { if (file.size > 5 * 1024 * 1024) throw new Error('Please choose an image smaller than 5 MB.'); if (!['image/png', 'image/jpeg', 'image/gif', 'image/webp'].includes(file.type)) throw new Error('Use a PNG, JPEG, GIF or WebP image.'); const data = await new Promise<string>((resolve, reject) => { const reader = new FileReader(); reader.onload = () => resolve(String(reader.result)); reader.onerror = () => reject(new Error('Could not read this image.')); reader.readAsDataURL(file) }); const image = new Image(); image.src = data; await image.decode(); const width = Math.min(620, image.naturalWidth); editor.chain().focus().setImage({ src: data, alt: file.name, width, height: Math.round(width * image.naturalHeight / image.naturalWidth) }).run() }) }} />
+    {dialog === 'paragraph' && session && <ParagraphDialog session={session} onApply={properties => execute('wc.paragraph', properties)} onClose={() => setDialog(null)} />}
     {dialog === 'file' && <Modal title="Make something worth keeping." onClose={() => setDialog(null)}>
       <p className="modal-description">Your workspace, your documents, your device.</p>
       <div className="file-actions"><button onClick={newDocument}><FilePlus2 /><span><strong>New document</strong><small>A fresh page and a little possibility.</small></span><kbd>N</kbd></button><button onClick={open}><FolderOpen /><span><strong>Open a document</strong><small>Wordcraft, DOCX, HTML or plain text.</small></span><kbd>O</kbd></button><button onClick={() => setDialog('export')}><ArrowDownToLine /><span><strong>Export a copy</strong><small>Keep a backup or take it somewhere new.</small></span></button><button onClick={print}><Printer /><span><strong>Print or save as PDF</strong><small>Using your system's print dialog.</small></span><kbd>P</kbd></button></div>
@@ -220,7 +263,7 @@ function Writer({ workspace, notice, setNotice }: { workspace: ReturnType<typeof
       <div className="command-list">{commands.map(({ label, hint, action, icon: Icon }) => <button key={label} onClick={action}><Icon size={18} /><span>{label}</span><small>{hint}</small></button>)}{!commands.length && <p className="modal-description">No matching commands. Try "open", "table" or "focus".</p>}</div>
     </Modal>}
     {dialog === 'about' && <Modal title="A space for your words." onClose={() => setDialog(null)}>
-      <div className="about-brand"><img src="/favicon.svg" alt="" /><div><h3>Wordcraft Desktop <span>0.1.1</span></h3><p>TypeScript + React + Neutralinojs WebView</p></div></div>
+      <div className="about-brand"><img src="/favicon.svg" alt="" /><div><h3>Wordcraft Desktop <span>0.2.0</span></h3><p>TypeScript + React + Neutralinojs WebView</p></div></div>
       <p className="modal-description">An independent reimplementation inspired by the open-source WordCraft project. Built for thoughtful, local-first writing. This initial version does not reproduce the original's full feature set or Word's layout engine.</p>
       <div className="shortcut-list">{[['Save locally', 'Cmd/Ctrl S'], ['Export a copy', 'Cmd/Ctrl Shift S'], ['Open document', 'Cmd/Ctrl O'], ['New document', 'Cmd/Ctrl N'], ['Find and replace', 'Cmd/Ctrl F'], ['Insert a link', 'Cmd/Ctrl K'], ['Print / PDF', 'Cmd/Ctrl P'], ['Bold / italic / underline', 'Cmd/Ctrl B / I / U']].map(([action, shortcut]) => <div key={action}><span>{action}</span><kbd>{shortcut}</kbd></div>)}</div>
       <p className="privacy-note"><ShieldCheck size={17} />Documents stay local. Export backups: browser data can be cleared.</p>

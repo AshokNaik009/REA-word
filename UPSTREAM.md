@@ -10,9 +10,16 @@ This project is an independent TypeScript reimplementation of a subset of the or
 product's workflow. The original repository's README, architecture and public UI
 screenshots informed the feature investigation. Its source checkout remains untouched.
 
-The Rust document model, command engine, layout renderer, file-format engines and UI
-have not been translated or incorporated. Tiptap/ProseMirror supplies editing;
-Mammoth supplies basic DOCX import; docx supplies basic DOCX generation.
+The Rust document model, layout renderer, file-format engines and UI have not been
+translated or incorporated. Tiptap/ProseMirror supplies the current editing model;
+Mammoth supplies basic DOCX import; docx supplies basic DOCX generation. Independently
+written TypeScript adapters implement a growing subset of the upstream command contracts.
+
+`docs/upstream-inventory.json` and the generated `docs/feature-parity.md` derive command
+IDs, labels, locations and source references from the pinned upstream catalog and literal
+command declarations. These metadata are used under the upstream MIT option; its
+copyright and license are retained in `docs/LICENSE-UPSTREAM`. No upstream executable
+code, proprietary application assets, or private documents are included.
 
 The initial Tauri experiment was replaced by Neutralinojs at the owner's request.
 No Rust sources or Rust toolchain are part of this project.

@@ -3,6 +3,7 @@ import { createDocument, filename, MAX_FILE_BYTES, parseDocument, textContent, t
 import { sanitizeHTML, validateContent } from './editor'
 import { generateJSON } from '@tiptap/react'
 import { extensions } from './editor'
+import { readDocxMainXML, restoreDocxProperties } from './docx-import'
 
 export interface OpenedFile { name: string; bytes: Uint8Array }
 export interface ImportResult { document: CraftDocument; warning?: string }
@@ -27,15 +28,20 @@ export async function importFile(file: OpenedFile): Promise<ImportResult> {
     // Imports are copies: never silently overwrite an existing workspace document.
     result = { document: { ...doc, id: crypto.randomUUID(), updatedAt: new Date().toISOString() } }
   } else if (extension === 'docx') {
-    const mammoth = await import('mammoth')
+    const xml = readDocxMainXML(file.bytes)
+    const importedMammoth = await import('mammoth')
+    const mammoth = importedMammoth.default ?? importedMammoth
     const buffer = new Uint8Array(file.bytes).buffer
-    const converted = await mammoth.convertToHtml({ arrayBuffer: buffer }, {
+    // Mammoth's browser and Node entry points use different binary input keys.
+    const converted = await mammoth.convertToHtml({ arrayBuffer: buffer, ...(typeof Buffer === 'function' ? { buffer: Buffer.from(buffer) } : {}) }, {
       externalFileAccess: false,
-      styleMap: ["p[style-name='Title'] => h1:fresh", "p[style-name='Subtitle'] => p:fresh"],
+      ignoreEmptyParagraphs: false,
+      styleMap: ["p[style-name='Title'] => h1:fresh", "p[style-name='Subtitle'] => p:fresh", "br[type='page'] => br.wc-page-break"],
     })
+    const restored = restoreDocxProperties(converted.value, xml)
     result = {
-      document: createDocument(title, generateJSON(sanitizeHTML(converted.value), extensions)),
-      warning: 'DOCX imported as an editable copy. Basic text, headings, lists, tables and embedded images are supported. Page layout, comments, revisions, headers and advanced formatting may be lost. Keep your original file.',
+      document: createDocument(title, generateJSON(sanitizeHTML(restored.html), extensions)),
+      warning: `DOCX imported as an editable copy. Basic text, headings, lists, tables, embedded images and page breaks are supported. ${restored.mapped ? 'Direct paragraph spacing, indents and direction were mapped.' : 'Paragraph properties could not be safely mapped and were not restored.'} Sections, comments, revisions, headers, inherited styles and advanced formatting may be lost. Keep your original file.`,
     }
   } else if (extension === 'html' || extension === 'htm') {
     result = { document: createDocument(title, generateJSON(sanitizeHTML(new TextDecoder().decode(file.bytes)), extensions)) }
@@ -58,7 +64,7 @@ export async function exportBytes(doc: CraftDocument, format: ExportFormat, html
   if (format === 'wordcraft') return { bytes: encode(JSON.stringify(doc, null, 2)), mime: 'application/json' }
   if (format === 'txt') return { bytes: encode(textContent(doc.content)), mime: 'text/plain;charset=utf-8' }
   if (format === 'html') {
-    return { bytes: encode(`<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${escapeHTML(doc.title)}</title><style>body{max-width:720px;margin:64px auto;padding:0 24px;font:17px/1.7 Georgia,serif;color:#293c35}h1,h2,h3{line-height:1.2;color:#174f48}img{max-width:100%;height:auto}table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccc;padding:8px}blockquote{border-left:3px solid #174f48;margin:24px 0;padding-left:24px}</style></head><body>${sanitizeHTML(html)}</body></html>`), mime: 'text/html;charset=utf-8' }
+    return { bytes: encode(`<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${escapeHTML(doc.title)}</title><style>body{max-width:720px;margin:64px auto;padding:0 24px;font:17px/1.7 Georgia,serif;color:#293c35}h1,h2,h3{line-height:1.2;color:#174f48}img{max-width:100%;height:auto}table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccc;padding:8px}blockquote{border-left:3px solid #174f48;margin:24px 0;padding-left:24px}[data-wordcraft-page-break]{break-after:page;border-top:1px dashed #aaa;margin:24px 0}@media print{[data-wordcraft-page-break]{border:0;margin:0}}</style></head><body>${sanitizeHTML(html)}</body></html>`), mime: 'text/html;charset=utf-8' }
   }
   const { exportDocx } = await import('./docx')
   return { bytes: await exportDocx(doc), mime: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' }

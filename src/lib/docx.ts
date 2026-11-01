@@ -1,7 +1,7 @@
 import type { JSONContent } from '@tiptap/react'
 import {
   AlignmentType, Document, ExternalHyperlink, HeadingLevel, ImageRun,
-  LevelFormat, Packer, Paragraph, Table, TableCell, TableRow, TextRun, WidthType,
+  LevelFormat, LineRuleType, Packer, PageBreak, Paragraph, Table, TableCell, TableRow, TextRun, WidthType,
   type IParagraphOptions, type IRunOptions, type INumberingOptions,
 } from 'docx'
 import { isLocalImage, isSafeLink, pageDimensions, textContent, type CraftDocument } from './document'
@@ -21,6 +21,8 @@ function runOptions(node: JSONContent): IRunOptions {
     if (mark.type === 'italic') options.italics = true
     if (mark.type === 'underline') options.underline = {}
     if (mark.type === 'strike') options.strike = true
+    if (mark.type === 'superscript') options.superScript = true
+    if (mark.type === 'subscript') options.subScript = true
     if (mark.type === 'code') options.font = 'Courier New'
     if (mark.type === 'highlight') options.highlight = 'yellow'
     if (mark.type === 'textStyle') {
@@ -102,13 +104,32 @@ export async function exportDocx(doc: CraftDocument): Promise<Uint8Array> {
         output.push(new Paragraph({ children: inline([node]) }))
       } else if (node.type === 'horizontalRule') {
         output.push(new Paragraph({ thematicBreak: true }))
+      } else if (node.type === 'pageBreak') {
+        output.push(new Paragraph({ children: [new PageBreak()] }))
       } else {
         const align = String(node.attrs?.textAlign ?? 'left')
+        const attrs = node.attrs ?? {}
+        const toTwips = (value: unknown) => value == null ? undefined : Math.round(Number(value) * 20)
+        const lineRule = attrs.lineRule === 'exactly' ? LineRuleType.EXACT : attrs.lineRule === 'atLeast' ? LineRuleType.AT_LEAST : LineRuleType.AUTO
         const options: IParagraphOptions = {
           children: node.type === 'codeBlock' ? [new TextRun({ text: textContent(node), font: 'Courier New' })] : inline(node.content),
           heading: node.type === 'heading' ? ({ 1: HeadingLevel.HEADING_1, 2: HeadingLevel.HEADING_2, 3: HeadingLevel.HEADING_3 }[Number(node.attrs?.level)] ?? HeadingLevel.HEADING_1) : undefined,
           alignment: { left: AlignmentType.LEFT, center: AlignmentType.CENTER, right: AlignmentType.RIGHT, justify: AlignmentType.JUSTIFIED }[align],
-          spacing: { after: 180, line: 320 },
+          spacing: {
+            before: toTwips(attrs.spaceBefore), after: toTwips(attrs.spaceAfter) ?? 180,
+            line: attrs.lineSpacing == null ? 320 : Math.round(Number(attrs.lineSpacing) * (lineRule === LineRuleType.AUTO ? 240 : 20)),
+            lineRule,
+          },
+          indent: {
+            left: toTwips(attrs.indentLeft), right: toTwips(attrs.indentRight),
+            firstLine: Number(attrs.firstLineIndent) > 0 ? toTwips(attrs.firstLineIndent) : undefined,
+            hanging: Number(attrs.firstLineIndent) < 0 ? toTwips(-Number(attrs.firstLineIndent)) : undefined,
+          },
+          bidirectional: attrs.direction == null ? undefined : attrs.direction === 'rtl',
+          keepNext: attrs.keepNext ?? undefined,
+          keepLines: attrs.keepLines ?? undefined,
+          pageBreakBefore: attrs.pageBreakBefore ?? undefined,
+          widowControl: attrs.widowControl ?? undefined,
           numbering: list && !listConsumed ? { reference: list.reference, level: list.level } : undefined,
         }
         output.push(new Paragraph(options))
@@ -142,6 +163,5 @@ export async function exportDocx(doc: CraftDocument): Promise<Uint8Array> {
       children,
     }],
   })
-  const blob = await Packer.toBlob(file)
-  return new Uint8Array(await blob.arrayBuffer())
+  return Packer.pack(file, 'uint8array')
 }

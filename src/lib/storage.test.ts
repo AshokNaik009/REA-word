@@ -44,7 +44,7 @@ describe('local persistence', () => {
   it('does not overwrite stored documents with invalid input', async () => {
     const doc = createDocument()
     await saveDocument(doc)
-    await expect(saveDocument({ ...doc, version: 2 } as never)).rejects.toThrow()
+    await expect(saveDocument({ ...doc, version: 3 } as never)).rejects.toThrow()
     expect((await loadWorkspace()).documents).toEqual([doc])
   })
 })

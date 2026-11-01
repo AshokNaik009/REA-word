@@ -5,6 +5,20 @@ An independent reimplementation inspired by [storytold/wordcraft](https://github
 
 **No Rust toolchain. No Electron runtime. No native application code to compile.**
 
+## Port Progress
+
+Version **0.2.0** starts the engine migration beyond the original desktop prototype:
+
+- A UI-independent typed command/session layer shared by ribbon actions, command search, shortcuts and automation.
+- 52 callable commands: 51 upstream IDs and one grouped paragraph-properties command. All remain partial upstream implementations.
+- Page breaks, superscript/subscript, paragraph spacing and indents, text direction, print keep/widow controls, and table merge/split.
+- Supported new properties survive native backups and synthetic DOCX exchange tests; unsupported DOCX structures still require keeping the original.
+- A source-checkout headless CLI for scripted editing and document conversion, without opening a window.
+
+The [generated parity matrix](docs/feature-parity.md) inventories **662 upstream command IDs**;
+611 have no TS engine implementation yet. Counts measure command availability, not feature or layout fidelity.
+See the [migration plan and architecture](docs/porting-plan.md) and [automation/CLI reference](docs/automation.md).
+
 ## What "No Rust" Means
 
 | Task | Node.js needed? | Rust needed? | Native compiler needed? |
@@ -31,7 +45,7 @@ The earlier Tauri prototype and its project-local Rust toolchain have been remov
 The local build is:
 
 ```text
-release/Wordcraft-Desktop-0.1.1-macOS.dmg
+release/Wordcraft-Desktop-0.2.0-macOS.dmg
 ```
 
 1. Open the DMG.
@@ -46,6 +60,9 @@ Open action or Privacy & Security. Do not disable Gatekeeper globally.
 
 Version 0.1.1 fixes first-launch initialization of Neutralino's native storage directory.
 Quit the old application before opening the new build. Existing document storage is not cleared.
+Version 0.2.0 writes version 2 native documents and reads/migrates version 1 documents.
+Use 0.2.0 or later after migration: the old 0.1.x application cannot read version 2 documents.
+Keep original backups; do not clear native storage to work around a downgrade error.
 
 ## Development Prerequisites
 
@@ -233,9 +250,10 @@ AppImage packaging generally needs a Linux host; a portable executable is not an
 
 ## Features And Limits
 
-- Rich text, headings, font family/size/color, lists, alignment, highlights, links and undo/redo.
+- Rich text, headings, font family/size/color, lists, alignment, highlights, links, superscript/subscript and undo/redo.
 - Ribbon tabs, document library, heading outline, find/replace, focus mode and word counts.
-- Tables with row/column editing; embedded PNG/JPEG/GIF/WebP images.
+- Tables with row/column editing and selected-cell merge/split; embedded PNG/JPEG/GIF/WebP images.
+- Paragraph spacing, indents, RTL/LTR direction, line spacing, explicit page breaks and print keep/widow controls.
 - A4/Letter, portrait/landscape, margin presets and print/PDF through the system print dialog.
 - `.wordcraft` JSON backups preserve this editor's supported content and page settings.
 - Basic `.docx`, `.html` and `.txt` import/export. Files open as copies, not in-place overwrites.
@@ -249,8 +267,15 @@ Its decorative running header/footer are UI chrome, not editable document header
 DOCX exchange can lose custom highlight colors, image dimensions, WebP images, merged-cell
 row spans, section layout and advanced formatting. Keep original files and `.wordcraft` backups.
 The import dialog warns about these limitations. Document imports are limited to 20 MB,
-and inserted image files to 5 MB. Large or untrusted office documents are not a hardened
+inserted image files to 5 MB, and DOCX main XML to 8 MB. The DOCX preflight bounds expanded
+ZIP content to 60 MB. Large or untrusted office documents are not a hardened
 document-conversion sandbox.
+
+DOCX direct paragraph properties are restored only when the source and converted paragraph
+sequences align. Otherwise the import notice explicitly reports that those properties were
+not restored. Inherited styles, unusual document parts and notes may prevent matching.
+Keep/widow rules affect browser-managed printing and DOCX; they do not implement on-screen pagination.
+"At least" line spacing is approximate on the canvas.
 
 ## Storage And Privacy
 
@@ -277,8 +302,10 @@ Use one native app instance at a time; multi-instance conflict resolution is not
 
 ```bash
 npm run check
+npm run test:cli
 npm run test:e2e
 npm run test:native
+npm run parity:check
 ```
 
 The default E2E suite uses installed Google Chrome. For WebKit testing, first run

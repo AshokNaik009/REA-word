@@ -20,7 +20,7 @@ describe('document model', () => {
     expect(() => parseDocument(text)).toThrow()
   })
   it('rejects future versions without rewriting them', () => {
-    expect(() => parseDocument(JSON.stringify({ ...createDocument(), version: 2 }))).toThrow()
+    expect(() => parseDocument(JSON.stringify({ ...createDocument(), version: 3 }))).toThrow()
   })
   it('rejects unknown node types and deeply nested content', () => {
     expect(isEditorContent({ type: 'doc', content: [{ type: 'iframe' }] })).toBe(false)

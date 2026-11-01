@@ -27,9 +27,13 @@ requested by CSS only when available on the user's system; fallback fonts remain
 | DOMPurify | https://github.com/cure53/DOMPurify | Apache-2.0 OR MPL-2.0 |
 | idb | https://github.com/jakearchibald/idb | ISC |
 | Zod | https://github.com/colinhacks/zod | MIT |
+| fflate | https://github.com/101arrowz/fflate | MIT |
+| jsdom (source CLI / test adapter) | https://github.com/jsdom/jsdom | MIT |
 
 Dependencies retain their own licenses and notices. This is a source attribution index,
 not an exhaustive legal inventory of all transitive packages. Consult installed package
 licenses and the lockfile when preparing a public distribution.
 
 The original WordCraft project is credited in `UPSTREAM.md`; its ArtCraft marks are not used.
+The generated upstream command inventory derives metadata from that project's public
+source under MIT; see `docs/LICENSE-UPSTREAM`.

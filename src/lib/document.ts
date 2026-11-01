@@ -1,9 +1,10 @@
 import type { JSONContent } from '@tiptap/react'
 import { z } from 'zod'
+import { paragraphProperties } from '../engine/properties'
 
 export const MAX_FILE_BYTES = 20 * 1024 * 1024
-const nodeTypes = new Set(['doc', 'paragraph', 'text', 'heading', 'bulletList', 'orderedList', 'listItem', 'blockquote', 'codeBlock', 'horizontalRule', 'hardBreak', 'table', 'tableRow', 'tableCell', 'tableHeader', 'image'])
-const markTypes = new Set(['bold', 'italic', 'underline', 'strike', 'code', 'link', 'textStyle', 'highlight'])
+const nodeTypes = new Set(['doc', 'paragraph', 'text', 'heading', 'bulletList', 'orderedList', 'listItem', 'blockquote', 'codeBlock', 'horizontalRule', 'hardBreak', 'pageBreak', 'table', 'tableRow', 'tableCell', 'tableHeader', 'image'])
+const markTypes = new Set(['bold', 'italic', 'underline', 'strike', 'code', 'link', 'textStyle', 'highlight', 'superscript', 'subscript'])
 
 export function isSafeLink(url: string): boolean {
   return /^(https?:\/\/|mailto:|#)/i.test(url.trim())
@@ -22,6 +23,7 @@ export function isEditorContent(value: unknown): value is JSONContent {
     if (++count > 50_000 || item.depth > 40 || !item.value || typeof item.value !== 'object') return false
     const node = item.value as JSONContent
     if (!node.type || !nodeTypes.has(node.type)) return false
+    if (['paragraph', 'heading'].includes(node.type) && !paragraphProperties.safeParse(node.attrs ?? {}).success) return false
     if (node.text !== undefined && (typeof node.text !== 'string' || node.text.length > 5_000_000)) return false
     if (node.type === 'image' && !isLocalImage(String(node.attrs?.src ?? ''))) return false
     if (node.marks !== undefined) {
@@ -47,7 +49,7 @@ export const pageSchema = z.object({
 
 export const documentSchema = z.object({
   format: z.literal('wordcraft'),
-  version: z.literal(1),
+  version: z.union([z.literal(1), z.literal(2)]).transform(() => 2 as const),
   id: z.string().min(1).max(100),
   title: z.string().max(200),
   createdAt: z.string().datetime(),
@@ -62,7 +64,7 @@ export type ExportFormat = 'wordcraft' | 'docx' | 'html' | 'txt'
 
 export function createDocument(title = 'Untitled document', content: JSONContent = { type: 'doc', content: [{ type: 'paragraph' }] }): CraftDocument {
   const now = new Date().toISOString()
-  return { format: 'wordcraft', version: 1, id: crypto.randomUUID(), title, createdAt: now, updatedAt: now, page: { size: 'A4', orientation: 'portrait', margins: 'normal' }, content }
+  return { format: 'wordcraft', version: 2, id: crypto.randomUUID(), title, createdAt: now, updatedAt: now, page: { size: 'A4', orientation: 'portrait', margins: 'normal' }, content }
 }
 
 export function parseDocument(text: string): CraftDocument {
@@ -86,6 +88,7 @@ export function filename(title: string): string {
 export function textContent(node: JSONContent): string {
   if (node.type === 'text') return node.text ?? ''
   if (node.type === 'hardBreak') return '\n'
+  if (node.type === 'pageBreak') return '\f'
   const separator = ['doc', 'table', 'tableRow', 'bulletList', 'orderedList', 'blockquote'].includes(node.type ?? '') ? '\n' : ''
   return (node.content ?? []).map(textContent).join(separator)
 }
